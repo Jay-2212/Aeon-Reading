@@ -1,0 +1,62 @@
+# .github/workflows/fetch-articles.yml
+#
+# Fetch Aeon Articles — GitHub Actions Workflow
+# ===============================================
+# Runs the Python data-pipeline script (scripts/fetch_articles.py) on a schedule
+# (every 6 hours) and on manual request via workflow_dispatch (the in-app Refresh
+# button calls the GitHub Actions API to trigger this event).
+#
+# On completion the workflow commits any new/changed files in the data/ directory
+# back to the repository. If no articles changed, the git diff is empty and the
+# commit step exits cleanly with "No changes".
+#
+# Required repository permissions: contents:write (to commit data/ files).
+
+name: Fetch Aeon Articles
+
+on:
+  # Scheduled run — every 6 hours
+  schedule:
+    - cron: '0 */6 * * *'
+  # Manual trigger — called by the in-app Refresh button via the GitHub API,
+  # or manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+permissions:
+  contents: write   # Needed so the workflow can commit updated data/ files
+
+jobs:
+  fetch:
+    name: Fetch and update articles
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository so we can read/write data/ files.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python 3.12 (matches the version used during development).
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Step 3: Install the Python dependencies required by fetch_articles.py.
+      - name: Install Python dependencies
+        run: pip install requests lxml bleach python-dateutil cssselect
+
+      # Step 4: Run the main data-pipeline script.
+      # The script exits 0 on success (even if there are no new articles).
+      - name: Run fetch script
+        run: python scripts/fetch_articles.py
+
+      # Step 5: Stage any changes in data/, check if anything actually changed,
+      # and only commit + push if there are real changes to avoid empty commits.
+      - name: Commit and push if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "No changes — nothing to commit." && exit 0
+          git commit -m "chore: update articles [skip ci]"
+          git push

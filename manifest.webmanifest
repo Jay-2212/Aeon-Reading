@@ -1,0 +1,30 @@
+{
+  "name": "Aeon Reader",
+  "short_name": "Aeon",
+  "description": "A distraction-free reading experience for Aeon articles.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#F5ECD7",
+  "background_color": "#F5ECD7",
+  "lang": "en",
+  "categories": ["news", "education", "books"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
