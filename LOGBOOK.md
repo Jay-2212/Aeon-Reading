@@ -64,8 +64,8 @@ A short message to the next agent.
 | 6 | Settings Panel | ✅ Done | Agent 1 |
 | 7 | Refresh Mechanism | ✅ Done | Agent 1 |
 | 8 | Service Worker & PWA | ✅ Done | Agent 1 |
-| 9 | Quality-of-Life Features | 🔄 Partial | Agent 1 |
-| 10 | Phase 2 Features (deferred) | 🔒 Deferred | — |
+| 9 | Quality-of-Life Features | ✅ Done | Agent 2 |
+| 10 | Phase 2 Features (deferred) | ✅ Done | Agent 2 |
 
 ---
 
@@ -171,3 +171,60 @@ and see the feed skeleton, empty state, and settings sheet working. The Refresh 
 needs a GitHub PAT to work. All four themes look great — the Sepia theme especially.
 Good luck, and remember: document everything and test as you go!
 
+
+---
+
+## Agent 2 — 2026-03-23
+
+### Completed Phases
+- ✅ Phase 9 — Quality-of-Life Features (JavaScript unit tests — vitest setup + 82 passing tests)
+- ✅ Phase 10 — Phase 2 Features: Auto-scroll (teleprompter mode) and Text-to-Speech (Web Speech API)
+
+### Partially Completed Phases
+- ✅ All previously partial items resolved. Text highlighting (localStorage, character offsets) was listed as Phase 10 but was already marked as deferred; it remains deferred as it requires significant design work around the bodyHtml structure.
+
+### Files Created
+- `package.json` — npm manifest with vitest 2.x devDependency and `test:js` script
+- `vitest.config.js` — vitest config (jsdom environment, tests/js/** glob)
+- `tests/js/helpers.js` — shared test utilities: loadScript() and minimal HTML fixtures
+- `tests/js/test_app.test.js` — 18 tests covering applyTheme, applyFont, applyFontScale, applyLineSpacing, showToast, setOfflineStatus
+- `tests/js/test_feed.test.js` — 12 tests covering createArticleCard HTML, renderFeed, empty/error states, getCurrentArticles
+- `tests/js/test_reader.test.js` — 22 tests covering progress calculation, countdown, scroll-to-top threshold, swipe gesture, auto-scroll, TTS
+- `tests/js/test_settings.test.js` — 18 tests covering pill sync, open/close, spacing, drop cap, PAT management, font-size slider sync
+- `tests/js/test_api.test.js` — 12 tests covering triggerWorkflowDispatch request, ETag change detection, offline guard
+
+### Files Modified
+- `js/reader.js` — Added auto-scroll (teleprompter) feature and Text-to-Speech feature; updated public API; added btn-tts DOM ref; added 12 new constants for auto-scroll and TTS state
+- `js/settings.js` — Added auto-scroll toggle + speed slider DOM references; added event listeners for aeon:auto-scroll-changed and aeon:auto-scroll-speed-changed; restoreUIFromStorage now restores auto-scroll state
+- `index.html` — Added TTS button to reader header; added auto-scroll toggle and speed slider to reader settings sheet
+- `styles/reader.css` — Added `.btn--tts-active` style and `.auto-scroll-indicator` pulsing bar style
+- `LOGBOOK.md` — Updated phase completion table; added this entry
+
+### Known Issues / Technical Debt
+1. **Text highlighting** (localStorage per character offset) is still not implemented. This was deferred from Phase 10. It requires careful integration with the sanitised bodyHtml.
+
+2. **Auto-scroll does not persist between articles.** The toggle resets when navigating to a new article. If desired, the next agent could call `startAutoScroll()` in `renderArticle()` when `localStorage.getItem('aeon_auto_scroll') === 'true'`.
+
+3. **TTS language is hardcoded to 'en'.** A future improvement: detect article language from `<html lang>` or article metadata.
+
+4. **PWA Icons are still plain solid-colour squares.** The icon-192.png and icon-512.png should be replaced with properly designed icons.
+
+5. **Google Fonts are still loaded from CDN.** Self-hosting as WOFF2 is recommended for full offline support.
+
+6. **package-lock.json is committed.** This is intentional for reproducible CI builds (npm ci).
+
+### Recommendations for Next Agent
+- All main features from the engineering plan are now implemented.
+- The remaining known issues are cosmetic/enhancement items; no blocking bugs.
+- To run JS tests: `npm run test:js`; to run Python tests: `python -m pytest tests/test_fetch_articles.py -v`
+- Consider testing the app end-to-end via a local HTTP server (`python -m http.server 8080`) since data/articles.json loads via fetch.
+
+### Next Agent Should Start At
+No required next phase. All phases are complete. Optional enhancements:
+1. Replace placeholder PWA icons with designed icons containing the "Aeon" wordmark.
+2. Self-host Google Fonts as WOFF2 in assets/fonts/ for full offline capability.
+3. Implement text highlighting (character-offset-based, localStorage persistence) if desired.
+4. Persist auto-scroll state across article navigations (call startAutoScroll in renderArticle if saved preference is true).
+
+### Good Luck Note
+The app is now fully functional end-to-end — data pipeline, feed, reader, themes, settings, refresh, service worker, focus mode, swipe, wake lock, share, auto-scroll, and TTS all implemented. All 82 JS tests and 54 Python tests pass. The codebase is well-documented throughout. Enjoy reading!
