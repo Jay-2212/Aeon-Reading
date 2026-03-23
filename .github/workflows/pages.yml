@@ -1,0 +1,63 @@
+# .github/workflows/pages.yml
+#
+# Deploy to GitHub Pages — GitHub Actions Workflow
+# =================================================
+# Deploys the entire repository root as a GitHub Pages site.
+#
+# Triggers:
+#   1. On every push to the `main` branch (when source files change).
+#   2. After the "Fetch Aeon Articles" workflow completes (so the site is
+#      redeployed whenever new article data is committed by that workflow).
+#
+# The deployment uses the official GitHub Pages actions:
+#   - actions/configure-pages  — prepares Pages metadata
+#   - actions/upload-pages-artifact — uploads the site artifact
+#   - actions/deploy-pages — deploys the artifact to Pages
+#
+# Required repository permissions: pages:write, id-token:write.
+
+name: Deploy to GitHub Pages
+
+on:
+  # Deploy when source files change on main
+  push:
+    branches: [main]
+  # Also deploy after the article-fetching workflow finishes,
+  # so the live site reflects any newly committed article data.
+  workflow_run:
+    workflows: ["Fetch Aeon Articles"]
+    types: [completed]
+
+permissions:
+  pages:     write      # Needed to deploy to GitHub Pages
+  id-token:  write      # Needed to verify the deploy action's identity
+
+jobs:
+  deploy:
+    name: Deploy site to GitHub Pages
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Step 1: Check out the repository to access the site files.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Configure Pages metadata (enables the Pages feature if needed).
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # Step 3: Upload the entire repository root as the Pages artifact.
+      # The `path: '.'` tells the action to serve the repo root — this means
+      # index.html, styles/, js/, assets/, and data/ are all published.
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      # Step 4: Deploy the uploaded artifact to GitHub Pages CDN.
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

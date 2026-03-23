@@ -1,0 +1,31 @@
+<!--
+  Placeholder image shown while article cover images are loading.
+  Uses a warm blurred gradient that matches the Sepia theme's palette,
+  providing a visually comfortable placeholder in the 16:9 aspect ratio
+  used by article cards.
+
+  This SVG is inlined into CSS as a data-URI for zero extra network requests.
+  The viewBox is 16x9 to naturally express the 16:9 aspect ratio.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" width="160" height="90">
+  <defs>
+    <!-- Warm gradient matching the Sepia theme background tones -->
+    <linearGradient id="placeholder-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#EDE0C8" />
+      <stop offset="50%"  stop-color="#D5C5A5" />
+      <stop offset="100%" stop-color="#C8B49A" />
+    </linearGradient>
+    <!-- Blur filter to give a soft, out-of-focus appearance -->
+    <filter id="placeholder-blur">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+  </defs>
+  <!-- Background rectangle with warm gradient and blur -->
+  <rect width="160" height="90" fill="url(#placeholder-grad)" filter="url(#placeholder-blur)" />
+  <!-- Subtle image icon in the centre to indicate a loading image -->
+  <g transform="translate(72,37)" opacity="0.35">
+    <rect width="16" height="12" rx="1.5" fill="none" stroke="#7A6652" stroke-width="1.2"/>
+    <circle cx="5" cy="5" r="1.8" fill="#7A6652"/>
+    <polyline points="0,12 5,7 9,10 12,6 16,12" fill="#7A6652" opacity="0.6"/>
+  </g>
+</svg>

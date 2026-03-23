@@ -74,7 +74,8 @@ REQUEST_DELAY = 1.0
 # HTTP request timeout (seconds)
 REQUEST_TIMEOUT = 30
 
-# User-agent string identifying this bot
+# User-agent string identifying this bot.
+# NOTE: The trailing hyphen in 'Aeon-Reading-' is the actual repository name — not a typo.
 USER_AGENT = (
     "AeonReader/1.0 (+https://github.com/Jay-2212/Aeon-Reading-)"
 )

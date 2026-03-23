@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--
+  Aeon Reader — index.html
+  ========================
+  Single-page application shell for the Aeon Reader PWA.
+
+  This file contains the complete HTML structure for both views (feed and reader),
+  all bottom-sheet dialogs (settings, in-reader options, PAT prompt), and the toast
+  notification container.  No content is hard-coded here — all article data is
+  injected by the JavaScript modules.
+
+  Views are toggled by adding/removing the `.view--active` class.  The active
+  view is shown; the inactive view is hidden with `display:none` (via CSS).
+
+  Architecture:
+    index.html  — this file (HTML shell)
+    styles/main.css    — layout, components, all four themes
+    styles/reader.css  — reader-specific typography
+    js/app.js          — router + bootstrap
+    js/feed.js         — article feed rendering
+    js/reader.js       — article reader rendering
+    js/settings.js     — settings panel logic
+    js/api.js          — GitHub API (workflow dispatch + polling)
+    js/sw.js           — Service Worker (offline support)
+-->
+<html lang="en" data-theme="sepia">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Viewport: viewport-fit=cover for safe-area insets on notched phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5ECD7" id="theme-color-meta" />
+  <title>Aeon Reader</title>
+  <meta name="description" content="A distraction-free reading experience for Aeon magazine articles." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Aeon" />
+
+  <!--
+    Content Security Policy
+    -----------------------
+    Restricts what resources the page may load, protecting against XSS.
+    Key rules:
+    - default-src 'self'     → only same-origin resources by default
+    - style-src: allows Google Fonts stylesheet + unsafe-inline for CSS custom-property transitions
+    - font-src: allows Google Fonts files
+    - img-src: allows Aeon's CDN domains + data URIs (placeholder SVG) + blobs
+    - connect-src: allows GitHub API (for workflow dispatch + polling)
+    - script-src 'self'      → no inline scripts, no eval
+    - worker-src 'self'      → Service Worker from same origin
+    - frame-src 'none'       → no iframes
+    - object-src 'none'      → no plugins
+  -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src    'self' https://fonts.gstatic.com;
+    img-src     'self'
+                https://aeon.co
+                https://images.aeon.co
+                https://d2e1bqvws99ptg.cloudfront.net
+                data:
+                blob:;
+    connect-src 'self' https://api.github.com;
+    script-src  'self';
+    worker-src  'self';
+    frame-src   'none';
+    object-src  'none';
+  " />
+
+  <!-- PWA Web App Manifest -->
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!--
+    Google Fonts — Lora (default reading font), Merriweather, Inter
+    Loaded with font-display:swap to prevent invisible text during load.
+    In a future phase these should be self-hosted as WOFF2 for full offline support.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@400;500&display=swap"
+  />
+
+  <!-- Application stylesheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/reader.css" />
+</head>
+
+<body>
+  <!-- Skip-navigation link for keyboard / screen-reader users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================================================================
+       FEED VIEW — Home screen with article cards
+       ================================================================== -->
+  <div id="view-feed" class="view view--active" aria-label="Article feed">
+
+    <!-- Sticky app header -->
+    <header class="app-header" id="feed-header">
+      <div class="app-header__inner">
+        <!-- App wordmark (left) -->
+        <span class="app-header__wordmark" aria-label="Aeon Reader">Aeon</span>
+
+        <!-- Action buttons (right) -->
+        <div class="app-header__actions">
+          <!-- Refresh button — triggers article pipeline via GitHub API -->
+          <button class="icon-btn" id="btn-refresh" aria-label="Refresh articles" title="Refresh">
+            <!-- Refresh / circular-arrow icon -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+            </svg>
+          </button>
+
+          <!-- Settings button — opens settings bottom sheet -->
+          <button class="icon-btn" id="btn-settings" aria-label="Open settings" title="Settings" aria-expanded="false" aria-controls="settings-sheet">
+            <!-- Gear / settings icon -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87a.49.49 0 00.12.61l2.03 1.58c-.04.3-.07.62-.07.94s.03.64.07.94L2.86 14.52a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 00-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Offline indicator bar — shown when the browser is offline -->
+      <div class="offline-indicator" id="offline-indicator" hidden aria-live="polite" role="status">
+        <svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M24 8.98C20.93 5.9 16.69 4 12 4 7.31 4 3.07 5.9.0 8.98L2.28 11.26c2.58-2.58 6.15-4.18 10.1-4.18 3.94 0 7.51 1.6 10.09 4.18L24 8.98zM12 6c3.73 0 7.11 1.51 9.56 3.96L23.84 7.68C21.02 4.84 17.2 3 13 3H11C6.8 3 2.98 4.84.16 7.68L2.44 9.96C4.89 7.51 8.27 6 12 6zm0 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm2.75-4.75l-1.41 1.41A3.502 3.502 0 0112 12c-.97 0-1.84.39-2.47 1.03L8.12 11.62C9.1 10.61 10.47 10 12 10c1.53 0 2.9.61 3.88 1.62l-1.13 1.13z"/>
+        </svg>
+        <span>Offline — showing cached articles</span>
+      </div>
+
+      <!-- Refresh progress bar — shown while the workflow is running -->
+      <div
+        class="progress-bar"
+        id="refresh-progress"
+        role="progressbar"
+        aria-label="Refreshing articles"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        hidden
+      ></div>
+    </header>
+
+    <!-- Main feed content area -->
+    <main id="main-content" class="feed-container">
+
+      <!-- Skeleton loading state — shown while articles.json is being fetched -->
+      <div class="feed-skeleton" id="feed-skeleton" role="status" aria-label="Loading articles" aria-busy="true">
+        <div class="card-skeleton" aria-hidden="true"></div>
+        <div class="card-skeleton" aria-hidden="true"></div>
+        <div class="card-skeleton" aria-hidden="true"></div>
+      </div>
+
+      <!-- Article card list — populated by js/feed.js -->
+      <ul class="article-list" id="article-list" role="list" aria-label="Articles"></ul>
+
+      <!-- Empty state — shown when articles.json has no entries -->
+      <div class="empty-state" id="empty-state" hidden role="status">
+        <svg class="empty-state__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M17.5 12A5.5 5.5 0 0123 17.5 5.5 5.5 0 0117.5 23 5.5 5.5 0 0112 17.5 5.5 5.5 0 0117.5 12m0 2a3.5 3.5 0 00-3.5 3.5 3.5 3.5 0 003.5 3.5 3.5 3.5 0 003.5-3.5 3.5 3.5 0 00-3.5-3.5M19 2a2 2 0 012 2v9.81c-.61-.35-1.28-.59-2-.72V4H5v16h6.08c.13.72.37 1.39.72 2H5a2 2 0 01-2-2V4a2 2 0 012-2h14M7 6h10v2H7V6m0 4h10v2H7v-2m0 4h7v2H7v-2z"/>
+        </svg>
+        <p class="empty-state__message">No articles yet.</p>
+        <p class="empty-state__hint">Tap refresh to load the latest Aeon articles.</p>
+        <button class="btn-primary" id="btn-refresh-empty">Refresh</button>
+      </div>
+
+      <!-- Error state — shown when articles.json fails to load -->
+      <div class="error-state" id="error-state" hidden role="alert">
+        <p class="error-state__message">Could not load articles.</p>
+        <button class="btn-primary" id="btn-retry">Retry</button>
+      </div>
+
+    </main>
+  </div><!-- /view-feed -->
+
+
+  <!-- ==================================================================
+       READER VIEW — Full article text
+       ================================================================== -->
+  <div id="view-reader" class="view" aria-label="Article reader" hidden>
+
+    <!-- Minimal reader header — hides on scroll down, reappears on scroll up -->
+    <header class="reader-header" id="reader-header">
+      <div class="reader-header__inner">
+        <!-- Back button — returns to the feed -->
+        <button class="icon-btn" id="btn-back" aria-label="Back to articles">
+          <!-- Left arrow icon -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </button>
+
+        <!-- Right-side action buttons -->
+        <div class="reader-header__actions">
+          <!-- Share article via Web Share API (falls back to clipboard) -->
+          <button class="icon-btn" id="btn-share" aria-label="Share article">
+            <!-- Share icon -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+            </svg>
+          </button>
+
+          <!-- In-reader settings (font, theme, focus mode) -->
+          <button
+            class="icon-btn"
+            id="btn-reader-menu"
+            aria-label="Reading options"
+            aria-expanded="false"
+            aria-controls="reader-settings-sheet"
+          >
+            <!-- Three-dot / more-options icon -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Reading progress bar — thin bar pinned below reader header -->
+    <div
+      class="reading-progress-bar"
+      id="reading-progress"
+      role="progressbar"
+      aria-label="Reading progress"
+      aria-valuenow="0"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+
+    <!-- Article content area — populated by js/reader.js -->
+    <article class="reader-article" id="reader-article" aria-live="polite">
+      <!-- Content is injected here by reader.js -->
+    </article>
+
+    <!-- Floating scroll-to-top button — appears after 400 px of scroll -->
+    <button class="scroll-top-btn" id="btn-scroll-top" aria-label="Scroll to top" hidden>
+      <!-- Upward arrow icon -->
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+      </svg>
+    </button>
+  </div><!-- /view-reader -->
+
+
+  <!-- ==================================================================
+       SETTINGS PANEL — Bottom sheet drawer
+       Opened by the gear icon in the feed header.
+       ================================================================== -->
+  <!-- Semi-transparent backdrop — tap to close -->
+  <div class="bottom-sheet-backdrop" id="settings-backdrop" hidden aria-hidden="true"></div>
+
+  <aside
+    class="bottom-sheet"
+    id="settings-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Settings"
+    hidden
+  >
+    <!-- Drag handle (decorative) -->
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+
+    <div class="bottom-sheet__header">
+      <h2 class="bottom-sheet__title">Settings</h2>
+      <button class="icon-btn" id="btn-close-settings" aria-label="Close settings">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="bottom-sheet__content">
+
+      <!-- Theme selector (4 pill buttons) -->
+      <div class="settings-group" role="group" aria-labelledby="label-theme">
+        <span class="settings-label" id="label-theme">Theme</span>
+        <div class="pill-group" id="theme-pills">
+          <button class="pill" data-theme-value="light"  aria-pressed="false">Light</button>
+          <button class="pill pill--active" data-theme-value="sepia"  aria-pressed="true">Sepia</button>
+          <button class="pill" data-theme-value="dark"   aria-pressed="false">Dark</button>
+          <button class="pill" data-theme-value="amoled" aria-pressed="false">AMOLED</button>
+        </div>
+      </div>
+
+      <!-- Font selector (4 pill buttons) -->
+      <div class="settings-group" role="group" aria-labelledby="label-font">
+        <span class="settings-label" id="label-font">Font</span>
+        <div class="pill-group" id="font-pills">
+          <button class="pill pill--active" data-font-value="lora"         aria-pressed="true">Lora</button>
+          <button class="pill"              data-font-value="merriweather" aria-pressed="false">Merriweather</button>
+          <button class="pill"              data-font-value="system"       aria-pressed="false">System</button>
+          <button class="pill"              data-font-value="inter"        aria-pressed="false">Inter</button>
+        </div>
+      </div>
+
+      <!-- Font size slider -->
+      <div class="settings-group">
+        <label class="settings-label" for="font-size-slider">Font size</label>
+        <div class="slider-row">
+          <span class="slider-label-small" aria-hidden="true">A</span>
+          <input
+            type="range"
+            id="font-size-slider"
+            class="settings-slider"
+            min="0.85"
+            max="1.3"
+            step="0.05"
+            value="1.0"
+            aria-label="Font size scale"
+          />
+          <span class="slider-label-large" aria-hidden="true">A</span>
+        </div>
+      </div>
+
+      <!-- Line spacing toggle -->
+      <div class="settings-group settings-group--row" role="group" aria-labelledby="label-spacing">
+        <span class="settings-label" id="label-spacing">Line spacing</span>
+        <div class="pill-group">
+          <button class="pill pill--active" id="spacing-comfortable" aria-pressed="true">Comfortable</button>
+          <button class="pill"              id="spacing-compact"     aria-pressed="false">Compact</button>
+        </div>
+      </div>
+
+      <!-- Drop cap toggle -->
+      <div class="settings-group settings-group--row">
+        <label class="settings-label" for="drop-cap-toggle">Drop cap</label>
+        <label class="toggle-switch" aria-label="Drop cap">
+          <input type="checkbox" id="drop-cap-toggle" role="switch" />
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+
+      <!-- GitHub Personal Access Token input (for Refresh) -->
+      <div class="settings-group">
+        <label class="settings-label" for="pat-input">GitHub token</label>
+        <p class="settings-help">
+          Fine-grained PAT with "Actions: write" on this repository.
+          Stored only on this device — never sent anywhere except api.github.com.
+        </p>
+        <div class="pat-row">
+          <input
+            type="password"
+            id="pat-input"
+            class="text-input"
+            placeholder="github_pat_…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="btn-secondary" id="btn-save-pat">Save</button>
+          <button class="btn-secondary btn-danger" id="btn-clear-pat">Clear</button>
+        </div>
+      </div>
+
+      <!-- Clear all cached data -->
+      <div class="settings-group">
+        <button class="btn-secondary btn-danger btn-full" id="btn-clear-cache">
+          Clear cached data
+        </button>
+      </div>
+
+    </div>
+  </aside><!-- /settings-sheet -->
+
+
+  <!-- ==================================================================
+       IN-READER SETTINGS SHEET — Quick options accessible from reader view
+       Opened by the "···" button in the reader header.
+       ================================================================== -->
+  <div class="bottom-sheet-backdrop" id="reader-settings-backdrop" hidden aria-hidden="true"></div>
+
+  <aside
+    class="bottom-sheet"
+    id="reader-settings-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Reading options"
+    hidden
+  >
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+
+    <div class="bottom-sheet__header">
+      <h2 class="bottom-sheet__title">Reading Options</h2>
+      <button class="icon-btn" id="btn-close-reader-settings" aria-label="Close reading options">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="bottom-sheet__content">
+
+      <!-- Quick font size slider -->
+      <div class="settings-group">
+        <label class="settings-label" for="reader-font-size-slider">Font size</label>
+        <div class="slider-row">
+          <span class="slider-label-small" aria-hidden="true">A</span>
+          <input
+            type="range"
+            id="reader-font-size-slider"
+            class="settings-slider"
+            min="0.85"
+            max="1.3"
+            step="0.05"
+            value="1.0"
+            aria-label="Font size scale"
+          />
+          <span class="slider-label-large" aria-hidden="true">A</span>
+        </div>
+      </div>
+
+      <!-- Quick theme picker -->
+      <div class="settings-group" role="group" aria-labelledby="label-reader-theme">
+        <span class="settings-label" id="label-reader-theme">Theme</span>
+        <div class="pill-group" id="reader-theme-pills">
+          <button class="pill" data-theme-value="light"  aria-pressed="false">Light</button>
+          <button class="pill pill--active" data-theme-value="sepia"  aria-pressed="true">Sepia</button>
+          <button class="pill" data-theme-value="dark"   aria-pressed="false">Dark</button>
+          <button class="pill" data-theme-value="amoled" aria-pressed="false">AMOLED</button>
+        </div>
+      </div>
+
+      <!-- Focus mode toggle (dims non-active paragraphs) -->
+      <div class="settings-group settings-group--row">
+        <label class="settings-label" for="focus-mode-toggle">Focus mode</label>
+        <label class="toggle-switch" aria-label="Focus mode">
+          <input type="checkbox" id="focus-mode-toggle" role="switch" />
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+
+    </div>
+  </aside><!-- /reader-settings-sheet -->
+
+
+  <!-- ==================================================================
+       PAT PROMPT SHEET — Shown on first refresh when no token is saved
+       ================================================================== -->
+  <div class="bottom-sheet-backdrop" id="pat-backdrop" hidden aria-hidden="true"></div>
+
+  <aside
+    class="bottom-sheet"
+    id="pat-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-label="GitHub token required"
+    hidden
+  >
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+
+    <div class="bottom-sheet__header">
+      <h2 class="bottom-sheet__title">GitHub Token Required</h2>
+    </div>
+
+    <div class="bottom-sheet__content">
+      <p class="settings-help">
+        To refresh articles, a GitHub Personal Access Token (PAT) is used to
+        trigger the article-fetching workflow. The token is stored only on
+        this device and sent only to api.github.com.
+      </p>
+      <ol class="settings-help pat-instructions">
+        <li>Go to GitHub → Settings → Developer settings → Fine-grained tokens</li>
+        <li>Create a token for the Aeon-Reading- repository with <strong>Actions: write</strong> permission</li>
+        <li>Paste the token below and tap Save &amp; Refresh</li>
+      </ol>
+      <div class="pat-row">
+        <input
+          type="password"
+          id="pat-prompt-input"
+          class="text-input"
+          placeholder="github_pat_…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="btn-primary" id="btn-save-pat-prompt">Save &amp; Refresh</button>
+      </div>
+    </div>
+  </aside><!-- /pat-sheet -->
+
+
+  <!-- ==================================================================
+       TOAST NOTIFICATION CONTAINER
+       Toasts are injected here by js/app.js showToast().
+       aria-live="polite" announces them to screen readers.
+       ================================================================== -->
+  <div
+    class="toast-container"
+    id="toast-container"
+    aria-live="polite"
+    aria-atomic="false"
+  ></div>
+
+
+  <!-- ==================================================================
+       SCRIPTS
+       All scripts are deferred so they execute after the HTML is parsed.
+       Load order matters: app.js bootstraps first, others follow.
+       ================================================================== -->
+  <script src="js/app.js" defer></script>
+  <script src="js/settings.js" defer></script>
+  <script src="js/feed.js" defer></script>
+  <script src="js/reader.js" defer></script>
+  <script src="js/api.js" defer></script>
+
+</body>
+</html>
