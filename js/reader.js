@@ -1,7 +1,7 @@
 /**
  * @fileoverview Aeon Reader — reader.js
  * =======================================
- * Phase 4: Article Reader View
+ * Phase 4 & 10: Article Reader View
  *
  * This module handles everything that happens in the reader view:
  *   - Fetching the individual article JSON file.
@@ -15,6 +15,8 @@
  *   - Screen Wake Lock: prevents screen sleep while article is open.
  *   - Back navigation (hardware back button and ← Back UI button).
  *   - Web Share API integration for the Share button.
+ *   - Auto-scroll (teleprompter mode): scrolls the article at a configurable speed.
+ *   - Text-to-Speech: reads the article aloud using the Web Speech API.
  *
  * @module reader
  */
@@ -37,6 +39,22 @@ const HEADER_HIDE_THRESHOLD = 80;
 /** Minimum scroll velocity to trigger header hide/show. */
 const HEADER_SCROLL_MIN_DELTA = 5;
 
+/**
+ * Auto-scroll pixel-per-frame speeds mapped to the 1–5 slider levels.
+ * Level 1 is the slowest (0.4 px/frame at 60fps ≈ 24 px/s),
+ * Level 5 is the fastest (2.0 px/frame ≈ 120 px/s).
+ */
+const AUTO_SCROLL_SPEEDS = [0, 0.4, 0.8, 1.2, 1.6, 2.0];
+
+/** localStorage key for the auto-scroll enabled state. */
+const LS_AUTO_SCROLL = 'aeon_auto_scroll';
+
+/** localStorage key for the auto-scroll speed level (1–5). */
+const LS_AUTO_SCROLL_SPEED = 'aeon_auto_scroll_speed';
+
+/** Delay (ms) before auto-scroll resumes after the user manually scrolls. */
+const AUTO_SCROLL_RESUME_DELAY_MS = 2000;
+
 // ---------------------------------------------------------------------------
 // Module State
 // ---------------------------------------------------------------------------
@@ -57,6 +75,35 @@ let focusObserver = null;
 let lastScrollY = 0;
 
 // ---------------------------------------------------------------------------
+// Auto-scroll state
+// ---------------------------------------------------------------------------
+
+/** Whether auto-scroll (teleprompter mode) is currently running. */
+let autoScrollActive = false;
+
+/** requestAnimationFrame ID for the current auto-scroll animation loop. */
+let autoScrollRafId = null;
+
+/** Current auto-scroll speed level (1–5). */
+let autoScrollSpeedLevel = 2;
+
+/** setTimeout ID used to resume auto-scroll after a manual scroll pause. */
+let autoScrollResumeTimerId = null;
+
+/** Whether the user is currently manually scrolling (pauses auto-scroll). */
+let autoScrollPaused = false;
+
+// ---------------------------------------------------------------------------
+// Text-to-Speech state
+// ---------------------------------------------------------------------------
+
+/** Whether TTS is currently active (speaking or paused). */
+let ttsActive = false;
+
+/** The SpeechSynthesisUtterance currently being spoken, or null. */
+let ttsUtterance = null;
+
+// ---------------------------------------------------------------------------
 // DOM References
 // ---------------------------------------------------------------------------
 
@@ -64,6 +111,7 @@ const readerArticle   = document.getElementById('reader-article');
 const readingProgress = document.getElementById('reading-progress');
 const btnBack         = document.getElementById('btn-back');
 const btnShare        = document.getElementById('btn-share');
+const btnTTS          = document.getElementById('btn-tts');
 const btnScrollTop    = document.getElementById('btn-scroll-top');
 const readerHeader    = document.getElementById('reader-header');
 
@@ -512,6 +560,254 @@ function initScrollFeatures() {
 }
 
 // ---------------------------------------------------------------------------
+// Auto-scroll (Phase 10 — Teleprompter Mode)
+// ---------------------------------------------------------------------------
+
+/**
+ * Run a single animation frame of the auto-scroll.
+ * Advances the scroll position by the configured pixels-per-frame and
+ * stops automatically when the bottom of the page is reached.
+ */
+function autoScrollStep() {
+  if (!autoScrollActive || autoScrollPaused) {
+    autoScrollRafId = null;
+    return;
+  }
+
+  const pixelsPerFrame = AUTO_SCROLL_SPEEDS[autoScrollSpeedLevel] || AUTO_SCROLL_SPEEDS[2];
+  window.scrollBy({ top: pixelsPerFrame, behavior: 'instant' });
+
+  // Stop at the bottom of the page
+  const atBottom =
+    window.scrollY + window.innerHeight >=
+    document.documentElement.scrollHeight - 2;
+
+  if (atBottom) {
+    stopAutoScroll();
+    return;
+  }
+
+  autoScrollRafId = requestAnimationFrame(autoScrollStep);
+}
+
+/**
+ * Start auto-scroll at the current speed level.
+ * Saves the enabled state to localStorage so it persists across articles.
+ */
+function startAutoScroll() {
+  autoScrollActive = true;
+  autoScrollPaused = false;
+  localStorage.setItem(LS_AUTO_SCROLL, 'true');
+
+  // Update the toggle UI
+  const toggle = document.getElementById('auto-scroll-toggle');
+  if (toggle) toggle.checked = true;
+
+  // Show the speed slider
+  const speedGroup = document.getElementById('auto-scroll-speed-group');
+  if (speedGroup) speedGroup.removeAttribute('hidden');
+
+  // Add a visual indicator bar at the bottom of the viewport
+  if (!document.getElementById('auto-scroll-indicator')) {
+    const indicator = document.createElement('div');
+    indicator.id        = 'auto-scroll-indicator';
+    indicator.className = 'auto-scroll-indicator';
+    indicator.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(indicator);
+  }
+
+  if (autoScrollRafId) cancelAnimationFrame(autoScrollRafId);
+  autoScrollRafId = requestAnimationFrame(autoScrollStep);
+}
+
+/**
+ * Stop auto-scroll and cancel the animation loop.
+ * Updates localStorage and the toggle UI.
+ */
+function stopAutoScroll() {
+  autoScrollActive = false;
+  autoScrollPaused = false;
+  localStorage.setItem(LS_AUTO_SCROLL, 'false');
+
+  if (autoScrollRafId) {
+    cancelAnimationFrame(autoScrollRafId);
+    autoScrollRafId = null;
+  }
+  if (autoScrollResumeTimerId) {
+    clearTimeout(autoScrollResumeTimerId);
+    autoScrollResumeTimerId = null;
+  }
+
+  // Update the toggle UI
+  const toggle = document.getElementById('auto-scroll-toggle');
+  if (toggle) toggle.checked = false;
+
+  // Hide the speed slider
+  const speedGroup = document.getElementById('auto-scroll-speed-group');
+  if (speedGroup) speedGroup.setAttribute('hidden', '');
+
+  // Remove the visual indicator bar
+  const indicator = document.getElementById('auto-scroll-indicator');
+  if (indicator) indicator.remove();
+}
+
+/**
+ * Set the auto-scroll speed level (1–5) and persist to localStorage.
+ * If auto-scroll is running, the new speed takes effect on the next frame.
+ *
+ * @param {number} level - Speed level between 1 (slowest) and 5 (fastest).
+ */
+function setAutoScrollSpeed(level) {
+  // Clamp to valid range
+  autoScrollSpeedLevel = Math.min(5, Math.max(1, Math.round(level)));
+  localStorage.setItem(LS_AUTO_SCROLL_SPEED, String(autoScrollSpeedLevel));
+}
+
+/**
+ * Handle a manual scroll event while auto-scroll is active.
+ * Pauses auto-scroll temporarily and resumes it after AUTO_SCROLL_RESUME_DELAY_MS.
+ */
+function onManualScrollDuringAutoScroll() {
+  if (!autoScrollActive) return;
+
+  // Pause the animation loop
+  autoScrollPaused = true;
+  if (autoScrollRafId) {
+    cancelAnimationFrame(autoScrollRafId);
+    autoScrollRafId = null;
+  }
+
+  // Clear any existing resume timer
+  if (autoScrollResumeTimerId) {
+    clearTimeout(autoScrollResumeTimerId);
+  }
+
+  // Resume after a short delay
+  autoScrollResumeTimerId = setTimeout(() => {
+    autoScrollResumeTimerId = null;
+    if (autoScrollActive) {
+      autoScrollPaused = false;
+      autoScrollRafId = requestAnimationFrame(autoScrollStep);
+    }
+  }, AUTO_SCROLL_RESUME_DELAY_MS);
+}
+
+// ---------------------------------------------------------------------------
+// Text-to-Speech (Phase 10.6)
+// ---------------------------------------------------------------------------
+
+/**
+ * Initialise the TTS button: show it only if the Web Speech API is available.
+ * Called once on module load.
+ */
+function initTTS() {
+  if (!btnTTS) return;
+  if (!('speechSynthesis' in window)) {
+    // API not supported — keep the button hidden
+    return;
+  }
+  // Show the button now that we know TTS is available
+  btnTTS.removeAttribute('hidden');
+}
+
+/**
+ * Extract the readable plain-text content of the current article body.
+ * Returns the concatenation of all paragraph text nodes.
+ *
+ * @returns {string} Plain text suitable for speechSynthesis.
+ */
+function getArticleTextForTTS() {
+  if (!currentArticle) return '';
+  // Build text from title + paragraphs in the rendered body
+  const bodyDiv = document.getElementById('reader-body');
+  if (!bodyDiv) return currentArticle.title || '';
+
+  const titleText = currentArticle.title ? `${currentArticle.title}. ` : '';
+  const bodyText  = Array.from(bodyDiv.querySelectorAll('p'))
+    .map(p => p.textContent.trim())
+    .filter(Boolean)
+    .join(' ');
+  return titleText + bodyText;
+}
+
+/**
+ * Start reading the article aloud using the Web Speech API.
+ * Updates the button label and adds the `.tts-active` class to `<body>`
+ * so CSS can highlight the TTS indicator.
+ */
+function startTTS() {
+  if (!('speechSynthesis' in window) || !currentArticle) return;
+
+  // Stop any previous utterance
+  window.speechSynthesis.cancel();
+
+  const text = getArticleTextForTTS();
+  if (!text) return;
+
+  ttsUtterance = new SpeechSynthesisUtterance(text);
+  ttsUtterance.rate  = 1.0;
+  ttsUtterance.pitch = 1.0;
+  ttsUtterance.lang  = 'en';
+
+  ttsUtterance.onstart = () => {
+    ttsActive = true;
+    if (btnTTS) {
+      btnTTS.setAttribute('aria-label', 'Stop reading aloud');
+      btnTTS.classList.add('btn--tts-active');
+    }
+  };
+
+  ttsUtterance.onend = () => {
+    ttsActive = false;
+    if (btnTTS) {
+      btnTTS.setAttribute('aria-label', 'Read article aloud');
+      btnTTS.classList.remove('btn--tts-active');
+    }
+    ttsUtterance = null;
+  };
+
+  ttsUtterance.onerror = (event) => {
+    // Ignore 'interrupted' errors — these are triggered by cancel() and are expected
+    if (event.error === 'interrupted') return;
+    console.warn('[TTS] Speech error:', event.error);
+    ttsActive = false;
+    if (btnTTS) {
+      btnTTS.setAttribute('aria-label', 'Read article aloud');
+      btnTTS.classList.remove('btn--tts-active');
+    }
+    ttsUtterance = null;
+  };
+
+  window.speechSynthesis.speak(ttsUtterance);
+}
+
+/**
+ * Stop the current TTS playback and reset the button state.
+ */
+function stopTTS() {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+  ttsActive = false;
+  ttsUtterance = null;
+  if (btnTTS) {
+    btnTTS.setAttribute('aria-label', 'Read article aloud');
+    btnTTS.classList.remove('btn--tts-active');
+  }
+}
+
+/**
+ * Toggle TTS on or off. If currently speaking, stops; otherwise starts.
+ */
+function toggleTTS() {
+  if (ttsActive) {
+    stopTTS();
+  } else {
+    startTTS();
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Show / Hide Reader View
 // ---------------------------------------------------------------------------
 
@@ -546,6 +842,16 @@ function onLeavingReader() {
     disableFocusMode();
   }
 
+  // Stop auto-scroll if running
+  if (autoScrollActive) {
+    stopAutoScroll();
+  }
+
+  // Stop TTS if speaking
+  if (ttsActive) {
+    stopTTS();
+  }
+
   // Reset document title
   document.title = 'Aeon Reader';
 
@@ -578,6 +884,11 @@ function init() {
     btnShare.addEventListener('click', shareArticle);
   }
 
+  // TTS button
+  if (btnTTS) {
+    btnTTS.addEventListener('click', toggleTTS);
+  }
+
   // Scroll-to-top button
   if (btnScrollTop) {
     btnScrollTop.addEventListener('click', () => {
@@ -590,6 +901,10 @@ function init() {
     const readerView = document.getElementById('view-reader');
     if (readerView && !readerView.hasAttribute('hidden')) {
       handleReaderScroll();
+      // Pause auto-scroll briefly when the user scrolls manually
+      if (autoScrollActive) {
+        onManualScrollDuringAutoScroll();
+      }
     }
   }, { passive: true });
 
@@ -605,6 +920,23 @@ function init() {
       disableFocusMode();
     }
   });
+
+  // Auto-scroll toggle event from settings.js
+  document.addEventListener('aeon:auto-scroll-changed', (event) => {
+    if (event.detail.enabled) {
+      startAutoScroll();
+    } else {
+      stopAutoScroll();
+    }
+  });
+
+  // Auto-scroll speed change event from settings.js
+  document.addEventListener('aeon:auto-scroll-speed-changed', (event) => {
+    setAutoScrollSpeed(event.detail.speed);
+  });
+
+  // Initialise TTS (show button if API is available)
+  initTTS();
 }
 
 init();
@@ -617,5 +949,11 @@ window.AeonReader = {
   showArticle,
   enableFocusMode,
   disableFocusMode,
+  startAutoScroll,
+  stopAutoScroll,
+  setAutoScrollSpeed,
+  startTTS,
+  stopTTS,
+  toggleTTS,
   getCurrentArticle: () => currentArticle,
 };

@@ -428,3 +428,39 @@
     font-size: calc(19px * var(--font-scale));
   }
 }
+
+/* =========================================================
+   Text-to-Speech Active State
+   ========================================================= */
+
+/* Highlight the TTS button while reading aloud */
+.btn--tts-active {
+  /* Use the accent colour with a subtle background fill */
+  color: var(--accent-color, #8B4513);
+  background-color: var(--accent-color-alpha, rgba(139, 69, 19, 0.12));
+  border-radius: 50%;
+}
+
+/* =========================================================
+   Auto-scroll (Teleprompter Mode) Indicator
+   ========================================================= */
+
+/* Thin pulsing bar shown at the bottom of the viewport when auto-scroll is on.
+   Added by JS when auto-scroll starts; removed when it stops. */
+.auto-scroll-indicator {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-color, #8B4513);
+  opacity: 0.6;
+  animation: auto-scroll-pulse 2s ease-in-out infinite;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes auto-scroll-pulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 0.25; }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "aeon-reading",
+  "private": true,
+  "scripts": {
+    "test:js": "vitest run",
+    "test:js:watch": "vitest"
+  },
+  "devDependencies": {
+    "jsdom": "^29.0.1",
+    "vitest": "^2.1.9"
+  }
+}

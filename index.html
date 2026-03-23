@@ -195,6 +195,14 @@
 
         <!-- Right-side action buttons -->
         <div class="reader-header__actions">
+          <!-- Text-to-Speech button — hidden if Web Speech API is unavailable -->
+          <button class="icon-btn" id="btn-tts" aria-label="Read article aloud" hidden>
+            <!-- Speaker/play icon -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+            </svg>
+          </button>
+
           <!-- Share article via Web Share API (falls back to clipboard) -->
           <button class="icon-btn" id="btn-share" aria-label="Share article">
             <!-- Share icon -->
@@ -430,6 +438,34 @@
           <input type="checkbox" id="focus-mode-toggle" role="switch" />
           <span class="toggle-switch__slider"></span>
         </label>
+      </div>
+
+      <!-- Auto-scroll toggle (teleprompter mode) -->
+      <div class="settings-group settings-group--row">
+        <label class="settings-label" for="auto-scroll-toggle">Auto-scroll</label>
+        <label class="toggle-switch" aria-label="Auto-scroll">
+          <input type="checkbox" id="auto-scroll-toggle" role="switch" />
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+
+      <!-- Auto-scroll speed slider — only visible when auto-scroll is on -->
+      <div class="settings-group" id="auto-scroll-speed-group" hidden>
+        <label class="settings-label" for="auto-scroll-speed-slider">Scroll speed</label>
+        <div class="slider-row">
+          <span class="slider-label-small" aria-hidden="true">Slow</span>
+          <input
+            type="range"
+            id="auto-scroll-speed-slider"
+            class="settings-slider"
+            min="1"
+            max="5"
+            step="1"
+            value="2"
+            aria-label="Auto-scroll speed"
+          />
+          <span class="slider-label-large" aria-hidden="true">Fast</span>
+        </div>
       </div>
 
     </div>

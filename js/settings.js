@@ -67,6 +67,9 @@ const btnCloseReaderSettings  = document.getElementById('btn-close-reader-settin
 const readerThemePills        = document.getElementById('reader-theme-pills');
 const readerFontSizeSlider    = document.getElementById('reader-font-size-slider');
 const focusModeToggle         = document.getElementById('focus-mode-toggle');
+const autoScrollToggle        = document.getElementById('auto-scroll-toggle');
+const autoScrollSpeedGroup    = document.getElementById('auto-scroll-speed-group');
+const autoScrollSpeedSlider   = document.getElementById('auto-scroll-speed-slider');
 
 // ---------------------------------------------------------------------------
 // DOM References — PAT Prompt Sheet
@@ -239,12 +242,14 @@ function syncFontSizeSliders(value) {
  * Called once on initialisation so the controls match what's already applied.
  */
 function restoreUIFromStorage() {
-  const theme   = localStorage.getItem('aeon_theme')        || 'sepia';
-  const font    = localStorage.getItem('aeon_font')         || 'lora';
-  const scale   = localStorage.getItem('aeon_font_scale')   || '1';
-  const spacing = localStorage.getItem('aeon_line_spacing') || String(SPACING_COMFORTABLE);
-  const dropCap = localStorage.getItem('aeon_drop_cap')     === 'true';
-  const pat     = localStorage.getItem(LS_PAT)              || '';
+  const theme        = localStorage.getItem('aeon_theme')          || 'sepia';
+  const font         = localStorage.getItem('aeon_font')           || 'lora';
+  const scale        = localStorage.getItem('aeon_font_scale')     || '1';
+  const spacing      = localStorage.getItem('aeon_line_spacing')   || String(SPACING_COMFORTABLE);
+  const dropCap      = localStorage.getItem('aeon_drop_cap')       === 'true';
+  const pat          = localStorage.getItem(LS_PAT)                || '';
+  const autoScroll   = localStorage.getItem('aeon_auto_scroll')    === 'true';
+  const scrollSpeed  = parseInt(localStorage.getItem('aeon_auto_scroll_speed') || '2', 10);
 
   // Theme pills (both sheets)
   syncAllPills('themeValue', theme);
@@ -269,6 +274,21 @@ function restoreUIFromStorage() {
   // Drop cap toggle
   if (dropCapToggle) {
     dropCapToggle.checked = dropCap;
+  }
+
+  // Auto-scroll toggle and speed slider
+  if (autoScrollToggle) {
+    autoScrollToggle.checked = autoScroll;
+  }
+  if (autoScrollSpeedSlider) {
+    autoScrollSpeedSlider.value = String(scrollSpeed);
+  }
+  if (autoScrollSpeedGroup) {
+    if (autoScroll) {
+      autoScrollSpeedGroup.removeAttribute('hidden');
+    } else {
+      autoScrollSpeedGroup.setAttribute('hidden', '');
+    }
   }
 
   // PAT input (show masked placeholder if token exists)
@@ -474,6 +494,36 @@ function init() {
     focusModeToggle.addEventListener('change', () => {
       document.dispatchEvent(new CustomEvent('aeon:focus-mode-changed', {
         detail: { enabled: focusModeToggle.checked },
+      }));
+    });
+  }
+
+  // Auto-scroll toggle — enables/disables teleprompter mode
+  if (autoScrollToggle) {
+    autoScrollToggle.addEventListener('change', () => {
+      const enabled = autoScrollToggle.checked;
+
+      // Show or hide the speed slider based on the toggle state
+      if (autoScrollSpeedGroup) {
+        if (enabled) {
+          autoScrollSpeedGroup.removeAttribute('hidden');
+        } else {
+          autoScrollSpeedGroup.setAttribute('hidden', '');
+        }
+      }
+
+      document.dispatchEvent(new CustomEvent('aeon:auto-scroll-changed', {
+        detail: { enabled },
+      }));
+    });
+  }
+
+  // Auto-scroll speed slider
+  if (autoScrollSpeedSlider) {
+    autoScrollSpeedSlider.addEventListener('input', () => {
+      const speed = parseInt(autoScrollSpeedSlider.value, 10);
+      document.dispatchEvent(new CustomEvent('aeon:auto-scroll-speed-changed', {
+        detail: { speed },
       }));
     });
   }
