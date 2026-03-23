@@ -162,13 +162,20 @@ async function triggerWorkflowDispatch(pat) {
 // ---------------------------------------------------------------------------
 
 /**
- * Fetch `data/articles.json` and return { etag, data } if the file has changed
- * since the last known ETag/Last-Modified value, or null if unchanged.
+ * Fetch `data/articles.json` and return `{ etag, data }` if the file has
+ * changed since the last known version, or `null` if unchanged.
  *
- * Uses `cache: 'no-store'` to bypass the browser cache and get the latest version.
+ * Version detection order:
+ *   1. HTTP `ETag` response header (most reliable — set by most servers).
+ *   2. HTTP `Last-Modified` response header (fallback for servers without ETags).
+ *   3. `lastFetched` field inside the JSON (GitHub Pages CDN fallback — the
+ *      workflow always updates this timestamp when it writes new articles).
+ *
+ * Using `cache: 'no-store'` bypasses the browser HTTP cache; the SW's
+ * network-first strategy ensures the response comes from the origin server.
  *
  * @returns {Promise<{etag: string, data: object}|null>}
- *   Returns the new data + etag if changed, or null if unchanged.
+ *   Returns the new data + version string if changed, or null if unchanged.
  */
 async function checkForUpdates() {
   const response = await fetch(ARTICLES_JSON_URL, { cache: 'no-store' });
@@ -177,17 +184,22 @@ async function checkForUpdates() {
     throw new Error(`Failed to poll articles.json: HTTP ${response.status}`);
   }
 
-  // Use ETag or Last-Modified as a cache-buster signal
-  const newEtag = response.headers.get('ETag') || response.headers.get('Last-Modified');
+  // Always parse the body — we need lastFetched as a version fallback
+  const data = await response.json();
 
-  if (newEtag && newEtag === lastKnownEtag) {
-    // No change
-    return null;
+  // Build a version token: prefer ETag/Last-Modified; fall back to lastFetched
+  const newVersion = response.headers.get('ETag')
+    || response.headers.get('Last-Modified')
+    || data.lastFetched
+    || null;
+
+  // Strict equality covers null===null (both unavailable → treat as unchanged)
+  if (newVersion === lastKnownEtag) {
+    return null; // No change detected
   }
 
-  const data = await response.json();
-  lastKnownEtag = newEtag;
-  return { etag: newEtag, data };
+  lastKnownEtag = newVersion;
+  return { etag: newVersion, data };
 }
 
 /**
@@ -303,10 +315,18 @@ async function triggerRefresh() {
     ? window.AeonFeed.getCurrentArticles()
     : [];
 
-  // Prime the ETag so we detect the change after the workflow runs
+  // Prime the version baseline so we can detect changes after the workflow runs.
+  // Use GET (not HEAD) so we can read lastFetched as a fallback when the server
+  // does not send ETag/Last-Modified headers (e.g. GitHub Pages CDN).
   try {
-    const response = await fetch(ARTICLES_JSON_URL, { cache: 'no-store', method: 'HEAD' });
-    lastKnownEtag = response.headers.get('ETag') || response.headers.get('Last-Modified');
+    const response = await fetch(ARTICLES_JSON_URL, { cache: 'no-store' });
+    const etag = response.headers.get('ETag') || response.headers.get('Last-Modified');
+    if (etag) {
+      lastKnownEtag = etag;
+    } else {
+      const data = await response.json();
+      lastKnownEtag = data.lastFetched || null;
+    }
   } catch (_) {
     // Not critical — polling will still detect changes even without a baseline
   }

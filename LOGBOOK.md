@@ -228,3 +228,48 @@ No required next phase. All phases are complete. Optional enhancements:
 
 ### Good Luck Note
 The app is now fully functional end-to-end — data pipeline, feed, reader, themes, settings, refresh, service worker, focus mode, swipe, wake lock, share, auto-scroll, and TTS all implemented. All 82 JS tests and 54 Python tests pass. The codebase is well-documented throughout. Enjoy reading!
+
+
+---
+
+## Agent 3 — 2026-03-23
+
+### Completed Phases
+- ✅ Bug-fix + Quality Audit — Fixed all identified production bugs; polished codebase to production-grade quality
+
+### Partially Completed Phases
+None — all bugs fixed and all quality items addressed.
+
+### Files Created
+None.
+
+### Files Modified
+- `sw.js` — Moved from `js/sw.js` to repo root (fixes SW scope on GitHub Pages); incremented CACHE_VERSION to 'v2'; split HTML/directory requests to use network-first strategy (was incorrectly cache-first)
+- `js/app.js` — Updated SW registration path from `./js/sw.js` to `./sw.js`; removed now-unnecessary explicit `scope: './'`
+- `js/api.js` — Fixed `checkForUpdates()`: added `lastFetched` fallback for servers without ETag/Last-Modified (critical for GitHub Pages CDN); changed comparison to strict `===` so `null===null` correctly signals "no change" instead of false-positive; changed baseline priming from HEAD to GET so `lastFetched` can be read as fallback
+- `index.html` — Reordered `<script defer>` tags so `api.js` loads **before** `feed.js`; eliminates the theoretical race condition where the Refresh button was clicked before `window.AeonAPI` was defined
+- `scripts/fetch_articles.py` — Fixed `run()`: added guard before Step 7 save so that if all article-page fetches fail (e.g. Aeon blocks scraping), the existing `articles.json` is NOT overwritten with empty articles
+- `tests/js/test_api.test.js` — Added 2 new tests: `lastFetched` fallback detection; `null===null` stable no-change assertion
+- `LOGBOOK.md` — This entry
+
+### Known Issues / Technical Debt
+1. **articles.json is currently empty** because a previous workflow run had all article-page fetches fail (Aeon may have rate-limited or blocked the scraper). The `fetch_articles.py` fix will prevent another bad commit, but a manual workflow trigger is needed to repopulate.
+2. **Text highlighting** still deferred from Agent 2 — complex feature, low priority.
+3. **Auto-scroll persistence** still deferred from Agent 2.
+4. **PWA icons** are still placeholder solid-colour squares.
+5. **Google Fonts** still loaded from CDN (not self-hosted).
+
+### Recommendations for Next Agent
+- Trigger the "Fetch Aeon Articles" workflow manually from the Actions tab to repopulate `articles.json`.
+- To run JS tests: `npm run test:js` (should show 84 passing).
+- To run Python tests: `pip install requests lxml bleach python-dateutil cssselect pytest && python -m pytest tests/test_fetch_articles.py -v`.
+- The Service Worker is now correctly positioned at the repo root. Old SW registrations under `js/sw.js` will auto-unregister on next page load (old cache 'v1' will be deleted by the new 'v2' activate event).
+
+### Next Agent Should Start At
+No required next phase. Optional:
+1. Trigger the workflow to repopulate articles.
+2. Replace placeholder PWA icons.
+3. Self-host Google Fonts.
+
+### Good Luck Note
+All production-blocking bugs are now fixed. The refresh button will work correctly once a PAT is saved and the user is online. Polling now reliably detects article updates even on GitHub Pages where ETags are not always present. The Service Worker properly controls the full app scope on GitHub Pages.

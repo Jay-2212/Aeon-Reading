@@ -773,6 +773,15 @@ def run() -> None:
     # ------------------------------------------------------------------
     # Step 7: Rebuild articles.json
     # ------------------------------------------------------------------
+    # Guard: only write the index if at least one article was processed
+    # OR stale articles need to be removed.  If new_ids were found but
+    # every article-page fetch failed, new_summaries is empty — in that
+    # case we leave the existing articles.json untouched rather than
+    # overwriting it with an empty list.
+    if not new_summaries and not removed_ids:
+        print("No articles were successfully processed or removed. Skipping index update.")
+        return
+
     # Keep articles that are still in the feed
     kept_articles = [a for a in existing_articles if a["id"] not in removed_ids]
 

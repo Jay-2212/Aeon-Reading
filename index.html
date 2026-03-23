@@ -17,11 +17,11 @@
     styles/main.css    — layout, components, all four themes
     styles/reader.css  — reader-specific typography
     js/app.js          — router + bootstrap
+    js/api.js          — GitHub API (workflow dispatch + polling)
     js/feed.js         — article feed rendering
     js/reader.js       — article reader rendering
     js/settings.js     — settings panel logic
-    js/api.js          — GitHub API (workflow dispatch + polling)
-    js/sw.js           — Service Worker (offline support)
+    sw.js              — Service Worker (offline support)
 -->
 <html lang="en" data-theme="sepia">
 <head>
@@ -533,13 +533,19 @@
   <!-- ==================================================================
        SCRIPTS
        All scripts are deferred so they execute after the HTML is parsed.
-       Load order matters: app.js bootstraps first, others follow.
+       Load order reflects the dependency graph:
+         app.js     — bootstraps window.AeonApp (no dependencies)
+         api.js     — registers window.AeonAPI before feed.js initialises,
+                      eliminating any race condition on the Refresh button
+         settings.js — depends on window.AeonApp at init time
+         feed.js    — depends on window.AeonApp and window.AeonAPI at click time
+         reader.js  — depends on window.AeonApp at init time
        ================================================================== -->
   <script src="js/app.js" defer></script>
+  <script src="js/api.js" defer></script>
   <script src="js/settings.js" defer></script>
   <script src="js/feed.js" defer></script>
   <script src="js/reader.js" defer></script>
-  <script src="js/api.js" defer></script>
 
 </body>
 </html>
