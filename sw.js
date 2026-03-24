@@ -4,13 +4,14 @@
  * Phase 8: Service Worker & Progressive Web App Support
  *
  * This Service Worker provides offline support and caching for the Aeon Reader.
- * It is registered by `js/app.js` with scope `'./'`.
+ * It is registered by `js/app.js` without an explicit scope, so its default
+ * scope covers the entire app origin path (the SW file is at the repo root).
  *
  * Cache strategies per resource type (see ENGINEERING_PLAN.md §12.1):
  *
  * | Resource                | Strategy                              |
  * |-------------------------|---------------------------------------|
- * | index.html              | Network-first, stale-while-revalidate |
+ * | index.html / HTML pages | Network-first (always serve fresh)    |
  * | styles/*.css, js/*.js   | Cache-first (immutable-ish assets)    |
  * | data/articles.json      | Network-first; serve cache if offline |
  * | data/article-*.json     | Cache-first; add on first read        |
@@ -30,8 +31,11 @@
 // Cache Configuration
 // ---------------------------------------------------------------------------
 
-/** Current cache version — increment this to bust old caches on deploy. */
-const CACHE_VERSION = 'v1';
+/**
+ * Current cache version — increment this whenever the SW logic or
+ * PRECACHE_URLS change to ensure clients receive the updated assets.
+ */
+const CACHE_VERSION = 'v2';
 
 /** Cache for the application shell (HTML, CSS, JS, manifest, icons). */
 const SHELL_CACHE = `aeon-shell-${CACHE_VERSION}`;
@@ -158,10 +162,15 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // ---- App shell (HTML, CSS, JS, manifest) — Cache-first ----
-  if (url.pathname.match(/\.(html|css|js|webmanifest|svg|png|ico)$/) ||
-      url.pathname === '/' ||
-      url.pathname.endsWith('/')) {
+  // ---- HTML pages and directory indexes — Network-first ----
+  // Always fetch HTML fresh so the user gets updated script/style references.
+  if (url.pathname.match(/\.html$/) || url.pathname === '/' || url.pathname.endsWith('/')) {
+    event.respondWith(networkFirst(request, SHELL_CACHE));
+    return;
+  }
+
+  // ---- JS, CSS, manifest, icons, SVGs — Cache-first (immutable assets) ----
+  if (url.pathname.match(/\.(css|js|webmanifest|svg|png|ico)$/)) {
     event.respondWith(cacheFirst(request, SHELL_CACHE));
     return;
   }

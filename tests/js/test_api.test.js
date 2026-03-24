@@ -192,6 +192,61 @@ describe('api.js — checkForUpdates()', () => {
     const result = await window.AeonAPI.checkForUpdates();
     expect(result).toBeNull();
   });
+
+  it('uses lastFetched as a version token when no ETag or Last-Modified is present', async () => {
+    /**
+     * Asserts that when the server sends no caching headers, checkForUpdates
+     * falls back to the lastFetched field inside articles.json.
+     * This is the typical behaviour on GitHub Pages which does not always
+     * send ETag/Last-Modified for static files.
+     */
+    const ts1 = '2026-03-23T19:00:00.000000+00:00';
+    const ts2 = '2026-03-23T20:00:00.000000+00:00';
+    const noHeaders = { get: () => null }; // No ETag, no Last-Modified
+
+    // First call — sets lastKnownEtag to ts1
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      headers: noHeaders,
+      json: async () => ({ lastFetched: ts1, articles: [] }),
+    });
+    await window.AeonAPI.checkForUpdates();
+
+    // Second call — same lastFetched → no change
+    let result = await window.AeonAPI.checkForUpdates();
+    expect(result).toBeNull();
+
+    // Third call — updated lastFetched → change detected
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      headers: noHeaders,
+      json: async () => ({ lastFetched: ts2, articles: [{ id: 'article-a' }] }),
+    });
+    result = await window.AeonAPI.checkForUpdates();
+    expect(result).not.toBeNull();
+    expect(result.etag).toBe(ts2);
+  });
+
+  it('returns null when no version token is available at all (null === null)', async () => {
+    /**
+     * Asserts that when neither ETag/Last-Modified nor lastFetched is available,
+     * checkForUpdates treats the state as unchanged (null === null) on the
+     * second call, preventing spurious "change detected" events.
+     */
+    const noHeaders = { get: () => null };
+
+    // First call — lastKnownEtag set to null
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      headers: noHeaders,
+      json: async () => ({ lastFetched: null, articles: [] }),
+    });
+    await window.AeonAPI.checkForUpdates();
+
+    // Second call — still null → should return null (no false positive)
+    const result = await window.AeonAPI.checkForUpdates();
+    expect(result).toBeNull();
+  });
 });
 
 // ---------------------------------------------------------------------------

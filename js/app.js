@@ -292,13 +292,13 @@ function setOfflineStatus(isOffline) {
 
 /**
  * Register the Service Worker if the browser supports it.
- * The SW file is at `js/sw.js` but is served from the root scope
- * by registering with `scope: './'`.
+ * The SW file is at `sw.js` (repo root) so its default scope covers the
+ * entire app path — no explicit `scope` option is needed.
  */
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('./js/sw.js', { scope: './' })
+      .register('./sw.js')
       .then(reg => console.info('[SW] Registered, scope:', reg.scope))
       .catch(err => console.warn('[SW] Registration failed:', err));
   }
