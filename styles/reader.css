@@ -292,6 +292,11 @@
   background-color: var(--bg-card);
 }
 
+/* Explicitly remove generic margins from images inside figures
+   so figcaptions remain visually close to their images. */
+.reader-body figure img {
+  margin: 0;
+}
 /* Horizontal rule */
 .reader-body hr {
   border: none;
