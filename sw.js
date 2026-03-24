@@ -35,7 +35,7 @@
  * Current cache version — increment this whenever the SW logic or
  * PRECACHE_URLS change to ensure clients receive the updated assets.
  */
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 
 /** Cache for the application shell (HTML, CSS, JS, manifest, icons). */
 const SHELL_CACHE = `aeon-shell-${CACHE_VERSION}`;

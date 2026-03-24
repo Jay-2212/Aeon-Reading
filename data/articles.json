@@ -1,4 +1,185 @@
 {
-  "lastFetched": "2026-03-23T19:04:42.915937+00:00",
-  "articles": []
+  "lastFetched": "2026-03-24T12:45:48.707581+00:00",
+  "articles": [
+    {
+      "id": "far-from-junk-the-clock-in-our-dna-and-its-discoverer",
+      "title": "The clock in our genes",
+      "author": "Beatrice Steinert",
+      "category": "",
+      "publishedAt": "2026-03-24T10:00:00+00:00",
+      "excerpt": "The biologist Victoria Foe discovered a timing device in ‘junk’ DNA that could unlock the evolution of complex life- by Beatrice SteinertRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 30,
+      "articleFile": "data/article-far-from-junk-the-clock-in-our-dna-and-its-discoverer.json"
+    },
+    {
+      "id": "the-extraordinary-efficiency-of-japans-edo-economy",
+      "title": "The city that wasted nothing",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-23T10:01:00+00:00",
+      "excerpt": "Edo, modern Tokyo, transformed from a city near ecological collapse to a thriving epicentre by creating a circular economy- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-the-extraordinary-efficiency-of-japans-edo-economy.json"
+    },
+    {
+      "id": "how-lansana-keita-reinvigorated-african-philosophy",
+      "title": "An African philosophy",
+      "author": "Sanya Osha",
+      "category": "",
+      "publishedAt": "2026-03-23T10:00:00+00:00",
+      "excerpt": "Lansana Keita rejected Eurocentric ideas, tracing the philosophical tradition back to African Kemet or ancient Egypt- by Sanya OshaRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 19,
+      "articleFile": "data/article-how-lansana-keita-reinvigorated-african-philosophy.json"
+    },
+    {
+      "id": "what-the-evolution-of-bitch-says-about-gender-and-power",
+      "title": "Bitch: a history",
+      "author": "Karen Stollznow",
+      "category": "",
+      "publishedAt": "2026-03-20T10:00:00+00:00",
+      "excerpt": "The word can morph from noun to verb to adjective, from dog to human, from female to male. What will it do next?- by Karen StollznowRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 24,
+      "articleFile": "data/article-what-the-evolution-of-bitch-says-about-gender-and-power.json"
+    },
+    {
+      "id": "movement-is-a-life-philosophy-for-an-87-year-old-runner",
+      "title": "Running against time",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-19T10:01:00+00:00",
+      "excerpt": "We all want longevity without compromising on quality of life. This 87-year-old achieves both with a daily running habit- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-movement-is-a-life-philosophy-for-an-87-year-old-runner.json"
+    },
+    {
+      "id": "if-we-hope-to-build-artificial-souls-where-should-we-start",
+      "title": "Geist in the machine",
+      "author": "Peter Wolfendale",
+      "category": "",
+      "publishedAt": "2026-03-19T10:00:00+00:00",
+      "excerpt": "As the 18th-century war between mechanism and romanticism returns, we face a new question: can we build artificial souls?- by Peter WolfendaleRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 39,
+      "articleFile": "data/article-if-we-hope-to-build-artificial-souls-where-should-we-start.json"
+    },
+    {
+      "id": "could-one-road-forever-change-this-remote-alaskan-refuge",
+      "title": "Izembek",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-18T10:01:00+00:00",
+      "excerpt": "What does true wilderness look like? A photographer captures a rare slice of it in this refuge threatened by development- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-could-one-road-forever-change-this-remote-alaskan-refuge.json"
+    },
+    {
+      "id": "why-do-some-regrets-fade-while-others-persist-and-grow",
+      "title": "Abandoning ourselves",
+      "author": "Tasha Kleeman",
+      "category": "",
+      "publishedAt": "2026-03-17T10:00:00+00:00",
+      "excerpt": "Since living requires choosing, we will always feel regret about the paths not taken. But what matters is the future we forge- by Tasha KleemanRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 13,
+      "articleFile": "data/article-why-do-some-regrets-fade-while-others-persist-and-grow.json"
+    },
+    {
+      "id": "henri-bergson-on-why-our-world-is-built-of-objects-and-space",
+      "title": "Henri Bergson: Creative Evolution",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-16T10:01:00+00:00",
+      "excerpt": "How do we develop our sense of space? Henri Bergson questioned the very fabric of our reality in his revolutionary work- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-henri-bergson-on-why-our-world-is-built-of-objects-and-space.json"
+    },
+    {
+      "id": "she-freed-physics-but-emmy-noether-couldnt-escape-herself",
+      "title": "Unbounded",
+      "author": "Julia Ravanis",
+      "category": "",
+      "publishedAt": "2026-03-16T10:00:00+00:00",
+      "excerpt": "In the early 20th century, Emmy Noether’s mathematics transcended the physical world. She longed to do the same herself- by Julia RavanisRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 19,
+      "articleFile": "data/article-she-freed-physics-but-emmy-noether-couldnt-escape-herself.json"
+    },
+    {
+      "id": "what-african-philosophy-says-about-our-duties-to-oneself",
+      "title": "A duty to oneself",
+      "author": "Thaddeus Metz",
+      "category": "",
+      "publishedAt": "2026-03-13T10:00:00+00:00",
+      "excerpt": "African philosophical values of harmony and vitality have much to offer our thinking about what we owe to ourselves- by Thaddeus MetzRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 17,
+      "articleFile": "data/article-what-african-philosophy-says-about-our-duties-to-oneself.json"
+    },
+    {
+      "id": "a-dispatch-from-the-dawn-of-the-electronic-music-age",
+      "title": "What is electronic music?",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-12T10:01:00+00:00",
+      "excerpt": "These days, synthesised sound is easy to access – but early electronic music pioneers had to get hands on to produce it- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-a-dispatch-from-the-dawn-of-the-electronic-music-age.json"
+    },
+    {
+      "id": "de-extinction-is-redefining-what-it-means-to-be-alive",
+      "title": "Reversing extinction",
+      "author": "Sadiah Qureshi",
+      "category": "",
+      "publishedAt": "2026-03-12T10:00:00+00:00",
+      "excerpt": "Technologies of preserving and reviving organisms are already redefining the meaning of life, death, and extinction itself- by Sadiah QureshiRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 19,
+      "articleFile": "data/article-de-extinction-is-redefining-what-it-means-to-be-alive.json"
+    },
+    {
+      "id": "one-mans-poignant-search-for-community-via-radio-waves",
+      "title": "Echo",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-11T10:01:00+00:00",
+      "excerpt": "Struggling to speak after an operation, one man sets out to build himself a new connection to the world: a radio antenna- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 2,
+      "articleFile": "data/article-one-mans-poignant-search-for-community-via-radio-waves.json"
+    },
+    {
+      "id": "who-am-i-when-i-care-emotion-through-the-lens-of-franz-boas",
+      "title": "Does culture make emotion?",
+      "author": "Noga Arikha",
+      "category": "",
+      "publishedAt": "2026-03-10T10:00:00+00:00",
+      "excerpt": "Franz Boas helps us solve the puzzle of where our emotional lives originate: in our selves or in the cultures around us- by Noga ArikhaRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-who-am-i-when-i-care-emotion-through-the-lens-of-franz-boas.json"
+    }
+  ]
 }
