@@ -311,3 +311,52 @@ Optional enhancements:
 
 ### Good Luck Note
 The "Refresh" button and "Offline" issues reported by the user are now resolved. The app will no longer be empty even if scraping is partially blocked. Enjoy!
+
+---
+
+## Agent 5 — 2026-03-24
+
+### Completed Phases
+- ✅ Bug-fix: Fixed critical JavaScript error preventing app from loading articles.
+- ✅ Bug-fix: Fixed missing CSS rule causing skeleton and empty state to remain visible.
+- ✅ Bug-fix: Updated Content Security Policy to allow images from aeonmedia.co domain.
+- ✅ Code quality: Removed excessive debug console.log statements from feed.js.
+- ✅ Testing: Verified app functionality with Playwright end-to-end tests.
+
+### Files Modified
+- `js/api.js` — Renamed `ARTICLES_JSON_URL` to `ARTICLES_JSON_PATH` to avoid duplicate constant declaration with feed.js (line 51).
+- `js/feed.js` — Removed debug code and excessive console.log statements; cleaned up renderFeed, loadFeed, and init functions.
+- `styles/main.css` — Added missing `[hidden] { display: none !important; }` CSS rule (line 59-61) to properly hide elements with the hidden attribute.
+- `index.html` — Added `https://images.aeonmedia.co` to Content Security Policy img-src directive (line 61).
+- `package.json` + `package-lock.json` — Added Playwright dev dependencies for testing.
+
+### Root Cause Analysis
+The app was showing "offline" with flashing skeletons and empty articles due to three critical bugs:
+
+1. **JavaScript Fatal Error**: Both `feed.js` (line 29) and `api.js` (line 51) declared the same constant `ARTICLES_JSON_URL` in global scope. Since these scripts load with `defer` attribute, they execute sequentially in global scope, causing "Identifier 'ARTICLES_JSON_URL' has already been declared" error. This broke all JavaScript execution, preventing articles from loading.
+
+2. **Missing CSS Rule**: The codebase had CSS for `.view[hidden]` but no general `[hidden]` selector. When JavaScript called `setAttribute('hidden', '')` on skeleton and empty state elements, they remained visible because CSS didn't hide them. This caused the "flashing skeletons" issue.
+
+3. **CSP Blocking Images**: Article images from `images.aeonmedia.co` were blocked by Content Security Policy, which only allowed `images.aeon.co`. This prevented article images from displaying in reader view.
+
+### Known Issues / Technical Debt
+1. **PWA icons** are still placeholder solid-colour squares.
+2. **Google Fonts** still loaded from CDN (not self-hosted for full offline support).
+3. **Vercel Security Checkpoint** still blocks full-text scraping (RSS fallback is in place).
+
+### Recommendations for Next Agent
+- All critical bugs are fixed. The app now loads and displays articles correctly.
+- Articles can be clicked to open reader view.
+- Back navigation works properly.
+- To test: `python3 -m http.server 8080` then open http://localhost:8080/
+- To run JS tests: `npm run test:js` (should show 84 passing).
+
+### Next Agent Should Start At
+No required next phase. All critical functionality is working. Optional enhancements:
+1. Replace placeholder PWA icons with designed icons.
+2. Self-host Google Fonts as WOFF2 for full offline capability.
+3. Implement text highlighting feature (deferred from Agent 2).
+
+### Good Luck Note
+The app is now fully functional! Articles load correctly, the skeleton hides after loading, and navigation works perfectly. Tested with Playwright to confirm feed view, reader view, and back navigation all work as expected. The three critical bugs (duplicate const, missing CSS, CSP) have been resolved. Enjoy reading!
+

@@ -178,21 +178,8 @@ function createArticleCard(article) {
  * @param {Array} articles - Array of article summary objects.
  */
 function renderFeed(articles) {
-  console.log('[Feed] renderFeed called with', articles?.length, 'articles');
-  
-  // DEBUG: Show status on screen
-  let debugEl = document.getElementById('debug-status');
-  if (!debugEl) {
-    debugEl = document.createElement('div');
-    debugEl.id = 'debug-status';
-    debugEl.style.cssText = 'position:fixed;bottom:0;left:0;background:rgba(0,0,0,0.8);color:white;font-family:monospace;z-index:9999;padding:5px;font-size:10px;';
-    document.body.appendChild(debugEl);
-  }
-  debugEl.textContent = `Articles: ${articles?.length || 0} | List empty: ${articleList.children.length === 0}`;
-
   articleList.innerHTML = '';
   if (!articles || articles.length === 0) {
-    console.warn('[Feed] No articles to render, showing empty state');
     showEmptyState();
     return;
   }
@@ -201,10 +188,6 @@ function renderFeed(articles) {
     fragment.appendChild(createArticleCard(article));
   });
   articleList.appendChild(fragment);
-  console.log('[Feed] articleList populated with', articleList.children.length, 'items');
-  
-  debugEl.textContent += ` | Populated: ${articleList.children.length}`;
-  
   hideSkeleton();
   hideEmptyState();
   hideErrorState();
@@ -313,13 +296,10 @@ function handleRefresh() {
  * Shows the skeleton during loading and handles error / empty states.
  */
 async function loadFeed() {
-  console.log('[Feed] loadFeed called');
   showSkeleton();
   try {
     const data = await fetchArticles();
-    console.log('[Feed] fetchArticles response:', data);
     currentArticles = data.articles || [];
-    console.log('[Feed] currentArticles length:', currentArticles.length);
     renderFeed(currentArticles);
   } catch (err) {
     console.error('[Feed] Failed to load articles:', err);
@@ -330,7 +310,6 @@ async function loadFeed() {
 
 /** Initialise feed event listeners and load the feed. */
 function init() {
-  console.log('[Feed] init starting');
   // Refresh button in header
   const btnRefresh = document.getElementById('btn-refresh');
   if (btnRefresh) {
@@ -352,7 +331,6 @@ function init() {
   // Listen for articles-updated event from api.js
   document.addEventListener('aeon:articles-updated', (event) => {
     const { newArticles, totalCount } = event.detail;
-    console.log('[Feed] aeon:articles-updated received:', newArticles?.length);
     if (newArticles && newArticles.length > 0) {
       prependNewCards(newArticles);
       window.AeonApp.showToast(
@@ -365,12 +343,10 @@ function init() {
 
   // Restore scroll position when returning from reader view
   document.addEventListener('aeon:show-feed', () => {
-    console.log('[Feed] aeon:show-feed received');
     restoreScrollPosition();
   });
 
   // Initial load
-  console.log('[Feed] Initial load trigger');
   loadFeed();
 }
 

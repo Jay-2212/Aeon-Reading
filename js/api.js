@@ -48,7 +48,7 @@ const POLL_INTERVAL_MS = 10_000;
 const POLL_TIMEOUT_MS = 15 * 60 * 1_000;
 
 /** Path to articles index used for polling. */
-const ARTICLES_JSON_URL = './data/articles.json';
+const ARTICLES_JSON_PATH = './data/articles.json';
 
 // ---------------------------------------------------------------------------
 // Module State
@@ -177,7 +177,7 @@ async function triggerWorkflowDispatch(pat) {
  *   Returns the new data + version string if changed, or null if unchanged.
  */
 async function checkForUpdates() {
-  const response = await fetch(ARTICLES_JSON_URL, { cache: 'no-store' });
+  const response = await fetch(ARTICLES_JSON_PATH, { cache: 'no-store' });
 
   if (!response.ok) {
     throw new Error(`Failed to poll articles.json: HTTP ${response.status}`);
@@ -312,7 +312,7 @@ async function triggerRefresh() {
   // Use GET (not HEAD) so we can read lastFetched as a fallback when the server
   // does not send ETag/Last-Modified headers (e.g. GitHub Pages CDN).
   try {
-    const response = await fetch(ARTICLES_JSON_URL, { cache: 'no-store' });
+    const response = await fetch(ARTICLES_JSON_PATH, { cache: 'no-store' });
     const etag = response.headers.get('ETag') || response.headers.get('Last-Modified');
     if (etag) {
       lastKnownEtag = etag;
