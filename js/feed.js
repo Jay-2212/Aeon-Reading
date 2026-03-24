@@ -178,8 +178,10 @@ function createArticleCard(article) {
  * @param {Array} articles - Array of article summary objects.
  */
 function renderFeed(articles) {
+  console.log('[Feed] renderFeed called with', articles?.length, 'articles');
   articleList.innerHTML = '';
   if (!articles || articles.length === 0) {
+    console.warn('[Feed] No articles to render, showing empty state');
     showEmptyState();
     return;
   }
@@ -188,6 +190,7 @@ function renderFeed(articles) {
     fragment.appendChild(createArticleCard(article));
   });
   articleList.appendChild(fragment);
+  console.log('[Feed] articleList populated with', articleList.children.length, 'items');
   hideSkeleton();
   hideEmptyState();
   hideErrorState();
@@ -296,10 +299,13 @@ function handleRefresh() {
  * Shows the skeleton during loading and handles error / empty states.
  */
 async function loadFeed() {
+  console.log('[Feed] loadFeed called');
   showSkeleton();
   try {
     const data = await fetchArticles();
+    console.log('[Feed] fetchArticles response:', data);
     currentArticles = data.articles || [];
+    console.log('[Feed] currentArticles length:', currentArticles.length);
     renderFeed(currentArticles);
   } catch (err) {
     console.error('[Feed] Failed to load articles:', err);

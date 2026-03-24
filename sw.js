@@ -196,13 +196,14 @@ self.addEventListener('fetch', (event) => {
 async function cacheFirst(request, cacheName) {
   const cachedResponse = await caches.match(request);
   if (cachedResponse) {
+    console.debug('[SW] cacheFirst hit:', request.url);
     return cachedResponse;
   }
+  console.debug('[SW] cacheFirst miss, fetching:', request.url);
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
-      // Clone before caching — a Response can only be consumed once
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
@@ -227,13 +228,16 @@ async function cacheFirst(request, cacheName) {
  */
 async function networkFirst(request, cacheName) {
   try {
+    console.debug('[SW] networkFirst trying network:', request.url);
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
+      console.debug('[SW] networkFirst success:', request.url);
       const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (err) {
+    console.info('[SW] networkFirst failed, trying cache:', request.url);
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       console.info('[SW] Network-first: serving from cache (offline):', request.url);
