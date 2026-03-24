@@ -179,6 +179,17 @@ function createArticleCard(article) {
  */
 function renderFeed(articles) {
   console.log('[Feed] renderFeed called with', articles?.length, 'articles');
+  
+  // DEBUG: Show status on screen
+  let debugEl = document.getElementById('debug-status');
+  if (!debugEl) {
+    debugEl = document.createElement('div');
+    debugEl.id = 'debug-status';
+    debugEl.style.cssText = 'position:fixed;bottom:0;left:0;background:rgba(0,0,0,0.8);color:white;font-family:monospace;z-index:9999;padding:5px;font-size:10px;';
+    document.body.appendChild(debugEl);
+  }
+  debugEl.textContent = `Articles: ${articles?.length || 0} | List empty: ${articleList.children.length === 0}`;
+
   articleList.innerHTML = '';
   if (!articles || articles.length === 0) {
     console.warn('[Feed] No articles to render, showing empty state');
@@ -191,6 +202,9 @@ function renderFeed(articles) {
   });
   articleList.appendChild(fragment);
   console.log('[Feed] articleList populated with', articleList.children.length, 'items');
+  
+  debugEl.textContent += ` | Populated: ${articleList.children.length}`;
+  
   hideSkeleton();
   hideEmptyState();
   hideErrorState();
