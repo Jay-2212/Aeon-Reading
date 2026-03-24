@@ -316,6 +316,7 @@ async function loadFeed() {
 
 /** Initialise feed event listeners and load the feed. */
 function init() {
+  console.log('[Feed] init starting');
   // Refresh button in header
   const btnRefresh = document.getElementById('btn-refresh');
   if (btnRefresh) {
@@ -337,6 +338,7 @@ function init() {
   // Listen for articles-updated event from api.js
   document.addEventListener('aeon:articles-updated', (event) => {
     const { newArticles, totalCount } = event.detail;
+    console.log('[Feed] aeon:articles-updated received:', newArticles?.length);
     if (newArticles && newArticles.length > 0) {
       prependNewCards(newArticles);
       window.AeonApp.showToast(
@@ -348,15 +350,22 @@ function init() {
   });
 
   // Restore scroll position when returning from reader view
-  document.addEventListener('aeon:show-feed', restoreScrollPosition);
+  document.addEventListener('aeon:show-feed', () => {
+    console.log('[Feed] aeon:show-feed received');
+    restoreScrollPosition();
+  });
 
   // Initial load
+  console.log('[Feed] Initial load trigger');
   loadFeed();
 }
 
 // Initialise once the DOM and other deferred scripts are ready
-// (this script is itself deferred, so init() is safe to call immediately)
-init();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 // ---------------------------------------------------------------------------
 // Public API
