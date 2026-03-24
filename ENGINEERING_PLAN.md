@@ -47,7 +47,7 @@ Aeon Reader is a progressive web app (PWA) that delivers Aeon's most recent 10�
 
 - Primary: Android Chrome (mobile browser, home-screen shortcut via PWA)
 - Secondary: any modern desktop/mobile browser
-- Hosted on: GitHub Pages (`https://<user>.github.io/Aeon-Reading-/`) — note: the trailing hyphen is part of the repository name.
+- Hosted on: GitHub Pages (`https://<user>.github.io/Aeon-Reading/`).
 
 ---
 
@@ -737,7 +737,7 @@ All article HTML is sanitised server-side (in the GH Actions script) using `blea
 ## 15. File & Directory Layout
 
 ```
-Aeon-Reading-/          ← repository root (repo name includes trailing hyphen)
+Aeon-Reading/          ← repository root (repo name includes trailing hyphen)
 ├── index.html
 ├── manifest.webmanifest
 ├── styles/

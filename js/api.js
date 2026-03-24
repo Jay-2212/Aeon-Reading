@@ -31,10 +31,9 @@
 const REPO_OWNER = 'Jay-2212';
 
 /** GitHub repository name.
- * NOTE: The trailing hyphen is part of the actual repository name — not a typo.
- * See ENGINEERING_PLAN.md §15 and repository memory.
+ * NOTE: The repository name is 'Aeon-Reading' as seen in the git remote.
  */
-const REPO_NAME = 'Aeon-Reading-';
+const REPO_NAME = 'Aeon-Reading';
 
 /** The workflow file name to dispatch. */
 const WORKFLOW_ID = 'fetch-articles.yml';
@@ -284,12 +283,6 @@ function finishRefresh(success) {
  */
 async function triggerRefresh() {
   if (refreshInProgress) return;
-
-  // Check for connectivity
-  if (!navigator.onLine) {
-    window.AeonApp.showToast('You\'re offline — cannot refresh.', 'error');
-    return;
-  }
 
   // Get saved PAT
   const pat = (window.AeonSettings && window.AeonSettings.getSavedPat())

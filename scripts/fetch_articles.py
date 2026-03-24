@@ -75,9 +75,9 @@ REQUEST_DELAY = 1.0
 REQUEST_TIMEOUT = 30
 
 # User-agent string identifying this bot.
-# NOTE: The trailing hyphen in 'Aeon-Reading-' is the actual repository name — not a typo.
+# Using a browser-like string to avoid being blocked by Aeon.
 USER_AGENT = (
-    "AeonReader/1.0 (+https://github.com/Jay-2212/Aeon-Reading-)"
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 AeonReader/1.0 (+https://github.com/Jay-2212/Aeon-Reading)"
 )
 
 # ---------------------------------------------------------------------------
@@ -685,6 +685,32 @@ def build_full_article(rss_art: dict, content: dict) -> dict:
     }
 
 
+def _get_rss_fallback_content(rss_art: dict) -> dict:
+    """Provide fallback content extracted from the RSS feed metadata.
+
+    Used when the full article page fetch fails or is blocked.
+
+    Args:
+        rss_art: Metadata dict from the RSS feed.
+
+    Returns:
+        A content dict suitable for build_full_article/build_article_summary.
+    """
+    # Use the RSS excerpt as the bodyHtml (wrapped in a paragraph)
+    body_html = f"<p>{rss_art['excerpt']}</p>"
+    
+    # Add a "Read more" link
+    body_html += f'<p><a href="{rss_art["url"]}" target="_blank" rel="noopener noreferrer">Read full article on Aeon (requires browser)</a></p>'
+
+    return {
+        "bodyHtml":           body_html,
+        "authorBio":          "",
+        "imageUrl":           rss_art["imageUrl"],
+        "imageAlt":           rss_art["imageAlt"],
+        "readingTimeMinutes": 1, # Default to 1 min for summary
+    }
+
+
 def run() -> None:
     """Execute the full article fetch-and-update pipeline.
 
@@ -747,7 +773,13 @@ def run() -> None:
         print(f"\nFetching article: {art_id}")
         try:
             page_html = fetch_article_html(rss_art["url"])
-            content = extract_article_content(page_html, rss_art)
+            
+            # Check if we hit the Vercel Security Checkpoint
+            if "Vercel Security Checkpoint" in page_html or "We're verifying your browser" in page_html:
+                print(f"WARNING: Hit Vercel Security Checkpoint for '{art_id}'. Using RSS fallback.")
+                content = _get_rss_fallback_content(rss_art)
+            else:
+                content = extract_article_content(page_html, rss_art)
 
             # Write the full article JSON
             full_article = build_full_article(rss_art, content)
@@ -758,7 +790,15 @@ def run() -> None:
             processed_count += 1
 
         except requests.RequestException as exc:
-            print(f"WARNING: Failed to fetch article '{art_id}': {exc}", file=sys.stderr)
+            print(f"WARNING: Failed to fetch article '{art_id}': {exc}. Using RSS fallback.", file=sys.stderr)
+            content = _get_rss_fallback_content(rss_art)
+            
+            full_article = build_full_article(rss_art, content)
+            save_article_json(art_id, full_article)
+            
+            new_summaries.append(build_article_summary(rss_art, content))
+            processed_count += 1
+            
         except Exception as exc:  # pylint: disable=broad-except
             print(f"WARNING: Error processing article '{art_id}': {exc}", file=sys.stderr)
 

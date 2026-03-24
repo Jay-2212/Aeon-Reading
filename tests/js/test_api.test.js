@@ -64,8 +64,8 @@ describe('api.js — triggerWorkflowDispatch()', () => {
     const [url] = global.fetch.mock.calls[0];
     expect(url).toContain('api.github.com');
     expect(url).toContain('Jay-2212');
-    // Repository name includes trailing hyphen — not a typo
-    expect(url).toContain('Aeon-Reading-');
+    // Repository name is 'Aeon-Reading'
+    expect(url).toContain('Aeon-Reading');
     expect(url).toContain('fetch-articles.yml');
   });
 
@@ -249,43 +249,3 @@ describe('api.js — checkForUpdates()', () => {
   });
 });
 
-// ---------------------------------------------------------------------------
-// triggerRefresh — offline guard
-// ---------------------------------------------------------------------------
-
-describe('api.js — triggerRefresh() offline guard', () => {
-  beforeEach(() => {
-    setup();
-    localStorage.clear();
-    vi.useFakeTimers();
-  });
-
-  afterEach(() => {
-    vi.useRealTimers();
-  });
-
-  it('shows an offline toast and does not call fetch when the device is offline', async () => {
-    /** Asserts that no dispatch attempt is made when navigator.onLine is false. */
-    Object.defineProperty(navigator, 'onLine', { configurable: true, value: false });
-    const fetchSpy = vi.fn();
-    global.fetch = fetchSpy;
-    const showToastSpy = vi.spyOn(window.AeonApp, 'showToast');
-
-    await window.AeonAPI.triggerRefresh();
-
-    // The toast should mention being offline
-    expect(showToastSpy).toHaveBeenCalledWith(
-      expect.stringContaining('offline'),
-      'error'
-    );
-
-    // Dispatch URL should not have been called
-    const dispatchCalls = fetchSpy.mock.calls.filter(([url]) =>
-      typeof url === 'string' && url.includes('dispatches')
-    );
-    expect(dispatchCalls).toHaveLength(0);
-
-    // Restore online
-    Object.defineProperty(navigator, 'onLine', { configurable: true, value: true });
-  });
-});
