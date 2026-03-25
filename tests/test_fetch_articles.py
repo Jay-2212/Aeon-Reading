@@ -121,7 +121,7 @@ RECOMMENDATIONS_HTML = """\
 </html>
 """
 
-IMAGE_FALLBACK_HTML = """\
+IMAGE_FALLBACK_HTML = """
 <html>
 <body>
   <div class="article__body">
@@ -131,6 +131,37 @@ IMAGE_FALLBACK_HTML = """\
 </body>
 </html>
 """
+
+OVER_AGGRESSIVE_PROMO_HTML = """
+<html>
+<body>
+  <div class="article__body">
+    <div class="container">
+      <p>Listen to this essay</p>
+      <p>Legitimate content inside the same container.</p>
+    </div>
+    <p>More real content.</p>
+  </div>
+</body>
+</html>
+"""
+
+OVER_AGGRESSIVE_SYNDICATION_HTML = """
+<html>
+<body>
+  <div class="article__body">
+    <div class="main-wrapper">
+      <p>Important article text.</p>
+      <div class="footer">
+        <p>SYNDICATE THIS</p>
+        <p>Recommended content to strip.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+"""
+
 
 
 # ---------------------------------------------------------------------------
@@ -482,6 +513,22 @@ class TestExtractArticleContent:
         result = fa.extract_article_content(IMAGE_FALLBACK_HTML, meta)
         assert result["imageUrl"] == "https://images.aeonmedia.co/images/fallback.jpg"
         assert result["imageAlt"] == "Fallback hero"
+
+    def test_audio_promo_does_not_remove_container_with_real_content(self):
+        """Audio promo removal should only target the promo node, not its parents with content."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(OVER_AGGRESSIVE_PROMO_HTML, meta)
+        assert "Listen to this essay" not in result["bodyHtml"]
+        assert "Legitimate content inside the same container." in result["bodyHtml"]
+        assert "More real content." in result["bodyHtml"]
+
+    def test_syndication_marker_does_not_remove_whole_wrapper(self):
+        """Syndication marker removal should not remove the entire article if it's in a wrapper."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(OVER_AGGRESSIVE_SYNDICATION_HTML, meta)
+        assert "SYNDICATE THIS" not in result["bodyHtml"]
+        assert "Recommended content to strip." not in result["bodyHtml"]
+        assert "Important article text." in result["bodyHtml"]
 
 
 # ---------------------------------------------------------------------------

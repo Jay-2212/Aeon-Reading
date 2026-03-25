@@ -467,28 +467,69 @@ def _remove_audio_promos(root: lxml_html.HtmlElement) -> None:
         re.compile(r"listen to this (essay|article)", re.IGNORECASE),
         re.compile(r"\b\d+\s*minute\s+listen\b", re.IGNORECASE),
     ]
-    for el in list(root.iter()):
-        # Focus on common container tags to avoid stripping inline links
+    
+    to_remove = []
+    # Identify innermost elements matching the promo patterns
+    for el in root.iterdescendants():
         if el.tag not in {"p", "div", "section", "span"}:
             continue
+            
         text = " ".join((el.text_content() or "").split())
-        if text and any(p.search(text) for p in patterns):
-            parent = el.getparent()
-            if parent is not None:
-                parent.remove(el)
+        if not text or not any(p.search(text) for p in patterns):
+            continue
+            
+        # Ensure we don't have a matching child (we want the most specific element)
+        has_matching_child = False
+        for child in el.iterdescendants():
+            child_text = " ".join((child.text_content() or "").split())
+            if any(p.search(child_text) for p in patterns):
+                has_matching_child = True
+                break
+        
+        if not has_matching_child and len(text) < 150:
+            to_remove.append(el)
+
+    for el in to_remove:
+        parent = el.getparent()
+        if parent is not None:
+            parent.remove(el)
 
 
 def _strip_trailing_recommendations(body_el: lxml_html.HtmlElement) -> None:
     """Remove 'Syndicate this essay' blocks and subsequent recommended-article tiles."""
-    children = list(body_el)
-    for child in children:
-        text = " ".join((child.text_content() or "").split()).upper()
+    marker_el = None
+    # Find the innermost element containing the syndication marker
+    for el in body_el.iterdescendants():
+        text = " ".join((el.text_content() or "").split()).upper()
         if "SYNDICATE THIS" in text:
-            start = children.index(child)
-            for sib in children[start:]:
-                if sib in body_el:
-                    body_el.remove(sib)
-            return
+            has_matching_child = False
+            for child in el.iterdescendants():
+                if "SYNDICATE THIS" in " ".join((child.text_content() or "").split()).upper():
+                    has_matching_child = True
+                    break
+            if not has_matching_child and len(text) < 150:
+                marker_el = el
+                break
+
+    if marker_el is not None:
+        curr = marker_el
+        while curr is not None and curr != body_el:
+            parent = curr.getparent()
+            if parent is None:
+                break
+            
+            # Remove the current element and all its following siblings
+            found_curr = False
+            for sibling in list(parent):
+                if sibling == curr:
+                    found_curr = True
+                if found_curr:
+                    parent.remove(sibling)
+            
+            # Stop if the parent still has content or we reached the root
+            if parent == body_el or len(parent) > 0:
+                break
+            curr = parent
 
 
 def _sanitise_html(raw_html: str) -> str:
