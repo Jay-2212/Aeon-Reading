@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-03-24T12:45:48.707581+00:00",
+  "lastFetched": "2026-03-25T13:26:31.391343+00:00",
   "articles": [
+    {
+      "id": "as-technologies-mine-our-attention-we-must-look-to-artists",
+      "title": "Being in the world: technology and humanity",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-25T10:01:00+00:00",
+      "excerpt": "If technology threatens to flatten our humanity, artists can deepen it. Hear how, from a flamenco musician and a juggler- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-as-technologies-mine-our-attention-we-must-look-to-artists.json"
+    },
     {
       "id": "far-from-junk-the-clock-in-our-dna-and-its-discoverer",
       "title": "The clock in our genes",
@@ -168,18 +180,6 @@
       "imageAlt": "A shopfront with “O’DEA’S” in gold letters, two windows above with flower boxes holding pink flowers, and the number 66 on the right side.",
       "readingTimeMinutes": 2,
       "articleFile": "data/article-one-mans-poignant-search-for-community-via-radio-waves.json"
-    },
-    {
-      "id": "who-am-i-when-i-care-emotion-through-the-lens-of-franz-boas",
-      "title": "Does culture make emotion?",
-      "author": "Noga Arikha",
-      "category": "",
-      "publishedAt": "2026-03-10T10:00:00+00:00",
-      "excerpt": "Franz Boas helps us solve the puzzle of where our emotional lives originate: in our selves or in the cultures around us- by Noga ArikhaRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/1dc9cdcd-64fb-4205-895c-b342f5933bd9/essay-v2-getty-museum-a8372a23-50ed-4fe4-9205-42aabf3590d9_3000.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Sepia-toned photo of silhouetted figures dancing with sticks in a smoky environment, creating a dramatic atmosphere.",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-who-am-i-when-i-care-emotion-through-the-lens-of-franz-boas.json"
     }
   ]
 }
