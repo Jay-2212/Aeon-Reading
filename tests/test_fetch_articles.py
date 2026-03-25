@@ -94,6 +94,44 @@ SAMPLE_ARTICLE_HTML = """\
 </html>
 """
 
+PROMO_ARTICLE_HTML = """\
+<html>
+<body>
+  <div class="article__body">
+    <p>Listen to this essay</p>
+    <p>35 minute listen</p>
+    <p>Real content starts here.</p>
+  </div>
+</body>
+</html>
+"""
+
+RECOMMENDATIONS_HTML = """\
+<html>
+<body>
+  <div class="article__body">
+    <p>Keep this paragraph.</p>
+    <a href="/syndication?article_slug=test">SYNDICATE THIS ESSAY</a>
+    <a href="/essays/related">
+      <img src="https://images.aeonmedia.co/images/related.jpg" alt="Related" />
+      <p>Related article that should be stripped.</p>
+    </a>
+  </div>
+</body>
+</html>
+"""
+
+IMAGE_FALLBACK_HTML = """\
+<html>
+<body>
+  <div class="article__body">
+    <p><img src="https://images.aeonmedia.co/images/fallback.jpg" alt="Fallback hero" /></p>
+    <p>Body text.</p>
+  </div>
+</body>
+</html>
+"""
+
 
 # ---------------------------------------------------------------------------
 # Tests: _extract_slug
@@ -421,6 +459,29 @@ class TestExtractArticleContent:
         html_no_hero = "<html><body><div class='article__body'><p>Body</p></div></body></html>"
         result = fa.extract_article_content(html_no_hero, meta)
         assert result["imageUrl"] == "https://rss.example.com/img.jpg"
+
+    def test_removes_audio_promo_blocks(self):
+        """Inline 'Listen to this essay' promos are stripped from bodyHtml."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(PROMO_ARTICLE_HTML, meta)
+        assert "Listen to this essay" not in result["bodyHtml"]
+        assert "minute listen" not in result["bodyHtml"]
+        assert "Real content starts here." in result["bodyHtml"]
+
+    def test_strips_recommendations_after_syndication_link(self):
+        """Content after the 'SYNDICATE THIS ESSAY' block is removed."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(RECOMMENDATIONS_HTML, meta)
+        assert "SYNDICATE THIS ESSAY" not in result["bodyHtml"]
+        assert "Related article that should be stripped." not in result["bodyHtml"]
+        assert "Keep this paragraph." in result["bodyHtml"]
+
+    def test_uses_first_image_as_fallback_hero(self):
+        """When no hero is detected, the first content image is used as imageUrl."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(IMAGE_FALLBACK_HTML, meta)
+        assert result["imageUrl"] == "https://images.aeonmedia.co/images/fallback.jpg"
+        assert result["imageAlt"] == "Fallback hero"
 
 
 # ---------------------------------------------------------------------------

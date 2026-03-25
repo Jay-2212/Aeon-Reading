@@ -360,3 +360,33 @@ No required next phase. All critical functionality is working. Optional enhancem
 ### Good Luck Note
 The app is now fully functional! Articles load correctly, the skeleton hides after loading, and navigation works perfectly. Tested with Playwright to confirm feed view, reader view, and back navigation all work as expected. The three critical bugs (duplicate const, missing CSS, CSP) have been resolved. Enjoy reading!
 
+---
+
+## Agent 6 — 2026-03-24
+
+### Completed Phases
+- ✅ Bug-fix: Restored article thumbnails/hero images by falling back to the first content image when metadata is missing.
+- ✅ Bug-fix: Removed audio promo blocks (“Listen to this essay” / “minute listen”) and stripped trailing syndication/recommendation tiles from article bodies.
+- ✅ Styling: Made inline/figure images responsive (no cropping/overflow) and refreshed article data with cleaned content.
+
+### Files Modified
+- `scripts/fetch_articles.py` — strip audio promos/recommendations; fallback hero extraction from first body image.
+- `styles/reader.css` — responsive inline/figure images without cropping.
+- `tests/test_fetch_articles.py` — new coverage for audio/recommendation stripping and fallback hero.
+- `data/articles.json` and `data/article-*.json` — cleaned bodyHtml, populated imageUrl/alt, recalculated reading times.
+
+### Known Issues / Technical Debt
+1. `scripts/fetch_articles.py` could not reach `https://aeon.co/feed.rss` from this environment (DNS resolution failed). Data was cleaned offline using existing article JSON files; fetching fresh content still depends on external network availability.
+2. Hero fallback now uses the first content image; if future pages contain non-hero lead images before the hero, this could be improved with more specific selectors.
+
+### Recommendations for Next Agent
+- If network access works in your environment/CI, rerun `python scripts/fetch_articles.py` to fetch fresh articles with the new cleaning rules.
+- Keep an eye on future scraped pages; adjust hero selectors if Aeon changes markup.
+
+### Next Agent Should Start At
+No required next phase. Optional: rerun the fetch pipeline when external network access is available.
+
+### Good Luck Note
+Thumbnails and hero images now show up, article text is cleaner (no audio promos or stray recommendations), and images scale properly in the reader. Enjoy!
+
+---

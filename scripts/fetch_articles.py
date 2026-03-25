@@ -403,6 +403,18 @@ def extract_article_content(page_html: str, article_meta: dict) -> dict:
         body_candidates = doc.cssselect("body")
         body_el = body_candidates[0] if body_candidates else doc
 
+    # Step 4b: Remove inline audio promos and trailing recommendation blocks
+    _remove_audio_promos(body_el)
+    _strip_trailing_recommendations(body_el)
+
+    # Step 4c: Fallback hero extraction from the first content image
+    if not image_url:
+        fallback_src, fallback_alt = _extract_first_image(body_el)
+        if fallback_src:
+            image_url = fallback_src
+            if fallback_alt and not image_alt:
+                image_alt = fallback_alt
+
     # Step 5: Serialise the body element to an HTML string
     raw_html = lxml_etree.tostring(body_el, encoding="unicode", method="html")
 
@@ -447,6 +459,36 @@ def _remove_unwanted_elements(doc: lxml_html.HtmlElement) -> None:
             parent = el.getparent()
             if parent is not None:
                 parent.remove(el)
+
+
+def _remove_audio_promos(root: lxml_html.HtmlElement) -> None:
+    """Strip inline audio promo blocks such as 'Listen to this essay' + '35 minute listen'."""
+    patterns = [
+        re.compile(r"listen to this (essay|article)", re.IGNORECASE),
+        re.compile(r"\b\d+\s*minute\s+listen\b", re.IGNORECASE),
+    ]
+    for el in list(root.iter()):
+        # Focus on common container tags to avoid stripping inline links
+        if el.tag not in {"p", "div", "section", "span"}:
+            continue
+        text = " ".join((el.text_content() or "").split())
+        if text and any(p.search(text) for p in patterns):
+            parent = el.getparent()
+            if parent is not None:
+                parent.remove(el)
+
+
+def _strip_trailing_recommendations(body_el: lxml_html.HtmlElement) -> None:
+    """Remove 'Syndicate this essay' blocks and subsequent recommended-article tiles."""
+    children = list(body_el)
+    for child in children:
+        text = " ".join((child.text_content() or "").split()).upper()
+        if "SYNDICATE THIS" in text:
+            start = children.index(child)
+            for sib in children[start:]:
+                if sib in body_el:
+                    body_el.remove(sib)
+            return
 
 
 def _sanitise_html(raw_html: str) -> str:
@@ -558,6 +600,21 @@ def _extract_hero_image(doc: lxml_html.HtmlElement) -> tuple[str, str]:
             alt = img.get("alt", "")
             if src:
                 return src, alt
+    return "", ""
+
+
+def _extract_first_image(root: lxml_html.HtmlElement) -> tuple[str, str]:
+    """Fallback: return the first meaningful <img> src/alt found in the body."""
+    for img in root.cssselect("img"):
+        src = img.get("src", "") or img.get("data-src", "")
+        if not src or src.startswith("data:"):
+            continue
+        if src.startswith("//"):
+            src = "https:" + src
+        if not src.startswith("http"):
+            continue
+        alt = img.get("alt", "")
+        return src, alt
     return "", ""
 
 
