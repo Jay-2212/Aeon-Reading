@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-03-26T13:44:43.484410+00:00",
+  "lastFetched": "2026-03-27T13:21:43.093162+00:00",
   "articles": [
+    {
+      "id": "what-is-the-real-cost-of-betting-on-weather-catastrophes",
+      "title": "Catastrophe markets",
+      "author": "Jamie L Pietruska",
+      "category": "",
+      "publishedAt": "2026-03-27T10:00:00+00:00",
+      "excerpt": "Americans love to gamble. But placing bets on wildfires, floods and storms comes with serious moral and social costs- by Jamie L PietruskaRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-is-the-real-cost-of-betting-on-weather-catastrophes.json"
+    },
     {
       "id": "a-joyful-dance-celebration-of-indigenous-matriarchy",
       "title": "She never dances alone",
@@ -168,18 +180,6 @@
       "imageAlt": "A woman in a flowing white dress skateboarding past people walking on a sunny day next to a corrugated fence.",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-what-african-philosophy-says-about-our-duties-to-oneself.json"
-    },
-    {
-      "id": "a-dispatch-from-the-dawn-of-the-electronic-music-age",
-      "title": "What is electronic music?",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-12T10:01:00+00:00",
-      "excerpt": "These days, synthesised sound is easy to access – but early electronic music pioneers had to get hands on to produce it- by Aeon VideoWatch on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/149fca3f-77be-4e5a-bdf8-e8e636cc677f/delia-derbyshire-and-doctor-who-landscape-1.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "A woman in a recording studio with vintage equipment, including a TV, dials, and controls, in a black and white photo.",
-      "readingTimeMinutes": 2,
-      "articleFile": "data/article-a-dispatch-from-the-dawn-of-the-electronic-music-age.json"
     }
   ]
 }
