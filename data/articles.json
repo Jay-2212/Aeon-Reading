@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-03-27T13:21:43.093162+00:00",
+  "lastFetched": "2026-03-30T13:50:07.065698+00:00",
   "articles": [
+    {
+      "id": "in-search-of-truth-and-fun-at-princeton-university-1973",
+      "title": "A search for answers",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-03-30T10:01:00+00:00",
+      "excerpt": "When Princeton University asked two directors to produce a marketing video, it became a work of art – and a time capsule- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-in-search-of-truth-and-fun-at-princeton-university-1973.json"
+    },
+    {
+      "id": "how-the-hypercuriosity-of-adhd-may-have-helped-humans-thrive",
+      "title": "The hypercurious mind",
+      "author": "Anne-Laure Le Cunff",
+      "category": "",
+      "publishedAt": "2026-03-30T10:00:00+00:00",
+      "excerpt": "ADHD isn’t merely a dysfunction. It’s best understood as an impulsive motivational drive for novel information- by Anne-Laure Le CunffRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-how-the-hypercuriosity-of-adhd-may-have-helped-humans-thrive.json"
+    },
     {
       "id": "what-is-the-real-cost-of-betting-on-weather-catastrophes",
       "title": "Catastrophe markets",
@@ -156,30 +180,6 @@
       "imageAlt": "Visualisation of a double spiral pattern representing Lorenz attractor with a smaller graph inset on the right showing a mathematical plot labelled Z_n-1.",
       "readingTimeMinutes": 2,
       "articleFile": "data/article-henri-bergson-on-why-our-world-is-built-of-objects-and-space.json"
-    },
-    {
-      "id": "she-freed-physics-but-emmy-noether-couldnt-escape-herself",
-      "title": "Unbounded",
-      "author": "Julia Ravanis",
-      "category": "",
-      "publishedAt": "2026-03-16T10:00:00+00:00",
-      "excerpt": "In the early 20th century, Emmy Noether’s mathematics transcended the physical world. She longed to do the same herself- by Julia RavanisRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/03f82156-aa1b-46e4-aba3-06d1dcc10690/emmy-essayt.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Old black and white photo of a smiling person on a boat with the sea in the background.",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-she-freed-physics-but-emmy-noether-couldnt-escape-herself.json"
-    },
-    {
-      "id": "what-african-philosophy-says-about-our-duties-to-oneself",
-      "title": "A duty to oneself",
-      "author": "Thaddeus Metz",
-      "category": "",
-      "publishedAt": "2026-03-13T10:00:00+00:00",
-      "excerpt": "African philosophical values of harmony and vitality have much to offer our thinking about what we owe to ourselves- by Thaddeus MetzRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/b807922a-8794-4eb6-b207-b7f67b65c0b7/essay-panos_00369865.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "A woman in a flowing white dress skateboarding past people walking on a sunny day next to a corrugated fence.",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-what-african-philosophy-says-about-our-duties-to-oneself.json"
     }
   ]
 }
