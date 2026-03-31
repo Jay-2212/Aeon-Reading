@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-03-30T13:50:07.065698+00:00",
+  "lastFetched": "2026-03-31T13:49:22.144303+00:00",
   "articles": [
+    {
+      "id": "the-underground-bankers-who-reshape-the-flow-of-global-money",
+      "title": "Banking beyond the law",
+      "author": "Miles Kellerman",
+      "category": "",
+      "publishedAt": "2026-03-31T10:00:00+00:00",
+      "excerpt": "A centuries-old network of secret codes and shadowy brokers continues to outpace financial systems controlled by the state- by Miles KellermanRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-underground-bankers-who-reshape-the-flow-of-global-money.json"
+    },
     {
       "id": "in-search-of-truth-and-fun-at-princeton-university-1973",
       "title": "A search for answers",
@@ -168,18 +180,6 @@
       "imageAlt": "A man standing near a petrol pump on a traffic island between two diverging roads under a clear blue sky.",
       "readingTimeMinutes": 12,
       "articleFile": "data/article-why-do-some-regrets-fade-while-others-persist-and-grow.json"
-    },
-    {
-      "id": "henri-bergson-on-why-our-world-is-built-of-objects-and-space",
-      "title": "Henri Bergson: Creative Evolution",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-16T10:01:00+00:00",
-      "excerpt": "How do we develop our sense of space? Henri Bergson questioned the very fabric of our reality in his revolutionary work- by Aeon VideoWatch on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/a2bc1572-88e5-420d-b7de-061dbca7453d/henri-bergson-the-possible-and-the-real-landscape-1.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Visualisation of a double spiral pattern representing Lorenz attractor with a smaller graph inset on the right showing a mathematical plot labelled Z_n-1.",
-      "readingTimeMinutes": 2,
-      "articleFile": "data/article-henri-bergson-on-why-our-world-is-built-of-objects-and-space.json"
     }
   ]
 }
