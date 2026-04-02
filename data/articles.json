@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-01T13:52:10.826529+00:00",
+  "lastFetched": "2026-04-02T13:42:46.885118+00:00",
   "articles": [
+    {
+      "id": "what-a-plants-decision-making-reveals-about-intelligence",
+      "title": "The hidden world of plant roots",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-02T10:01:00+00:00",
+      "excerpt": "Plant roots don’t have a nervous system, yet can produce sophisticated responses. What does that say about intelligence?- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-a-plants-decision-making-reveals-about-intelligence.json"
+    },
+    {
+      "id": "frank-lloyd-wright-as-a-mirror-of-the-american-condition",
+      "title": "The house is a work of art",
+      "author": "Andrew Deming",
+      "category": "",
+      "publishedAt": "2026-04-02T10:00:00+00:00",
+      "excerpt": "Frank Lloyd Wright exalted the individual and made ordinary life beautiful. But his life was marked by scandal and grief- by Andrew DemingRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-frank-lloyd-wright-as-a-mirror-of-the-american-condition.json"
+    },
     {
       "id": "the-rise-and-fall-of-pratolino-tuscanys-proto-theme-park",
       "title": "The Medici’s lost garden of wonders",
@@ -156,30 +180,6 @@
       "imageAlt": "An elderly man outdoors smiling, wearing a Great Masters Britain running vest with a British flag, trees in the background.",
       "readingTimeMinutes": 2,
       "articleFile": "data/article-movement-is-a-life-philosophy-for-an-87-year-old-runner.json"
-    },
-    {
-      "id": "if-we-hope-to-build-artificial-souls-where-should-we-start",
-      "title": "Geist in the machine",
-      "author": "Peter Wolfendale",
-      "category": "",
-      "publishedAt": "2026-03-19T10:00:00+00:00",
-      "excerpt": "As the 18th-century war between mechanism and romanticism returns, we face a new question: can we build artificial souls?- by Peter WolfendaleRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/e4efef52-a9bb-4935-a1b2-22a8dae470a4/essay-final-soul-gettyimages-1128950701.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Black and white photo of a silhouette standing in calm water with distant hills and cloudy sky in the background.",
-      "readingTimeMinutes": 38,
-      "articleFile": "data/article-if-we-hope-to-build-artificial-souls-where-should-we-start.json"
-    },
-    {
-      "id": "could-one-road-forever-change-this-remote-alaskan-refuge",
-      "title": "Izembek",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-18T10:01:00+00:00",
-      "excerpt": "What does true wilderness look like? A photographer captures a rare slice of it in this refuge threatened by development- by Aeon VideoWatch on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/18fa4cdb-4869-49d3-ab55-5c0b4d547d4b/arctic-summer-landscape-3v3.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "A person stands on a derelict boat surrounded by buildings and dry grass. A folding chair is placed near a large metal shed.",
-      "readingTimeMinutes": 2,
-      "articleFile": "data/article-could-one-road-forever-change-this-remote-alaskan-refuge.json"
     }
   ]
 }
