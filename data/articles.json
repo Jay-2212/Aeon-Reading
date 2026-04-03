@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-02T13:42:46.885118+00:00",
+  "lastFetched": "2026-04-03T13:18:46.706057+00:00",
   "articles": [
+    {
+      "id": "how-might-humanitarian-journalism-be-done-better",
+      "title": "When trauma becomes trope",
+      "author": "Cathy Otten",
+      "category": "",
+      "publishedAt": "2026-04-03T10:00:00+00:00",
+      "excerpt": "Humanitarian journalism is a moral calling to document human suffering. But in practice, it’s an ethically murky undertaking- by Cathy OttenRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-how-might-humanitarian-journalism-be-done-better.json"
+    },
     {
       "id": "what-a-plants-decision-making-reveals-about-intelligence",
       "title": "The hidden world of plant roots",
@@ -168,18 +180,6 @@
       "imageAlt": "Black and white photo of a policeman observing a women’s protest with signs like “All Women Are Beautiful”",
       "readingTimeMinutes": 23,
       "articleFile": "data/article-what-the-evolution-of-bitch-says-about-gender-and-power.json"
-    },
-    {
-      "id": "movement-is-a-life-philosophy-for-an-87-year-old-runner",
-      "title": "Running against time",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-19T10:01:00+00:00",
-      "excerpt": "We all want longevity without compromising on quality of life. This 87-year-old achieves both with a daily running habit- by Aeon VideoWatch on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/2ddb9a04-48e8-4a56-8107-a7251fefe47a/CREO-FINAL2.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "An elderly man outdoors smiling, wearing a Great Masters Britain running vest with a British flag, trees in the background.",
-      "readingTimeMinutes": 2,
-      "articleFile": "data/article-movement-is-a-life-philosophy-for-an-87-year-old-runner.json"
     }
   ]
 }
