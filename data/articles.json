@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-03T13:18:46.706057+00:00",
+  "lastFetched": "2026-04-06T13:25:04.428297+00:00",
   "articles": [
+    {
+      "id": "we-long-misjudged-animal-consciousness-could-ai-be-next",
+      "title": "Is AI already conscious?",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-06T10:01:00+00:00",
+      "excerpt": "Why it’s difficult and perhaps even morally perilous to rule out the possibility of AI consciousness- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-we-long-misjudged-animal-consciousness-could-ai-be-next.json"
+    },
+    {
+      "id": "antibiotic-resistance-in-india-has-consequences-everywhere",
+      "title": "The antibiotic trap",
+      "author": "Assa Doron & Alex Broom",
+      "category": "",
+      "publishedAt": "2026-04-06T10:00:00+00:00",
+      "excerpt": "Easy access to desperately needed drugs has made India the global accelerant of our antimicrobial resistance crisis- by Assa Doron & Alex BroomRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-antibiotic-resistance-in-india-has-consequences-everywhere.json"
+    },
     {
       "id": "how-might-humanitarian-journalism-be-done-better",
       "title": "When trauma becomes trope",
@@ -156,30 +180,6 @@
       "imageAlt": "Five differently coloured triangular wax crayon bars standing upright on a white surface.",
       "readingTimeMinutes": 2,
       "articleFile": "data/article-the-extraordinary-efficiency-of-japans-edo-economy.json"
-    },
-    {
-      "id": "how-lansana-keita-reinvigorated-african-philosophy",
-      "title": "An African philosophy",
-      "author": "Sanya Osha",
-      "category": "",
-      "publishedAt": "2026-03-23T10:00:00+00:00",
-      "excerpt": "Lansana Keita rejected Eurocentric ideas, tracing the philosophical tradition back to African Kemet or ancient Egypt- by Sanya OshaRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/f10f2dbe-2e7c-4c66-8eb0-03b02ebb4129/essay-par14971.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "A building with yellow wall, hands in silhouette in foreground, and animals resting in the sun.",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-how-lansana-keita-reinvigorated-african-philosophy.json"
-    },
-    {
-      "id": "what-the-evolution-of-bitch-says-about-gender-and-power",
-      "title": "Bitch: a history",
-      "author": "Karen Stollznow",
-      "category": "",
-      "publishedAt": "2026-03-20T10:00:00+00:00",
-      "excerpt": "The word can morph from noun to verb to adjective, from dog to human, from female to male. What will it do next?- by Karen StollznowRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/a0d2135f-8018-4d31-86a9-76ad7d9a3f5c/test-essay-all-women-are-beautiful.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Black and white photo of a policeman observing a women’s protest with signs like “All Women Are Beautiful”",
-      "readingTimeMinutes": 23,
-      "articleFile": "data/article-what-the-evolution-of-bitch-says-about-gender-and-power.json"
     }
   ]
 }
