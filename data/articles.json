@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-07T13:46:24.125683+00:00",
+  "lastFetched": "2026-04-08T13:49:12.245259+00:00",
   "articles": [
+    {
+      "id": "a-vivid-portrait-of-montana-built-from-call-in-radio-clips",
+      "title": "Your opinion, please",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-08T10:01:00+00:00",
+      "excerpt": "From poetry to politics, this radio show asked listeners to speak their minds. Decades later, their words still resonate- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-a-vivid-portrait-of-montana-built-from-call-in-radio-clips.json"
+    },
     {
       "id": "robert-musil-gives-confidence-to-the-no-self-minority-like-me",
       "title": "Living without my self",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-as-technologies-mine-our-attention-we-must-look-to-artists.json"
-    },
-    {
-      "id": "far-from-junk-the-clock-in-our-dna-and-its-discoverer",
-      "title": "The clock in our genes",
-      "author": "Beatrice Steinert",
-      "category": "",
-      "publishedAt": "2026-03-24T10:00:00+00:00",
-      "excerpt": "The biologist Victoria Foe discovered a timing device in ‘junk’ DNA that could unlock the evolution of complex life- by Beatrice SteinertRead on Aeon",
-      "imageUrl": "https://images.aeonmedia.co/images/4610247b-cc47-4a60-ba35-9b43d11c362e/lightbox-essay-foe_negatives_lightbox.jpg?width=3840&quality=75&format=auto",
-      "imageAlt": "Microscope slides with various textures and markings, some labelled, with a yellow hue on the right side.",
-      "readingTimeMinutes": 29,
-      "articleFile": "data/article-far-from-junk-the-clock-in-our-dna-and-its-discoverer.json"
     }
   ]
 }
