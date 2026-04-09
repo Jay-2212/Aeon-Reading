@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-08T13:49:12.245259+00:00",
+  "lastFetched": "2026-04-09T13:59:22.483525+00:00",
   "articles": [
+    {
+      "id": "take-a-mind-bending-ride-through-the-cosmos-at-light-speed",
+      "title": "Travelling at the speed of light",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-09T10:01:00+00:00",
+      "excerpt": "A mind-bending trip into the cosmos aboard a speculative (yet theoretically possible) spacecraft near the speed of light- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-take-a-mind-bending-ride-through-the-cosmos-at-light-speed.json"
+    },
+    {
+      "id": "what-made-law-into-a-white-collar-sweatshop-in-the-1980s",
+      "title": "White-collar sweatshops",
+      "author": "Dylan Gottlieb",
+      "category": "",
+      "publishedAt": "2026-04-09T10:00:00+00:00",
+      "excerpt": "How did law firms and other professional workplaces become places of such crushing and soulless work?- by Dylan GottliebRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-made-law-into-a-white-collar-sweatshop-in-the-1980s.json"
+    },
     {
       "id": "a-vivid-portrait-of-montana-built-from-call-in-radio-clips",
       "title": "Your opinion, please",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-a-joyful-dance-celebration-of-indigenous-matriarchy.json"
-    },
-    {
-      "id": "why-china-insists-on-internal-unity-and-international-harmony",
-      "title": "One China, one world",
-      "author": "Peter C Perdue",
-      "category": "",
-      "publishedAt": "2026-03-26T10:00:00+00:00",
-      "excerpt": "China’s regime insists on national unity and international harmony. Is this anything more than an imperial posture?- by Peter C PerdueRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-china-insists-on-internal-unity-and-international-harmony.json"
-    },
-    {
-      "id": "as-technologies-mine-our-attention-we-must-look-to-artists",
-      "title": "Being in the world: technology and humanity",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-25T10:01:00+00:00",
-      "excerpt": "If technology threatens to flatten our humanity, artists can deepen it. Hear how, from a flamenco musician and a juggler- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-as-technologies-mine-our-attention-we-must-look-to-artists.json"
     }
   ]
 }
