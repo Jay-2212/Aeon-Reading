@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-09T13:59:22.483525+00:00",
+  "lastFetched": "2026-04-10T13:25:59.615743+00:00",
   "articles": [
+    {
+      "id": "could-ai-replace-human-art-experts-in-attributing-paintings",
+      "title": "Patterns without desires",
+      "author": "Noah Charney",
+      "category": "",
+      "publishedAt": "2026-04-10T10:00:00+00:00",
+      "excerpt": "The art expert is the fulcrum of all value and significance in the museum and auction world. Could AI supplant them?- by Noah CharneyRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-could-ai-replace-human-art-experts-in-attributing-paintings.json"
+    },
     {
       "id": "take-a-mind-bending-ride-through-the-cosmos-at-light-speed",
       "title": "Travelling at the speed of light",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-is-the-real-cost-of-betting-on-weather-catastrophes.json"
-    },
-    {
-      "id": "a-joyful-dance-celebration-of-indigenous-matriarchy",
-      "title": "She never dances alone",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-26T10:01:00+00:00",
-      "excerpt": "Broadcast at Times Square, this kaleidoscopic reimagining of a powwow dance celebrates the strength of Indigenous women- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-a-joyful-dance-celebration-of-indigenous-matriarchy.json"
     }
   ]
 }
