@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-10T13:25:59.615743+00:00",
+  "lastFetched": "2026-04-13T13:57:04.117068+00:00",
   "articles": [
+    {
+      "id": "reindeer-politics-why-some-sami-struggle-for-recognition",
+      "title": "I am Sámi",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-13T10:01:00+00:00",
+      "excerpt": "This short documentary asks what it means to be Sámi today, following decades-long state-mandated assimilation attempts- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-reindeer-politics-why-some-sami-struggle-for-recognition.json"
+    },
+    {
+      "id": "why-did-disabled-people-support-eugenics-in-the-1930s",
+      "title": "The sterilisation-seekers",
+      "author": "Coreen McGuire & Alex Aylward",
+      "category": "",
+      "publishedAt": "2026-04-13T10:00:00+00:00",
+      "excerpt": "In the story of eugenics, disabled people are often depicted as passive victims. But for some it seemed an opportunity- by Coreen McGuire & Alex AylwardRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-did-disabled-people-support-eugenics-in-the-1930s.json"
+    },
     {
       "id": "could-ai-replace-human-art-experts-in-attributing-paintings",
       "title": "Patterns without desires",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-in-search-of-truth-and-fun-at-princeton-university-1973.json"
-    },
-    {
-      "id": "how-the-hypercuriosity-of-adhd-may-have-helped-humans-thrive",
-      "title": "The hypercurious mind",
-      "author": "Anne-Laure Le Cunff",
-      "category": "",
-      "publishedAt": "2026-03-30T10:00:00+00:00",
-      "excerpt": "ADHD isn’t merely a dysfunction. It’s best understood as an impulsive motivational drive for novel information- by Anne-Laure Le CunffRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-how-the-hypercuriosity-of-adhd-may-have-helped-humans-thrive.json"
-    },
-    {
-      "id": "what-is-the-real-cost-of-betting-on-weather-catastrophes",
-      "title": "Catastrophe markets",
-      "author": "Jamie L Pietruska",
-      "category": "",
-      "publishedAt": "2026-03-27T10:00:00+00:00",
-      "excerpt": "Americans love to gamble. But placing bets on wildfires, floods and storms comes with serious moral and social costs- by Jamie L PietruskaRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-is-the-real-cost-of-betting-on-weather-catastrophes.json"
     }
   ]
 }
