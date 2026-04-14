@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-13T13:57:04.117068+00:00",
+  "lastFetched": "2026-04-14T14:01:21.551105+00:00",
   "articles": [
+    {
+      "id": "the-mysticism-of-nietzsches-doctrine-of-the-eternal-return",
+      "title": "You’ve lived this life before",
+      "author": "Mark Higgins",
+      "category": "",
+      "publishedAt": "2026-04-14T10:00:00+00:00",
+      "excerpt": "The mystical insight came to Nietzsche like a lightning flash: time eternally recurs – and life must be lived accordingly- by Mark HigginsRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-mysticism-of-nietzsches-doctrine-of-the-eternal-return.json"
+    },
     {
       "id": "reindeer-politics-why-some-sami-struggle-for-recognition",
       "title": "I am Sámi",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-underground-bankers-who-reshape-the-flow-of-global-money.json"
-    },
-    {
-      "id": "in-search-of-truth-and-fun-at-princeton-university-1973",
-      "title": "A search for answers",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-03-30T10:01:00+00:00",
-      "excerpt": "When Princeton University asked two directors to produce a marketing video, it became a work of art – and a time capsule- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-in-search-of-truth-and-fun-at-princeton-university-1973.json"
     }
   ]
 }
