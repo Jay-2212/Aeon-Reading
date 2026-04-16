@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-15T13:54:25.156961+00:00",
+  "lastFetched": "2026-04-16T14:03:25.997661+00:00",
   "articles": [
+    {
+      "id": "from-celtic-village-to-world-capital-how-paris-became-paris",
+      "title": "Evolution of Paris",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-16T10:01:00+00:00",
+      "excerpt": "The evolution of Paris across millennia – from Celtic fishing village to world capital – in three animated minutes- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-from-celtic-village-to-world-capital-how-paris-became-paris.json"
+    },
+    {
+      "id": "why-little-red-dots-pose-a-big-mystery-about-the-universe",
+      "title": "Join the dots",
+      "author": "Jenny Greene",
+      "category": "",
+      "publishedAt": "2026-04-16T10:00:00+00:00",
+      "excerpt": "Peering into the origins of our Universe, astronomers found something that shouldn’t be there: what are those little red dots?- by Jenny GreeneRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-little-red-dots-pose-a-big-mystery-about-the-universe.json"
+    },
     {
       "id": "a-propulsive-ode-to-the-forgotten-parents-of-film",
       "title": "Impromptu",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-a-plants-decision-making-reveals-about-intelligence.json"
-    },
-    {
-      "id": "frank-lloyd-wright-as-a-mirror-of-the-american-condition",
-      "title": "The house is a work of art",
-      "author": "Andrew Deming",
-      "category": "",
-      "publishedAt": "2026-04-02T10:00:00+00:00",
-      "excerpt": "Frank Lloyd Wright exalted the individual and made ordinary life beautiful. But his life was marked by scandal and grief- by Andrew DemingRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-frank-lloyd-wright-as-a-mirror-of-the-american-condition.json"
-    },
-    {
-      "id": "the-rise-and-fall-of-pratolino-tuscanys-proto-theme-park",
-      "title": "The Medici’s lost garden of wonders",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-01T10:01:00+00:00",
-      "excerpt": "The rise and fall of the Medici’s ingeniously engineered ‘Garden of Wonders’: the Pratolino ‘proto-theme park’ in Tuscany- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-rise-and-fall-of-pratolino-tuscanys-proto-theme-park.json"
     }
   ]
 }
