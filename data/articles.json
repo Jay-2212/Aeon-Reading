@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-16T14:03:25.997661+00:00",
+  "lastFetched": "2026-04-17T13:46:25.531133+00:00",
   "articles": [
+    {
+      "id": "you-know-what-consciousness-is-you-live-in-soul-land",
+      "title": "The invention of the soul",
+      "author": "Nicholas Humphrey",
+      "category": "",
+      "publishedAt": "2026-04-17T10:00:00+00:00",
+      "excerpt": "Humans weren’t given souls by God or genes. We made them ourselves with language – turning sentience into something sacred- by Nicholas HumphreyRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-you-know-what-consciousness-is-you-live-in-soul-land.json"
+    },
     {
       "id": "from-celtic-village-to-world-capital-how-paris-became-paris",
       "title": "Evolution of Paris",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-how-might-humanitarian-journalism-be-done-better.json"
-    },
-    {
-      "id": "what-a-plants-decision-making-reveals-about-intelligence",
-      "title": "The hidden world of plant roots",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-02T10:01:00+00:00",
-      "excerpt": "Plant roots don’t have a nervous system, yet can produce sophisticated responses. What does that say about intelligence?- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-a-plants-decision-making-reveals-about-intelligence.json"
     }
   ]
 }
