@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-20T13:59:58.125557+00:00",
+  "lastFetched": "2026-04-21T13:59:17.797965+00:00",
   "articles": [
+    {
+      "id": "lessons-from-the-fairness-of-african-fractal-societies",
+      "title": "Justice is geometric",
+      "author": "Likam Kyanzaire",
+      "category": "",
+      "publishedAt": "2026-04-21T10:00:00+00:00",
+      "excerpt": "Where centralised societies excel at extraction, African fractal systems allow for circulation, reciprocity and return- by Likam KyanzaireRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-lessons-from-the-fairness-of-african-fractal-societies.json"
+    },
     {
       "id": "many-complex-structures-predate-the-scientific-method-how",
       "title": "The engineering method",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-robert-musil-gives-confidence-to-the-no-self-minority-like-me.json"
-    },
-    {
-      "id": "we-long-misjudged-animal-consciousness-could-ai-be-next",
-      "title": "Is AI already conscious?",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-06T10:01:00+00:00",
-      "excerpt": "Why it’s difficult and perhaps even morally perilous to rule out the possibility of AI consciousness- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-we-long-misjudged-animal-consciousness-could-ai-be-next.json"
     }
   ]
 }
