@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-22T13:59:28.968144+00:00",
+  "lastFetched": "2026-04-23T14:01:17.778847+00:00",
   "articles": [
+    {
+      "id": "searching-for-superbug-cures-in-the-salt-flats-of-the-atacama-desert",
+      "title": "Life invisible",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-23T10:01:00+00:00",
+      "excerpt": "In the Atacama Desert, scientists race to find novel cures for antibiotic-resistant infections, as mining interests encroach- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-searching-for-superbug-cures-in-the-salt-flats-of-the-atacama-desert.json"
+    },
+    {
+      "id": "have-you-forgotten-what-it-means-to-be-afraid-of-nature",
+      "title": "No nature without fear",
+      "author": "Shawn Simpson",
+      "category": "",
+      "publishedAt": "2026-04-23T10:00:00+00:00",
+      "excerpt": "Aldo Leopold saw this in the eyes of a dying wolf: when we no longer fear nature, we are on the road to its destruction- by Shawn SimpsonRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-have-you-forgotten-what-it-means-to-be-afraid-of-nature.json"
+    },
     {
       "id": "the-swimmer-who-went-from-the-olympics-to-auschwitz-and-back-again",
       "title": "Butterfly (Papillon)",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-take-a-mind-bending-ride-through-the-cosmos-at-light-speed.json"
-    },
-    {
-      "id": "what-made-law-into-a-white-collar-sweatshop-in-the-1980s",
-      "title": "White-collar sweatshops",
-      "author": "Dylan Gottlieb",
-      "category": "",
-      "publishedAt": "2026-04-09T10:00:00+00:00",
-      "excerpt": "How did law firms and other professional workplaces become places of such crushing and soulless work?- by Dylan GottliebRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-made-law-into-a-white-collar-sweatshop-in-the-1980s.json"
-    },
-    {
-      "id": "a-vivid-portrait-of-montana-built-from-call-in-radio-clips",
-      "title": "Your opinion, please",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-08T10:01:00+00:00",
-      "excerpt": "From poetry to politics, this radio show asked listeners to speak their minds. Decades later, their words still resonate- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-a-vivid-portrait-of-montana-built-from-call-in-radio-clips.json"
     }
   ]
 }
