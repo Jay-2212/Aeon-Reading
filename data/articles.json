@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-23T14:01:17.778847+00:00",
+  "lastFetched": "2026-04-24T13:53:30.852221+00:00",
   "articles": [
+    {
+      "id": "the-role-of-literature-as-the-key-to-personal-freedom",
+      "title": "Does reading do us any good?",
+      "author": "Flora Champy",
+      "category": "",
+      "publishedAt": "2026-04-24T10:00:00+00:00",
+      "excerpt": "Stripped of easy moralising, literature makes us relish the search for truth in an age when many believe truth to be dead- by Flora ChampyRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-role-of-literature-as-the-key-to-personal-freedom.json"
+    },
     {
       "id": "searching-for-superbug-cures-in-the-salt-flats-of-the-atacama-desert",
       "title": "Life invisible",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-could-ai-replace-human-art-experts-in-attributing-paintings.json"
-    },
-    {
-      "id": "take-a-mind-bending-ride-through-the-cosmos-at-light-speed",
-      "title": "Travelling at the speed of light",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-09T10:01:00+00:00",
-      "excerpt": "A mind-bending trip into the cosmos aboard a speculative (yet theoretically possible) spacecraft near the speed of light- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-take-a-mind-bending-ride-through-the-cosmos-at-light-speed.json"
     }
   ]
 }
