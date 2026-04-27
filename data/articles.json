@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-24T13:53:30.852221+00:00",
+  "lastFetched": "2026-04-27T14:11:51.830686+00:00",
   "articles": [
+    {
+      "id": "yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove",
+      "title": "Africa’s cultural landmarks: Ọṣun-Òṣogbo Sacred Grove, Nigeria",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-27T10:01:00+00:00",
+      "excerpt": "Deep inside a luscious grove in Nigeria, a community of artists preserves otherworldly monuments to Yorùbá spirituality- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove.json"
+    },
+    {
+      "id": "medieval-art-makes-the-body-a-site-of-theology-and-politics",
+      "title": "The Black executioner",
+      "author": "Denva Gallant",
+      "category": "",
+      "publishedAt": "2026-04-27T10:00:00+00:00",
+      "excerpt": "Medieval artists depicted bodies as vehicles for politics and hierarchy. Repeated enough, these roles began to appear natural- by Denva GallantRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-medieval-art-makes-the-body-a-site-of-theology-and-politics.json"
+    },
     {
       "id": "the-role-of-literature-as-the-key-to-personal-freedom",
       "title": "Does reading do us any good?",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-reindeer-politics-why-some-sami-struggle-for-recognition.json"
-    },
-    {
-      "id": "why-did-disabled-people-support-eugenics-in-the-1930s",
-      "title": "The sterilisation-seekers",
-      "author": "Coreen McGuire & Alex Aylward",
-      "category": "",
-      "publishedAt": "2026-04-13T10:00:00+00:00",
-      "excerpt": "In the story of eugenics, disabled people are often depicted as passive victims. But for some it seemed an opportunity- by Coreen McGuire & Alex AylwardRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-did-disabled-people-support-eugenics-in-the-1930s.json"
-    },
-    {
-      "id": "could-ai-replace-human-art-experts-in-attributing-paintings",
-      "title": "Patterns without desires",
-      "author": "Noah Charney",
-      "category": "",
-      "publishedAt": "2026-04-10T10:00:00+00:00",
-      "excerpt": "The art expert is the fulcrum of all value and significance in the museum and auction world. Could AI supplant them?- by Noah CharneyRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-could-ai-replace-human-art-experts-in-attributing-paintings.json"
     }
   ]
 }
