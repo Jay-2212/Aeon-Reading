@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-27T14:11:51.830686+00:00",
+  "lastFetched": "2026-04-28T19:49:47.735787+00:00",
   "articles": [
+    {
+      "id": "why-man-the-hunter-continues-to-die-and-return",
+      "title": "Hunting ‘Man the Hunter’",
+      "author": "Vivek V Venkataraman",
+      "category": "",
+      "publishedAt": "2026-04-28T10:00:00+00:00",
+      "excerpt": "For a century, this theory of human origins has died and returned. To free it from limbo, we must disentangle its many meanings- by Vivek V VenkataramanRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-man-the-hunter-continues-to-die-and-return.json"
+    },
     {
       "id": "yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove",
       "title": "Africa’s cultural landmarks: Ọṣun-Òṣogbo Sacred Grove, Nigeria",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-mysticism-of-nietzsches-doctrine-of-the-eternal-return.json"
-    },
-    {
-      "id": "reindeer-politics-why-some-sami-struggle-for-recognition",
-      "title": "I am Sámi",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-13T10:01:00+00:00",
-      "excerpt": "This short documentary asks what it means to be Sámi today, following decades-long state-mandated assimilation attempts- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-reindeer-politics-why-some-sami-struggle-for-recognition.json"
     }
   ]
 }
