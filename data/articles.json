@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-28T19:49:47.735787+00:00",
+  "lastFetched": "2026-04-29T14:18:46.041109+00:00",
   "articles": [
+    {
+      "id": "a-millennium-of-japanese-history-as-told-through-the-samurai-sword",
+      "title": "1,000 years of Japanese swords",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-29T10:01:00+00:00",
+      "excerpt": "From weapon to icon – a riveting history lesson in the many meanings of the samurai sword that’s also just plain cool to see- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-a-millennium-of-japanese-history-as-told-through-the-samurai-sword.json"
+    },
     {
       "id": "why-man-the-hunter-continues-to-die-and-return",
       "title": "Hunting ‘Man the Hunter’",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-a-propulsive-ode-to-the-forgotten-parents-of-film.json"
-    },
-    {
-      "id": "the-mysticism-of-nietzsches-doctrine-of-the-eternal-return",
-      "title": "You’ve lived this life before",
-      "author": "Mark Higgins",
-      "category": "",
-      "publishedAt": "2026-04-14T10:00:00+00:00",
-      "excerpt": "The mystical insight came to Nietzsche like a lightning flash: time eternally recurs – and life must be lived accordingly- by Mark HigginsRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-mysticism-of-nietzsches-doctrine-of-the-eternal-return.json"
     }
   ]
 }
