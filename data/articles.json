@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-04-29T14:18:46.041109+00:00",
+  "lastFetched": "2026-04-30T14:13:10.699901+00:00",
   "articles": [
+    {
+      "id": "when-did-stories-become-so-centred-on-good-battling-evil-and-why",
+      "title": "Who invented bad guys?",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-04-30T10:01:00+00:00",
+      "excerpt": "The good-vs-evil paradigm of most pop-culture storytelling is a relatively recent effort to promote social cohesion- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-when-did-stories-become-so-centred-on-good-battling-evil-and-why.json"
+    },
+    {
+      "id": "what-ethiopian-running-says-about-the-limits-of-human-ability",
+      "title": "The Ethiopian running secret",
+      "author": "Michael Crawley & Geoff Burns",
+      "category": "",
+      "publishedAt": "2026-04-30T10:00:00+00:00",
+      "excerpt": "One school of training is highly personalised, technical and data-driven. The other is the one that wins marathons- by Michael Crawley & Geoff BurnsRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-ethiopian-running-says-about-the-limits-of-human-ability.json"
+    },
     {
       "id": "a-millennium-of-japanese-history-as-told-through-the-samurai-sword",
       "title": "1,000 years of Japanese swords",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-from-celtic-village-to-world-capital-how-paris-became-paris.json"
-    },
-    {
-      "id": "why-little-red-dots-pose-a-big-mystery-about-the-universe",
-      "title": "Join the dots",
-      "author": "Jenny Greene",
-      "category": "",
-      "publishedAt": "2026-04-16T10:00:00+00:00",
-      "excerpt": "Peering into the origins of our Universe, astronomers found something that shouldn’t be there: what are those little red dots?- by Jenny GreeneRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-little-red-dots-pose-a-big-mystery-about-the-universe.json"
-    },
-    {
-      "id": "a-propulsive-ode-to-the-forgotten-parents-of-film",
-      "title": "Impromptu",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-15T10:01:00+00:00",
-      "excerpt": "Take a kaleidoscopic journey through the early history of film, inspired by an enduring fascination with motion and form- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-a-propulsive-ode-to-the-forgotten-parents-of-film.json"
     }
   ]
 }
