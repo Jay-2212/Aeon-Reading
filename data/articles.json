@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-04-30T14:13:10.699901+00:00",
+  "lastFetched": "2026-05-01T13:42:26.643107+00:00",
   "articles": [
+    {
+      "id": "lucien-levy-bruhl-and-the-emergence-of-personhood",
+      "title": "To be is to participate",
+      "author": "João de Pina-Cabral",
+      "category": "",
+      "publishedAt": "2026-05-01T10:00:00+00:00",
+      "excerpt": "For Lucien Lévy-Bruhl, a person is not self-contained, but the outcome of a lifelong process of living with others: we before I- by João de Pina-CabralRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-lucien-levy-bruhl-and-the-emergence-of-personhood.json"
+    },
     {
       "id": "when-did-stories-become-so-centred-on-good-battling-evil-and-why",
       "title": "Who invented bad guys?",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-you-know-what-consciousness-is-you-live-in-soul-land.json"
-    },
-    {
-      "id": "from-celtic-village-to-world-capital-how-paris-became-paris",
-      "title": "Evolution of Paris",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-16T10:01:00+00:00",
-      "excerpt": "The evolution of Paris across millennia – from Celtic fishing village to world capital – in three animated minutes- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-from-celtic-village-to-world-capital-how-paris-became-paris.json"
     }
   ]
 }
