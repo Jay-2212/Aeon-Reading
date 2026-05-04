@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-05-01T13:42:26.643107+00:00",
+  "lastFetched": "2026-05-04T14:19:37.124486+00:00",
   "articles": [
+    {
+      "id": "is-democracy-without-elections-possible-could-a-lottery-be-better",
+      "title": "Democracy by lottery",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-05-04T10:01:00+00:00",
+      "excerpt": "Ancient Athenians chose leaders by lottery rather than elections. Could this solve the problems facing democracy today?- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-is-democracy-without-elections-possible-could-a-lottery-be-better.json"
+    },
+    {
+      "id": "why-reality-is-more-than-the-sum-of-its-particles",
+      "title": "Reality emerges",
+      "author": "Felix Flicker",
+      "category": "",
+      "publishedAt": "2026-05-04T10:00:00+00:00",
+      "excerpt": "Particles are nature’s smallest constituents, but that doesn’t mean they’re fundamental. So what is the Universe made of?- by Felix FlickerRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-reality-is-more-than-the-sum-of-its-particles.json"
+    },
     {
       "id": "lucien-levy-bruhl-and-the-emergence-of-personhood",
       "title": "To be is to participate",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-many-complex-structures-predate-the-scientific-method-how.json"
-    },
-    {
-      "id": "how-understanding-bioenergetics-can-help-our-brain-health",
-      "title": "Fuel for thought",
-      "author": "Hannah Critchlow",
-      "category": "",
-      "publishedAt": "2026-04-20T10:00:00+00:00",
-      "excerpt": "A brain fit for the 21st century is one that understands – and respects – its own bioenergetic foundations- by Hannah CritchlowRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-how-understanding-bioenergetics-can-help-our-brain-health.json"
-    },
-    {
-      "id": "you-know-what-consciousness-is-you-live-in-soul-land",
-      "title": "The invention of the soul",
-      "author": "Nicholas Humphrey",
-      "category": "",
-      "publishedAt": "2026-04-17T10:00:00+00:00",
-      "excerpt": "Humans weren’t given souls by God or genes. We made them ourselves with language – turning sentience into something sacred- by Nicholas HumphreyRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-you-know-what-consciousness-is-you-live-in-soul-land.json"
     }
   ]
 }
