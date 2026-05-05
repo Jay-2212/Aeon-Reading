@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-04T14:19:37.124486+00:00",
+  "lastFetched": "2026-05-05T19:43:37.296516+00:00",
   "articles": [
+    {
+      "id": "why-creativity-shines-out-on-the-edge-of-things",
+      "title": "Embrace the edge!",
+      "author": "Charles Foster",
+      "category": "",
+      "publishedAt": "2026-05-05T10:00:00+00:00",
+      "excerpt": "Brilliance and kindness shine brightest when far from the comfortable centre. Even nature is more generative there too- by Charles FosterRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-creativity-shines-out-on-the-edge-of-things.json"
+    },
     {
       "id": "is-democracy-without-elections-possible-could-a-lottery-be-better",
       "title": "Democracy by lottery",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-lessons-from-the-fairness-of-african-fractal-societies.json"
-    },
-    {
-      "id": "many-complex-structures-predate-the-scientific-method-how",
-      "title": "The engineering method",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-20T10:01:00+00:00",
-      "excerpt": "How humans built beautiful, lasting structures without science or mathematics, using only engineering rules of thumb- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-many-complex-structures-predate-the-scientific-method-how.json"
     }
   ]
 }
