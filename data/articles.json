@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-05T19:43:37.296516+00:00",
+  "lastFetched": "2026-05-06T14:31:25.964789+00:00",
   "articles": [
+    {
+      "id": "a-teen-girl-hits-a-crossroads-in-this-stirring-portrait-of-rural-iran",
+      "title": "Sarnevesht (Daughter)",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-05-06T10:01:00+00:00",
+      "excerpt": "In rural Iran, Sahar faces a stark choice: stay at home to look after her father, or go to the city to pursue her education- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-a-teen-girl-hits-a-crossroads-in-this-stirring-portrait-of-rural-iran.json"
+    },
     {
       "id": "why-creativity-shines-out-on-the-edge-of-things",
       "title": "Embrace the edge!",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-swimmer-who-went-from-the-olympics-to-auschwitz-and-back-again.json"
-    },
-    {
-      "id": "lessons-from-the-fairness-of-african-fractal-societies",
-      "title": "Justice is geometric",
-      "author": "Likam Kyanzaire",
-      "category": "",
-      "publishedAt": "2026-04-21T10:00:00+00:00",
-      "excerpt": "Where centralised societies excel at extraction, African fractal systems allow for circulation, reciprocity and return- by Likam KyanzaireRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-lessons-from-the-fairness-of-african-fractal-societies.json"
     }
   ]
 }
