@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-07T14:32:31.513862+00:00",
+  "lastFetched": "2026-05-08T14:04:50.175249+00:00",
   "articles": [
+    {
+      "id": "things-have-jobs-and-digital-devices-are-made-to-track-you",
+      "title": "The eye in your pocket",
+      "author": "Carissa Véliz",
+      "category": "",
+      "publishedAt": "2026-05-08T10:00:00+00:00",
+      "excerpt": "Things have jobs: pillows are made for comfort, scissors are sharp, and digital devices are made to track your every move- by Carissa VélizRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-things-have-jobs-and-digital-devices-are-made-to-track-you.json"
+    },
     {
       "id": "fungi-homes-and-more-ways-biology-could-sustain-life-beyond-earth",
       "title": "Nature’s hardware store: building the future with biology",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-role-of-literature-as-the-key-to-personal-freedom.json"
-    },
-    {
-      "id": "searching-for-superbug-cures-in-the-salt-flats-of-the-atacama-desert",
-      "title": "Life invisible",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-23T10:01:00+00:00",
-      "excerpt": "In the Atacama Desert, scientists race to find novel cures for antibiotic-resistant infections, as mining interests encroach- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-searching-for-superbug-cures-in-the-salt-flats-of-the-atacama-desert.json"
     }
   ]
 }
