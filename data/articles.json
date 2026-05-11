@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-05-08T14:04:50.175249+00:00",
+  "lastFetched": "2026-05-11T15:27:22.175955+00:00",
   "articles": [
+    {
+      "id": "the-historian-who-brings-lessons-on-us-prisons-inside-their-walls",
+      "title": "Classroom 4",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-05-11T10:01:00+00:00",
+      "excerpt": "In this award-winning short, inmates and college students explore the history of incarceration from inside a US prison- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-historian-who-brings-lessons-on-us-prisons-inside-their-walls.json"
+    },
+    {
+      "id": "children-need-stress-and-discomfort-in-order-to-grow-up",
+      "title": "Children are apprentices",
+      "author": "Niklas Serning & Nina Lyon",
+      "category": "",
+      "publishedAt": "2026-05-11T10:00:00+00:00",
+      "excerpt": "The emotional and practical skills of adulthood can only be learned from (appropriate) levels of discomfort and stress- by Niklas Serning & Nina LyonRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-children-need-stress-and-discomfort-in-order-to-grow-up.json"
+    },
     {
       "id": "things-have-jobs-and-digital-devices-are-made-to-track-you",
       "title": "The eye in your pocket",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove.json"
-    },
-    {
-      "id": "medieval-art-makes-the-body-a-site-of-theology-and-politics",
-      "title": "The Black executioner",
-      "author": "Denva Gallant",
-      "category": "",
-      "publishedAt": "2026-04-27T10:00:00+00:00",
-      "excerpt": "Medieval artists depicted bodies as vehicles for politics and hierarchy. Repeated enough, these roles began to appear natural- by Denva GallantRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-medieval-art-makes-the-body-a-site-of-theology-and-politics.json"
-    },
-    {
-      "id": "the-role-of-literature-as-the-key-to-personal-freedom",
-      "title": "Does reading do us any good?",
-      "author": "Flora Champy",
-      "category": "",
-      "publishedAt": "2026-04-24T10:00:00+00:00",
-      "excerpt": "Stripped of easy moralising, literature makes us relish the search for truth in an age when many believe truth to be dead- by Flora ChampyRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-role-of-literature-as-the-key-to-personal-freedom.json"
     }
   ]
 }
