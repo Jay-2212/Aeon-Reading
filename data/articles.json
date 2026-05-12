@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-11T15:27:22.175955+00:00",
+  "lastFetched": "2026-05-12T14:39:28.779452+00:00",
   "articles": [
+    {
+      "id": "how-does-the-deep-earth-see-humanity",
+      "title": "Beneath our human shallows",
+      "author": "James Dinneen",
+      "category": "",
+      "publishedAt": "2026-05-12T10:00:00+00:00",
+      "excerpt": "We need a new imagination for the whole Earth, linking the power of the deep planet with the vitality of the surface- by James DinneenRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-how-does-the-deep-earth-see-humanity.json"
+    },
     {
       "id": "the-historian-who-brings-lessons-on-us-prisons-inside-their-walls",
       "title": "Classroom 4",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-why-man-the-hunter-continues-to-die-and-return.json"
-    },
-    {
-      "id": "yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove",
-      "title": "Africa’s cultural landmarks: Ọṣun-Òṣogbo Sacred Grove, Nigeria",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-27T10:01:00+00:00",
-      "excerpt": "Deep inside a luscious grove in Nigeria, a community of artists preserves otherworldly monuments to Yorùbá spirituality- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-yoruba-spirituality-inspires-surreal-sculptures-in-this-sacred-grove.json"
     }
   ]
 }
