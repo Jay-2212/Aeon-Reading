@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-12T14:39:28.779452+00:00",
+  "lastFetched": "2026-05-13T14:49:23.071883+00:00",
   "articles": [
+    {
+      "id": "meet-the-bounty-hunters-who-enforce-new-yorks-idling-vehicle-ban",
+      "title": "Idle warriors",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-05-13T10:01:00+00:00",
+      "excerpt": "How a public health initiative to reduce air pollution has created ‘full-time citizen complainants’ who patrol the city- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-meet-the-bounty-hunters-who-enforce-new-yorks-idling-vehicle-ban.json"
+    },
     {
       "id": "how-does-the-deep-earth-see-humanity",
       "title": "Beneath our human shallows",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-a-millennium-of-japanese-history-as-told-through-the-samurai-sword.json"
-    },
-    {
-      "id": "why-man-the-hunter-continues-to-die-and-return",
-      "title": "Hunting ‘Man the Hunter’",
-      "author": "Vivek V Venkataraman",
-      "category": "",
-      "publishedAt": "2026-04-28T10:00:00+00:00",
-      "excerpt": "For a century, this theory of human origins has died and returned. To free it from limbo, we must disentangle its many meanings- by Vivek V VenkataramanRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-man-the-hunter-continues-to-die-and-return.json"
     }
   ]
 }
