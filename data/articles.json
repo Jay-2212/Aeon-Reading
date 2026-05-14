@@ -1,6 +1,30 @@
 {
-  "lastFetched": "2026-05-13T14:49:23.071883+00:00",
+  "lastFetched": "2026-05-14T14:29:32.890261+00:00",
   "articles": [
+    {
+      "id": "the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it",
+      "title": "Silvesterchlausen",
+      "author": "Aeon Video",
+      "category": "",
+      "publishedAt": "2026-05-14T10:01:00+00:00",
+      "excerpt": "‘We’re not sure what it means or how it started’ – the enigmatic ritual that has existed in Switzerland for centuries- by Aeon VideoWatch on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it.json"
+    },
+    {
+      "id": "to-fund-human-rights-we-need-a-global-fair-tax-convention",
+      "title": "Rights require money",
+      "author": "Attiya Waris",
+      "category": "",
+      "publishedAt": "2026-05-14T10:00:00+00:00",
+      "excerpt": "Talk as much as you like about human rights, nothing will change until the architecture of global finance is reformed- by Attiya WarisRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-to-fund-human-rights-we-need-a-global-fair-tax-convention.json"
+    },
     {
       "id": "meet-the-bounty-hunters-who-enforce-new-yorks-idling-vehicle-ban",
       "title": "Idle warriors",
@@ -156,30 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-when-did-stories-become-so-centred-on-good-battling-evil-and-why.json"
-    },
-    {
-      "id": "what-ethiopian-running-says-about-the-limits-of-human-ability",
-      "title": "The Ethiopian running secret",
-      "author": "Michael Crawley & Geoff Burns",
-      "category": "",
-      "publishedAt": "2026-04-30T10:00:00+00:00",
-      "excerpt": "One school of training is highly personalised, technical and data-driven. The other is the one that wins marathons- by Michael Crawley & Geoff BurnsRead on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-ethiopian-running-says-about-the-limits-of-human-ability.json"
-    },
-    {
-      "id": "a-millennium-of-japanese-history-as-told-through-the-samurai-sword",
-      "title": "1,000 years of Japanese swords",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-29T10:01:00+00:00",
-      "excerpt": "From weapon to icon – a riveting history lesson in the many meanings of the samurai sword that’s also just plain cool to see- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-a-millennium-of-japanese-history-as-told-through-the-samurai-sword.json"
     }
   ]
 }
