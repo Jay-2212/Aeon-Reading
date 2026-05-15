@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-14T14:29:32.890261+00:00",
+  "lastFetched": "2026-05-15T14:22:47.383797+00:00",
   "articles": [
+    {
+      "id": "young-people-now-and-the-mal-du-siecle-of-19th-century-france",
+      "title": "Gen Z but two centuries ago",
+      "author": "Emily Herring",
+      "category": "",
+      "publishedAt": "2026-05-15T10:00:00+00:00",
+      "excerpt": "A generation of young people with ‘full hearts in an empty world’ sought hope in the face of insurmountable malaise- by Emily HerringRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-young-people-now-and-the-mal-du-siecle-of-19th-century-france.json"
+    },
     {
       "id": "the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it",
       "title": "Silvesterchlausen",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-lucien-levy-bruhl-and-the-emergence-of-personhood.json"
-    },
-    {
-      "id": "when-did-stories-become-so-centred-on-good-battling-evil-and-why",
-      "title": "Who invented bad guys?",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-04-30T10:01:00+00:00",
-      "excerpt": "The good-vs-evil paradigm of most pop-culture storytelling is a relatively recent effort to promote social cohesion- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-when-did-stories-become-so-centred-on-good-battling-evil-and-why.json"
     }
   ]
 }
