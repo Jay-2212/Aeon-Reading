@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-18T10:17:57.012175+00:00",
+  "lastFetched": "2026-05-19T15:38:39.599133+00:00",
   "articles": [
+    {
+      "id": "china-and-the-sea-a-story-of-power-faith-and-appetite",
+      "title": "Maritime China",
+      "author": "Ron Po",
+      "category": "",
+      "publishedAt": "2026-05-19T10:00:00+00:00",
+      "excerpt": "Far from turning its back on the sea, the fate of Qing China was tied as much to tides and storms as to cavalry and walls- by Ron PoRead on Aeon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-china-and-the-sea-a-story-of-power-faith-and-appetite.json"
+    },
     {
       "id": "the-celestial-affair-that-made-us-mortal-an-animated-indian-myth",
       "title": "How death came to Earth",
@@ -168,18 +180,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-why-creativity-shines-out-on-the-edge-of-things.json"
-    },
-    {
-      "id": "is-democracy-without-elections-possible-could-a-lottery-be-better",
-      "title": "Democracy by lottery",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-04T10:01:00+00:00",
-      "excerpt": "Ancient Athenians chose leaders by lottery rather than elections. Could this solve the problems facing democracy today?- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-is-democracy-without-elections-possible-could-a-lottery-be-better.json"
     }
   ]
 }
