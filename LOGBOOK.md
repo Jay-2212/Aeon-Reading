@@ -390,3 +390,33 @@ No required next phase. Optional: rerun the fetch pipeline when external network
 Thumbnails and hero images now show up, article text is cleaner (no audio promos or stray recommendations), and images scale properly in the reader. Enjoy!
 
 ---
+
+## Agent 7 — 2026-05-21
+
+### Completed Phases
+- ✅ Aeon ingestion quality fix — filtered video entries, improved RSS content fallback, and improved thumbnail extraction resilience.
+- ✅ Pipeline behavior fix — stale cleanup now runs even when there are no newly added articles.
+- ✅ Testing update — added targeted Python coverage for video filtering and RSS-content fallback improvements.
+
+### Files Modified
+- `scripts/fetch_articles.py` — Added video-item filtering in RSS parsing; added RSS `content:encoded` support; improved excerpt cleanup; improved image extraction (`media:thumbnail`, image-safe `media:content`); upgraded RSS fallback content to use sanitised rich body + reading-time calculation + fallback image extraction; updated no-op early-return logic to still process removals.
+- `tests/test_fetch_articles.py` — Added tests for video filtering, thumbnail/media image handling, and richer RSS fallback body/image behavior.
+- `LOGBOOK.md` — This entry.
+
+### Known Issues / Technical Debt
+1. Fresh article data could not be regenerated in this environment because external access to `https://aeon.co/feed.rss` is currently unavailable here; fixes are validated by unit tests and will apply on the next successful workflow run.
+2. If Aeon changes feed schemas again (e.g., different media tags), selectors may need another update.
+
+### Recommendations for Next Agent
+- Trigger the “Fetch Aeon Articles” workflow once network access to Aeon feed is healthy, then verify:
+  - video entries are absent from `data/articles.json`,
+  - thumbnails are present where feed provides media fields,
+  - fallback text is richer than short excerpt-only output.
+
+### Next Agent Should Start At
+Validation task — run the fetch workflow and inspect generated `data/articles.json` + `data/article-*.json` quality after these parser/fallback changes.
+
+### Good Luck Note
+The ingestion path is now much more aligned with a reading-first product: it actively excludes video items and uses richer RSS text/image data when full-page scraping is blocked.
+
+---

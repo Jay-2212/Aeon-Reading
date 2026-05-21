@@ -186,7 +186,7 @@ def parse_rss_feed(xml_text: str) -> list[dict]:
     articles = []
     for item in channel.findall("item")[:MAX_ARTICLES]:
         article = _parse_rss_item(item, ns)
-        if article:
+        if article and not _is_video_entry(article):
             articles.append(article)
 
     return articles
@@ -243,15 +243,24 @@ def _parse_rss_item(item: ElementTree.Element, ns: dict) -> dict | None:
         published_at = datetime.now(timezone.utc).isoformat()
 
     # ------------------------------------------------------------------
-    # Excerpt — strip all HTML tags from the <description> element
+    # Rich RSS body — content:encoded (preferred fallback when scraping fails)
+    # ------------------------------------------------------------------
+    rss_content_html = ""
+    content_el = item.find("content:encoded", ns)
+    if content_el is not None and content_el.text:
+        rss_content_html = content_el.text.strip()
+
+    # ------------------------------------------------------------------
+    # Excerpt — prefer description, fall back to text extracted from content:encoded
     # ------------------------------------------------------------------
     excerpt = ""
     desc_el = item.find("description")
     if desc_el is not None and desc_el.text:
-        raw = desc_el.text or ""
-        excerpt = re.sub(r"<[^>]+>", "", raw).strip()
-        # Collapse whitespace and truncate
-        excerpt = " ".join(excerpt.split())[:300]
+        raw_excerpt = desc_el.text or ""
+        excerpt = re.sub(r"<[^>]+>", "", raw_excerpt)
+    elif rss_content_html:
+        excerpt = re.sub(r"<[^>]+>", "", rss_content_html)
+    excerpt = _clean_excerpt_text(excerpt)
 
     # ------------------------------------------------------------------
     # Author — try dc:creator first, fall back to <author>
@@ -272,12 +281,25 @@ def _parse_rss_item(item: ElementTree.Element, ns: dict) -> dict | None:
         category = category_el.text.strip()
 
     # ------------------------------------------------------------------
-    # Cover image — try media:content, then <enclosure>
+    # Cover image — prefer explicit image fields and avoid video attachments
     # ------------------------------------------------------------------
     image_url = ""
+    media_thumbnail = item.find("media:thumbnail", ns)
+    if media_thumbnail is not None:
+        image_url = media_thumbnail.get("url", "")
+
     media_content = item.find("media:content", ns)
     if media_content is not None:
-        image_url = media_content.get("url", "")
+        medium = (media_content.get("medium", "") or "").lower()
+        media_type = (media_content.get("type", "") or "").lower()
+        candidate = media_content.get("url", "")
+        looks_like_image = (
+            medium == "image"
+            or media_type.startswith("image/")
+            or re.search(r"\.(jpg|jpeg|png|webp|avif)(\?.*)?$", candidate, re.IGNORECASE)
+        )
+        if candidate and looks_like_image:
+            image_url = candidate
     if not image_url:
         enclosure = item.find("enclosure")
         if enclosure is not None and enclosure.get("type", "").startswith("image"):
@@ -293,7 +315,28 @@ def _parse_rss_item(item: ElementTree.Element, ns: dict) -> dict | None:
         "imageUrl":    image_url,
         "imageAlt":    "",  # RSS feeds rarely carry alt text; enriched from article page
         "url":         url,
+        "rssContentHtml": rss_content_html,
     }
+
+
+def _is_video_entry(article: dict) -> bool:
+    """Return True if an RSS entry points to an Aeon video rather than an article."""
+    url = (article.get("url") or "").lower()
+    author = (article.get("author") or "").lower()
+    category = (article.get("category") or "").lower()
+    return (
+        "/videos/" in url
+        or "aeon video" in author
+        or "video" in category
+    )
+
+
+def _clean_excerpt_text(text: str) -> str:
+    """Normalize excerpt text and remove trailing feed CTA fragments."""
+    cleaned = " ".join((text or "").split())
+    # Remove CTA tails often embedded in feed descriptions.
+    cleaned = re.sub(r"(Read|Watch)\s+on\s+Aeon\s*$", "", cleaned, flags=re.IGNORECASE)
+    return cleaned[:300].strip()
 
 
 def _extract_slug(url: str) -> str:
@@ -794,18 +837,44 @@ def _get_rss_fallback_content(rss_art: dict) -> dict:
     Returns:
         A content dict suitable for build_full_article/build_article_summary.
     """
-    # Use the RSS excerpt as the bodyHtml (wrapped in a paragraph)
-    body_html = f"<p>{rss_art['excerpt']}</p>"
-    
-    # Add a "Read more" link
-    body_html += f'<p><a href="{rss_art["url"]}" target="_blank" rel="noopener noreferrer">Read full article on Aeon (requires browser)</a></p>'
+    rss_body_html = (rss_art.get("rssContentHtml") or "").strip()
+    excerpt = (rss_art.get("excerpt") or "").strip()
+
+    if rss_body_html:
+        body_html = _sanitise_html(rss_body_html)
+    else:
+        safe_excerpt = bleach.clean(excerpt, tags=[], strip=True).strip()
+        body_html = f"<p>{safe_excerpt}</p>" if safe_excerpt else ""
+
+    if not body_html:
+        body_html = "<p>Read this article on Aeon.</p>"
+
+    # Add a canonical "Read more" link.
+    body_html += f'<p><a href="{rss_art["url"]}" target="_blank" rel="noopener noreferrer">Read full article on Aeon</a></p>'
+
+    # Derive reading time from the fallback body so the UI is still meaningful.
+    text_content = re.sub(r"<[^>]+>", " ", body_html)
+    word_count = len(text_content.split())
+    reading_time = max(1, math.ceil(word_count / WORDS_PER_MINUTE))
+
+    image_url = rss_art["imageUrl"]
+    image_alt = rss_art["imageAlt"]
+    if not image_url and rss_body_html:
+        try:
+            fallback_doc = lxml_html.fromstring(f"<div>{rss_body_html}</div>")
+            fallback_src, fallback_alt = _extract_first_image(fallback_doc)
+            if fallback_src:
+                image_url = fallback_src
+                image_alt = fallback_alt or image_alt
+        except (lxml_etree.ParserError, ValueError, TypeError):
+            pass
 
     return {
         "bodyHtml":           body_html,
         "authorBio":          "",
-        "imageUrl":           rss_art["imageUrl"],
-        "imageAlt":           rss_art["imageAlt"],
-        "readingTimeMinutes": 1, # Default to 1 min for summary
+        "imageUrl":           image_url,
+        "imageAlt":           image_alt,
+        "readingTimeMinutes": reading_time,
     }
 
 
@@ -853,7 +922,7 @@ def run() -> None:
     print(f"New articles to fetch: {len(new_ids)}")
     print(f"Stale articles to remove: {len(removed_ids)}")
 
-    if not new_ids:
+    if not new_ids and not removed_ids:
         print("No new articles found. Skipping commit.")
         return
 
