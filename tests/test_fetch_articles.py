@@ -193,6 +193,25 @@ OVER_AGGRESSIVE_SYNDICATION_HTML = """
 </html>
 """
 
+NEXT_ARTICLE_HTML = """
+<html>
+<head>
+  <meta property="og:image" content="https://images.aeonmedia.co/images/current-hero.jpg" />
+</head>
+<body>
+  <main>
+    <div class="article-content [&_.pullquote]:text-section">
+      <!-- Next.js marker comments are present in live Aeon HTML. -->
+      <div><p>Listen to this essay</p><!--$--></div>
+      <div class="has-dropcap">
+        <p>Current Aeon markup keeps full essay paragraphs here.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+"""
+
 
 
 # ---------------------------------------------------------------------------
@@ -555,6 +574,14 @@ class TestExtractArticleContent:
         assert result["imageUrl"] == "https://images.aeon.co/hero.jpg"
         assert result["imageAlt"] == "Brain scan"
 
+    def test_extracts_current_aeon_markup_and_meta_image(self):
+        """Next.js article markup uses .article-content and og:image."""
+        meta = {"imageUrl": "", "imageAlt": ""}
+        result = fa.extract_article_content(NEXT_ARTICLE_HTML, meta)
+        assert "Current Aeon markup keeps full essay paragraphs here." in result["bodyHtml"]
+        assert "Listen to this essay" not in result["bodyHtml"]
+        assert result["imageUrl"] == "https://images.aeonmedia.co/images/current-hero.jpg"
+
     def test_rss_image_preserved_when_page_has_none(self):
         """If the page has no hero image, the RSS imageUrl is returned."""
         meta = {"imageUrl": "https://rss.example.com/img.jpg", "imageAlt": "RSS alt"}
@@ -755,6 +782,33 @@ class TestRunPipeline:
         data = json.loads(new_file.read_text())
         assert data["id"] == "the-age-of-the-brain"
         assert "bodyHtml" in data
+
+    def test_degraded_existing_article_is_refetched(self, tmp_path):
+        """One-minute summaries with no image are repaired after extractor fixes."""
+        existing = {
+            "lastFetched": None,
+            "articles": [{
+                "id": "the-age-of-the-brain",
+                "publishedAt": "2025-06-01T10:00:00",
+                "imageUrl": "",
+                "readingTimeMinutes": 1,
+            }],
+        }
+        articles_file = tmp_path / "articles.json"
+        articles_file.write_text(json.dumps(existing))
+
+        with patch.object(fa, "ARTICLES_JSON", articles_file), \
+             patch.object(fa, "DATA_DIR", tmp_path), \
+             patch("fetch_articles.fetch_rss_feed", return_value=SAMPLE_RSS_XML), \
+             patch("fetch_articles.fetch_article_html", return_value=SAMPLE_ARTICLE_HTML), \
+             patch("fetch_articles.time") as mock_time:
+            mock_time.sleep = MagicMock()
+            fa.run()
+
+        updated = json.loads(articles_file.read_text())
+        repaired = next(a for a in updated["articles"] if a["id"] == "the-age-of-the-brain")
+        assert repaired["imageUrl"] == "https://images.aeon.co/brain.jpg"
+        assert (tmp_path / "article-the-age-of-the-brain.json").exists()
 
     def test_articles_json_updated_after_run(self, tmp_path):
         """articles.json is updated with the new article after run()."""

@@ -1,41 +1,17 @@
 {
-  "lastFetched": "2026-05-21T15:42:34.096358+00:00",
+  "lastFetched": "2026-05-21T16:38:01.200411+00:00",
   "articles": [
-    {
-      "id": "reclaiming-aloha-the-hawaiian-poet-rewriting-the-story-of-her-home",
-      "title": "Aloha ʻāina",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-21T10:01:00+00:00",
-      "excerpt": "It’s marketed as a holiday destination, but the true meaning of Hawai’i lies in the connections between land and people- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-reclaiming-aloha-the-hawaiian-poet-rewriting-the-story-of-her-home.json"
-    },
     {
       "id": "more-migration-or-less-migration-the-answer-is-boring",
       "title": "Make immigration boring",
       "author": "Alan Manning",
       "category": "",
       "publishedAt": "2026-05-21T10:00:00+00:00",
-      "excerpt": "The fiercest political battle of our age needs less moral drama and more hard thinking about numbers and fair tradeoffs- by Alan ManningRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "The fiercest political battle of our age needs less moral drama and more hard thinking about numbers and fair tradeoffs- by Alan Manning",
+      "imageUrl": "https://images.aeonmedia.co/images/a777283f-3215-4c00-a3b0-f6a85f7f12d2/essay-final-gettyimages-2248972026.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 15,
       "articleFile": "data/article-more-migration-or-less-migration-the-answer-is-boring.json"
-    },
-    {
-      "id": "in-search-of-the-donkey-that-sparked-a-national-incident-in-venezuela",
-      "title": "Looking for a donkey",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-20T10:01:00+00:00",
-      "excerpt": "After two arrests and a national uproar, why is it so tricky to find the donkey once likened to Venezuela’s president?- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-in-search-of-the-donkey-that-sparked-a-national-incident-in-venezuela.json"
     },
     {
       "id": "china-and-the-sea-a-story-of-power-faith-and-appetite",
@@ -43,23 +19,11 @@
       "author": "Ron Po",
       "category": "",
       "publishedAt": "2026-05-19T10:00:00+00:00",
-      "excerpt": "Far from turning its back on the sea, the fate of Qing China was tied as much to tides and storms as to cavalry and walls- by Ron PoRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "Far from turning its back on the sea, the fate of Qing China was tied as much to tides and storms as to cavalry and walls- by Ron Po",
+      "imageUrl": "https://images.aeonmedia.co/images/0d66e5b6-5ecc-4a3c-aaa3-3af90d548dfa/this-essay-pacifying-qing.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 19,
       "articleFile": "data/article-china-and-the-sea-a-story-of-power-faith-and-appetite.json"
-    },
-    {
-      "id": "the-celestial-affair-that-made-us-mortal-an-animated-indian-myth",
-      "title": "How death came to Earth",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-18T10:01:00+00:00",
-      "excerpt": "Why must humans die? According to an ancient Indian folktale, death first came to Earth through an ill-fated love affair- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-celestial-affair-that-made-us-mortal-an-animated-indian-myth.json"
     },
     {
       "id": "for-sergiu-klainerman-maths-is-a-fact-to-be-divined",
@@ -67,10 +31,10 @@
       "author": "Steve Nadis",
       "category": "",
       "publishedAt": "2026-05-18T10:00:00+00:00",
-      "excerpt": "Sergiu Klainerman spent years proving that black holes won’t fly apart; and arguing that maths is not a human invention- by Steve NadisRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "Sergiu Klainerman spent years proving that black holes won’t fly apart; and arguing that maths is not a human invention- by Steve Nadis",
+      "imageUrl": "https://images.aeonmedia.co/images/c8201a7f-310b-440c-afdb-59c1017052e7/screenshot-2026-04-24-at-12_31_40.png?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 22,
       "articleFile": "data/article-for-sergiu-klainerman-maths-is-a-fact-to-be-divined.json"
     },
     {
@@ -79,23 +43,11 @@
       "author": "Emily Herring",
       "category": "",
       "publishedAt": "2026-05-15T10:00:00+00:00",
-      "excerpt": "A generation of young people with ‘full hearts in an empty world’ sought hope in the face of insurmountable malaise- by Emily HerringRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "A generation of young people with ‘full hearts in an empty world’ sought hope in the face of insurmountable malaise- by Emily Herring",
+      "imageUrl": "https://images.aeonmedia.co/images/0b67748e-5785-4d72-bf8e-d4ed38024894/new-essay.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 16,
       "articleFile": "data/article-young-people-now-and-the-mal-du-siecle-of-19th-century-france.json"
-    },
-    {
-      "id": "the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it",
-      "title": "Silvesterchlausen",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-14T10:01:00+00:00",
-      "excerpt": "‘We’re not sure what it means or how it started’ – the enigmatic ritual that has existed in Switzerland for centuries- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it.json"
     },
     {
       "id": "to-fund-human-rights-we-need-a-global-fair-tax-convention",
@@ -103,23 +55,11 @@
       "author": "Attiya Waris",
       "category": "",
       "publishedAt": "2026-05-14T10:00:00+00:00",
-      "excerpt": "Talk as much as you like about human rights, nothing will change until the architecture of global finance is reformed- by Attiya WarisRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "Talk as much as you like about human rights, nothing will change until the architecture of global finance is reformed- by Attiya Waris",
+      "imageUrl": "https://images.aeonmedia.co/images/f1976456-f627-44a6-ac49-f7acf4e14011/essay-final-2025-07-19t053612z_166296836_rc21nfafvas4_rtrmadp_3_travel-cm-nairobi.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 19,
       "articleFile": "data/article-to-fund-human-rights-we-need-a-global-fair-tax-convention.json"
-    },
-    {
-      "id": "meet-the-bounty-hunters-who-enforce-new-yorks-idling-vehicle-ban",
-      "title": "Idle warriors",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-13T10:01:00+00:00",
-      "excerpt": "How a public health initiative to reduce air pollution has created ‘full-time citizen complainants’ who patrol the city- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-meet-the-bounty-hunters-who-enforce-new-yorks-idling-vehicle-ban.json"
     },
     {
       "id": "how-does-the-deep-earth-see-humanity",
@@ -127,23 +67,11 @@
       "author": "James Dinneen",
       "category": "",
       "publishedAt": "2026-05-12T10:00:00+00:00",
-      "excerpt": "We need a new imagination for the whole Earth, linking the power of the deep planet with the vitality of the surface- by James DinneenRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "We need a new imagination for the whole Earth, linking the power of the deep planet with the vitality of the surface- by James Dinneen",
+      "imageUrl": "https://images.aeonmedia.co/images/fa441f43-ad38-4663-bd2e-1e2a5884c09a/essay-sinkhole.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 17,
       "articleFile": "data/article-how-does-the-deep-earth-see-humanity.json"
-    },
-    {
-      "id": "the-historian-who-brings-lessons-on-us-prisons-inside-their-walls",
-      "title": "Classroom 4",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-11T10:01:00+00:00",
-      "excerpt": "In this award-winning short, inmates and college students explore the history of incarceration from inside a US prison- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-historian-who-brings-lessons-on-us-prisons-inside-their-walls.json"
     },
     {
       "id": "children-need-stress-and-discomfort-in-order-to-grow-up",
@@ -151,35 +79,23 @@
       "author": "Niklas Serning & Nina Lyon",
       "category": "",
       "publishedAt": "2026-05-11T10:00:00+00:00",
-      "excerpt": "The emotional and practical skills of adulthood can only be learned from (appropriate) levels of discomfort and stress- by Niklas Serning & Nina LyonRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "The emotional and practical skills of adulthood can only be learned from (appropriate) levels of discomfort and stress- by Niklas Serning & Nina Lyon",
+      "imageUrl": "https://images.aeonmedia.co/images/41f49d0e-f5ee-4fd5-bca8-952ef920e003/essay-sz-gettyimages-587480922.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 26,
       "articleFile": "data/article-children-need-stress-and-discomfort-in-order-to-grow-up.json"
     },
     {
       "id": "things-have-jobs-and-digital-devices-are-made-to-track-you",
-      "title": "The eye in your pocket",
+      "title": "The prophet in your pocket",
       "author": "Carissa Véliz",
       "category": "",
       "publishedAt": "2026-05-08T10:00:00+00:00",
-      "excerpt": "Things have jobs: pillows are made for comfort, scissors are sharp, and digital devices are made to track your every move- by Carissa VélizRead on Aeon",
-      "imageUrl": "",
+      "excerpt": "Things have jobs: pillows are made for comfort, scissors are sharp, and digital devices are made to track your every move- by Carissa Véliz",
+      "imageUrl": "https://images.aeonmedia.co/images/2cf389e1-6fac-4276-825e-6c2267b9e9e2/essay-gettyimages-875747400.jpg?width=1200&quality=75&format=jpg",
       "imageAlt": "",
-      "readingTimeMinutes": 1,
+      "readingTimeMinutes": 17,
       "articleFile": "data/article-things-have-jobs-and-digital-devices-are-made-to-track-you.json"
-    },
-    {
-      "id": "fungi-homes-and-more-ways-biology-could-sustain-life-beyond-earth",
-      "title": "Nature’s hardware store: building the future with biology",
-      "author": "Aeon Video",
-      "category": "",
-      "publishedAt": "2026-05-07T10:01:00+00:00",
-      "excerpt": "What if the tools for sustainable space exploration could be found in cellular life on Earth? A NASA astrobiologist explains- by Aeon VideoWatch on Aeon",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-fungi-homes-and-more-ways-biology-could-sustain-life-beyond-earth.json"
     }
   ]
 }

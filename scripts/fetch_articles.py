@@ -106,6 +106,7 @@ ALLOWED_ATTRS: dict[str, list[str]] = {
 # CSS selectors to try when locating the article body, in priority order.
 # The first matching element is used. If none match, the full <body> is used as fallback.
 BODY_SELECTORS = [
+    ".article-content",
     ".article__body",
     ".essay-body",
     "article .content",
@@ -524,6 +525,8 @@ def _remove_audio_promos(root: lxml_html.HtmlElement) -> None:
         # Ensure we don't have a matching child (we want the most specific element)
         has_matching_child = False
         for child in el.iterdescendants():
+            if not isinstance(child.tag, str):
+                continue
             child_text = " ".join((child.text_content() or "").split())
             if any(p.search(child_text) for p in patterns):
                 has_matching_child = True
@@ -543,10 +546,14 @@ def _strip_trailing_recommendations(body_el: lxml_html.HtmlElement) -> None:
     marker_el = None
     # Find the innermost element containing the syndication marker
     for el in body_el.iterdescendants():
+        if not isinstance(el.tag, str):
+            continue
         text = " ".join((el.text_content() or "").split()).upper()
         if "SYNDICATE THIS" in text:
             has_matching_child = False
             for child in el.iterdescendants():
+                if not isinstance(child.tag, str):
+                    continue
                 if "SYNDICATE THIS" in " ".join((child.text_content() or "").split()).upper():
                     has_matching_child = True
                     break
@@ -669,6 +676,8 @@ def _extract_hero_image(doc: lxml_html.HtmlElement) -> tuple[str, str]:
         A ``(src, alt)`` tuple. Both are empty strings if no image is found.
     """
     hero_selectors = [
+        'meta[property="og:image"]',
+        'meta[name="twitter:image"]',
         ".hero-image img",
         ".article-hero img",
         ".cover-image img",
@@ -679,6 +688,10 @@ def _extract_hero_image(doc: lxml_html.HtmlElement) -> tuple[str, str]:
         elements = doc.cssselect(selector)
         if elements:
             img = elements[0]
+            if img.tag == "meta":
+                src = img.get("content", "")
+                if src:
+                    return src, ""
             # Some sites use data-src for lazy loading
             src = img.get("src", "") or img.get("data-src", "")
             alt = img.get("alt", "")
@@ -878,6 +891,14 @@ def _get_rss_fallback_content(rss_art: dict) -> dict:
     }
 
 
+def _is_degraded_summary(article: dict) -> bool:
+    """Return True for index entries that look like RSS excerpt fallbacks."""
+    return (
+        not (article.get("imageUrl") or "").strip()
+        and article.get("readingTimeMinutes") == 1
+    )
+
+
 def run() -> None:
     """Execute the full article fetch-and-update pipeline.
 
@@ -919,10 +940,17 @@ def run() -> None:
     # ------------------------------------------------------------------
     new_ids: set[str] = rss_ids - existing_ids
     removed_ids: set[str] = existing_ids - rss_ids
+    refresh_ids = {
+        article["id"]
+        for article in existing_articles
+        if article["id"] in rss_ids and _is_degraded_summary(article)
+    }
+    fetch_ids = new_ids | refresh_ids
     print(f"New articles to fetch: {len(new_ids)}")
+    print(f"Degraded articles to refresh: {len(refresh_ids)}")
     print(f"Stale articles to remove: {len(removed_ids)}")
 
-    if not new_ids and not removed_ids:
+    if not fetch_ids and not removed_ids:
         print("No new articles found. Skipping commit.")
         return
 
@@ -934,7 +962,7 @@ def run() -> None:
 
     for rss_art in rss_articles:
         art_id = rss_art["id"]
-        if art_id not in new_ids:
+        if art_id not in fetch_ids:
             continue
 
         print(f"\nFetching article: {art_id}")
@@ -990,7 +1018,10 @@ def run() -> None:
         return
 
     # Keep articles that are still in the feed
-    kept_articles = [a for a in existing_articles if a["id"] not in removed_ids]
+    kept_articles = [
+        a for a in existing_articles
+        if a["id"] not in removed_ids and a["id"] not in refresh_ids
+    ]
 
     # Merge new summaries (prepended) with kept articles
     all_articles = new_summaries + kept_articles
