@@ -45,7 +45,8 @@ SAMPLE_RSS_XML = """\
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:media="http://search.yahoo.com/mrss/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aeon</title>
     <link>https://aeon.co</link>
@@ -65,6 +66,36 @@ SAMPLE_RSS_XML = """\
       <dc:creator>John Smith</dc:creator>
       <category>Culture</category>
       <description>Music is everywhere.</description>
+    </item>
+  </channel>
+</rss>
+"""
+
+SAMPLE_RSS_VIDEO_ITEM_XML = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <item>
+      <title>A Real Essay</title>
+      <link>https://aeon.co/essays/a-real-essay</link>
+      <pubDate>Thu, 01 Jun 2025 10:00:00 +0000</pubDate>
+      <dc:creator>Jane Doe</dc:creator>
+      <description>Essay summary.</description>
+      <media:content url="https://images.aeon.co/essay.jpg" medium="image"/>
+      <content:encoded><![CDATA[
+        <p>This is a long essay body with many words for testing purposes.</p>
+      ]]></content:encoded>
+    </item>
+    <item>
+      <title>Aeon video item</title>
+      <link>https://aeon.co/videos/some-video</link>
+      <pubDate>Thu, 01 Jun 2025 11:00:00 +0000</pubDate>
+      <dc:creator>Aeon Video</dc:creator>
+      <description>Watch on Aeon</description>
+      <media:content url="https://cdn.aeon.co/video.mp4" medium="video" type="video/mp4"/>
     </item>
   </channel>
 </rss>
@@ -307,6 +338,46 @@ class TestParseRssFeed:
         result = fa.parse_rss_feed(xml)
         assert len(result) <= fa.MAX_ARTICLES
 
+    def test_filters_video_entries(self):
+        """Video items are excluded so the app only ingests readable articles."""
+        articles = fa.parse_rss_feed(SAMPLE_RSS_VIDEO_ITEM_XML)
+        assert len(articles) == 1
+        assert articles[0]["id"] == "a-real-essay"
+
+    def test_media_thumbnail_is_used_when_present(self):
+        """media:thumbnail URL is used as imageUrl when present."""
+        xml = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <item>
+      <title>Thumb article</title>
+      <link>https://aeon.co/essays/thumb-article</link>
+      <media:thumbnail url="https://images.aeon.co/thumb.jpg"/>
+    </item>
+  </channel>
+</rss>
+"""
+        articles = fa.parse_rss_feed(xml)
+        assert articles[0]["imageUrl"] == "https://images.aeon.co/thumb.jpg"
+
+    def test_media_content_video_is_not_used_as_image(self):
+        """media:content entries that are videos are ignored for imageUrl."""
+        xml = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <item>
+      <title>Non-video author article</title>
+      <link>https://aeon.co/essays/non-video-author-article</link>
+      <media:content url="https://cdn.aeon.co/video.mp4" medium="video" type="video/mp4"/>
+    </item>
+  </channel>
+</rss>
+"""
+        articles = fa.parse_rss_feed(xml)
+        assert articles[0]["imageUrl"] == ""
+
 
 # ---------------------------------------------------------------------------
 # Tests: _sanitise_html
@@ -529,6 +600,36 @@ class TestExtractArticleContent:
         assert "SYNDICATE THIS" not in result["bodyHtml"]
         assert "Recommended content to strip." not in result["bodyHtml"]
         assert "Important article text." in result["bodyHtml"]
+
+
+class TestRssFallbackContent:
+    """Tests for RSS-based fallback content generation."""
+
+    def test_uses_content_encoded_as_body_when_available(self):
+        """Fallback uses content:encoded HTML to provide richer readable text."""
+        rss_art = {
+            "excerpt": "Short excerpt",
+            "url": "https://aeon.co/essays/a-real-essay",
+            "imageUrl": "",
+            "imageAlt": "",
+            "rssContentHtml": "<p>First paragraph with many words.</p><p>Second paragraph keeps reading quality high.</p>",
+        }
+        content = fa._get_rss_fallback_content(rss_art)
+        assert "First paragraph with many words." in content["bodyHtml"]
+        assert content["readingTimeMinutes"] >= 1
+
+    def test_extracts_fallback_image_from_content_encoded(self):
+        """Fallback derives imageUrl from first image in content:encoded when RSS image is missing."""
+        rss_art = {
+            "excerpt": "Short excerpt",
+            "url": "https://aeon.co/essays/image-article",
+            "imageUrl": "",
+            "imageAlt": "",
+            "rssContentHtml": "<p><img src=\"https://images.aeon.co/fallback.jpg\" alt=\"Fallback\"/></p><p>Body text.</p>",
+        }
+        content = fa._get_rss_fallback_content(rss_art)
+        assert content["imageUrl"] == "https://images.aeon.co/fallback.jpg"
+        assert content["imageAlt"] == "Fallback"
 
 
 # ---------------------------------------------------------------------------
