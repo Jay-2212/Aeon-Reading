@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-21T16:38:01.200411+00:00",
+  "lastFetched": "2026-05-22T14:51:38.870806+00:00",
   "articles": [
+    {
+      "id": "the-power-imbalance-between-parent-and-child-leaves-a-trace",
+      "title": "Being small",
+      "author": "Tom Wooldridge",
+      "category": "",
+      "publishedAt": "2026-05-22T10:00:00+00:00",
+      "excerpt": "Nobody quite recovers from being a child: the asymmetry of power between parents and children always leaves a trace- by Tom Wooldridge",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-power-imbalance-between-parent-and-child-leaves-a-trace.json"
+    },
     {
       "id": "more-migration-or-less-migration-the-answer-is-boring",
       "title": "Make immigration boring",
