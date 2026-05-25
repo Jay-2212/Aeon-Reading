@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-25T04:24:55.595983+00:00",
+  "lastFetched": "2026-05-25T10:21:57.527632+00:00",
   "articles": [
+    {
+      "id": "why-we-need-to-think-again-about-ecosystem-failure",
+      "title": "Can ecosystems malfunction?",
+      "author": "John Drake",
+      "category": "",
+      "publishedAt": "2026-05-25T10:00:00+00:00",
+      "excerpt": "We are told the natural world is ‘breaking down’. But forests don’t work like airplanes or human hearts- by John Drake",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-we-need-to-think-again-about-ecosystem-failure.json"
+    },
     {
       "id": "the-power-imbalance-between-parent-and-child-leaves-a-trace",
       "title": "Being small",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-how-does-the-deep-earth-see-humanity.json"
-    },
-    {
-      "id": "children-need-stress-and-discomfort-in-order-to-grow-up",
-      "title": "Children are apprentices",
-      "author": "Niklas Serning & Nina Lyon",
-      "category": "",
-      "publishedAt": "2026-05-11T10:00:00+00:00",
-      "excerpt": "The emotional and practical skills of adulthood can only be learned from (appropriate) levels of discomfort and stress- by Niklas Serning & Nina Lyon",
-      "imageUrl": "https://images.aeonmedia.co/images/41f49d0e-f5ee-4fd5-bca8-952ef920e003/essay-sz-gettyimages-587480922.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 26,
-      "articleFile": "data/article-children-need-stress-and-discomfort-in-order-to-grow-up.json"
-    },
-    {
-      "id": "things-have-jobs-and-digital-devices-are-made-to-track-you",
-      "title": "The prophet in your pocket",
-      "author": "Carissa Véliz",
-      "category": "",
-      "publishedAt": "2026-05-08T10:00:00+00:00",
-      "excerpt": "Things have jobs: pillows are made for comfort, scissors are sharp, and digital devices are made to track your every move- by Carissa Véliz",
-      "imageUrl": "https://images.aeonmedia.co/images/2cf389e1-6fac-4276-825e-6c2267b9e9e2/essay-gettyimages-875747400.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-things-have-jobs-and-digital-devices-are-made-to-track-you.json"
     }
   ]
 }
