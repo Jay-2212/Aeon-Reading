@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-05-27T04:23:38.570285+00:00",
+  "lastFetched": "2026-05-27T10:07:32.326560+00:00",
   "articles": [
     {
       "id": "a-fragile-crown-jewel-the-uns-human-rights-experts",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 19,
       "articleFile": "data/article-to-fund-human-rights-we-need-a-global-fair-tax-convention.json"
-    },
-    {
-      "id": "how-does-the-deep-earth-see-humanity",
-      "title": "Beneath our human shallows",
-      "author": "James Dinneen",
-      "category": "",
-      "publishedAt": "2026-05-12T10:00:00+00:00",
-      "excerpt": "We need a new imagination for the whole Earth, linking the power of the deep planet with the vitality of the surface- by James Dinneen",
-      "imageUrl": "https://images.aeonmedia.co/images/fa441f43-ad38-4663-bd2e-1e2a5884c09a/essay-sinkhole.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-how-does-the-deep-earth-see-humanity.json"
     }
   ]
 }
