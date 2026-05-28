@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-28T04:14:02.245427+00:00",
+  "lastFetched": "2026-05-28T10:15:48.863124+00:00",
   "articles": [
+    {
+      "id": "lets-save-the-enlightenment-baby-from-its-muddied-bathwater",
+      "title": "Flickering Enlightenment",
+      "author": "Eliane Glaser",
+      "category": "",
+      "publishedAt": "2026-05-28T10:00:00+00:00",
+      "excerpt": "Attacked by the Left and Right, the Enlightenment can only be saved through use of its greatest legacy: permanent critique- by Eliane Glaser",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-lets-save-the-enlightenment-baby-from-its-muddied-bathwater.json"
+    },
     {
       "id": "a-fragile-crown-jewel-the-uns-human-rights-experts",
       "title": "The embattled witnesses",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 16,
       "articleFile": "data/article-young-people-now-and-the-mal-du-siecle-of-19th-century-france.json"
-    },
-    {
-      "id": "to-fund-human-rights-we-need-a-global-fair-tax-convention",
-      "title": "Rights require money",
-      "author": "Attiya Waris",
-      "category": "",
-      "publishedAt": "2026-05-14T10:00:00+00:00",
-      "excerpt": "Talk as much as you like about human rights, nothing will change until the architecture of global finance is reformed- by Attiya Waris",
-      "imageUrl": "https://images.aeonmedia.co/images/f1976456-f627-44a6-ac49-f7acf4e14011/essay-final-2025-07-19t053612z_166296836_rc21nfafvas4_rtrmadp_3_travel-cm-nairobi.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-to-fund-human-rights-we-need-a-global-fair-tax-convention.json"
     }
   ]
 }
