@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-05-29T04:16:04.681549+00:00",
+  "lastFetched": "2026-05-29T10:05:46.657631+00:00",
   "articles": [
+    {
+      "id": "why-mozarts-operas-are-tests-of-moral-character",
+      "title": "Artist of sympathy and cruelty",
+      "author": "Dorian Bandy",
+      "category": "",
+      "publishedAt": "2026-05-29T10:00:00+00:00",
+      "excerpt": "Mozart’s genius lay in writing music of such power that he could draw his audience into morally wrenching predicaments- by Dorian Bandy",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-mozarts-operas-are-tests-of-moral-character.json"
+    },
     {
       "id": "lets-save-the-enlightenment-baby-from-its-muddied-bathwater",
       "title": "Flickering Enlightenment",
