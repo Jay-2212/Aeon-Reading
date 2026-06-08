@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-08T04:46:32.761018+00:00",
+  "lastFetched": "2026-06-08T11:09:47.548335+00:00",
   "articles": [
+    {
+      "id": "why-did-measuring-earths-true-shape-matter-for-science",
+      "title": "What shape is the Earth?",
+      "author": "Miguel Ohnesorge",
+      "category": "",
+      "publishedAt": "2026-06-08T10:00:00+00:00",
+      "excerpt": "The extraordinary challenge of determining the true shape of Earth reveals the deep value of measurement to scientific progress- by Miguel Ohnesorge",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-did-measuring-earths-true-shape-matter-for-science.json"
+    },
     {
       "id": "why-mozarts-operas-are-tests-of-moral-character",
       "title": "Artist of sympathy and cruelty",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 19,
       "articleFile": "data/article-china-and-the-sea-a-story-of-power-faith-and-appetite.json"
-    },
-    {
-      "id": "for-sergiu-klainerman-maths-is-a-fact-to-be-divined",
-      "title": "Mathematics is out there",
-      "author": "Steve Nadis",
-      "category": "",
-      "publishedAt": "2026-05-18T10:00:00+00:00",
-      "excerpt": "Sergiu Klainerman spent years proving that black holes won’t fly apart; and arguing that maths is not a human invention- by Steve Nadis",
-      "imageUrl": "https://images.aeonmedia.co/images/c8201a7f-310b-440c-afdb-59c1017052e7/screenshot-2026-04-24-at-12_31_40.png?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 22,
-      "articleFile": "data/article-for-sergiu-klainerman-maths-is-a-fact-to-be-divined.json"
-    },
-    {
-      "id": "young-people-now-and-the-mal-du-siecle-of-19th-century-france",
-      "title": "Gen Z but two centuries ago",
-      "author": "Emily Herring",
-      "category": "",
-      "publishedAt": "2026-05-15T10:00:00+00:00",
-      "excerpt": "A generation of young people with ‘full hearts in an empty world’ sought hope in the face of insurmountable malaise- by Emily Herring",
-      "imageUrl": "https://images.aeonmedia.co/images/0b67748e-5785-4d72-bf8e-d4ed38024894/new-essay.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 16,
-      "articleFile": "data/article-young-people-now-and-the-mal-du-siecle-of-19th-century-france.json"
     }
   ]
 }
