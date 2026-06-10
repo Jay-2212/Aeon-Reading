@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-10T04:19:41.601682+00:00",
+  "lastFetched": "2026-06-10T10:14:03.569682+00:00",
   "articles": [
     {
       "id": "why-being-autistic-can-be-a-lot-of-fun",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 15,
       "articleFile": "data/article-more-migration-or-less-migration-the-answer-is-boring.json"
-    },
-    {
-      "id": "china-and-the-sea-a-story-of-power-faith-and-appetite",
-      "title": "Maritime China",
-      "author": "Ron Po",
-      "category": "",
-      "publishedAt": "2026-05-19T10:00:00+00:00",
-      "excerpt": "Far from turning its back on the sea, the fate of Qing China was tied as much to tides and storms as to cavalry and walls- by Ron Po",
-      "imageUrl": "https://images.aeonmedia.co/images/0d66e5b6-5ecc-4a3c-aaa3-3af90d548dfa/this-essay-pacifying-qing.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-china-and-the-sea-a-story-of-power-faith-and-appetite.json"
     }
   ]
 }
