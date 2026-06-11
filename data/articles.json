@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-11T04:42:08.612892+00:00",
+  "lastFetched": "2026-06-11T10:48:45.004580+00:00",
   "articles": [
+    {
+      "id": "what-is-nick-lands-philosophy-of-accelerationism-really",
+      "title": "The no-human future",
+      "author": "Vincent Lê",
+      "category": "",
+      "publishedAt": "2026-06-11T10:00:00+00:00",
+      "excerpt": "Terrorists and tech bros alike view accelerationism as a revolutionary weapon. Nick Land glimpsed something much darker- by Vincent Lê",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-is-nick-lands-philosophy-of-accelerationism-really.json"
+    },
     {
       "id": "why-being-autistic-can-be-a-lot-of-fun",
       "title": "The joy of autism",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-power-imbalance-between-parent-and-child-leaves-a-trace.json"
-    },
-    {
-      "id": "more-migration-or-less-migration-the-answer-is-boring",
-      "title": "Make immigration boring",
-      "author": "Alan Manning",
-      "category": "",
-      "publishedAt": "2026-05-21T10:00:00+00:00",
-      "excerpt": "The fiercest political battle of our age needs less moral drama and more hard thinking about numbers and fair tradeoffs- by Alan Manning",
-      "imageUrl": "https://images.aeonmedia.co/images/a777283f-3215-4c00-a3b0-f6a85f7f12d2/essay-final-gettyimages-2248972026.jpg?width=1200&quality=75&format=jpg",
-      "imageAlt": "",
-      "readingTimeMinutes": 15,
-      "articleFile": "data/article-more-migration-or-less-migration-the-answer-is-boring.json"
     }
   ]
 }
