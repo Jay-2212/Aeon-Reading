@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-12T04:44:27.066439+00:00",
+  "lastFetched": "2026-06-12T10:24:06.721648+00:00",
   "articles": [
+    {
+      "id": "what-ancient-philosophy-really-thought-about-domestic-life",
+      "title": "A philosophy of home",
+      "author": "Sandrine Bergès",
+      "category": "",
+      "publishedAt": "2026-06-12T10:00:00+00:00",
+      "excerpt": "The household is a community, as much as the state, and ancient philosophy had much more to say about it than we think- by Sandrine Bergès",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-ancient-philosophy-really-thought-about-domestic-life.json"
+    },
     {
       "id": "what-is-nick-lands-philosophy-of-accelerationism-really",
       "title": "The no-human future",
