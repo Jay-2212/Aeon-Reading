@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-16T05:09:47.902464+00:00",
+  "lastFetched": "2026-06-16T11:24:41.433817+00:00",
   "articles": [
+    {
+      "id": "the-strange-rocks-that-wouldnt-exist-without-us",
+      "title": "What is this rock?",
+      "author": "John MacDonald",
+      "category": "",
+      "publishedAt": "2026-06-16T10:00:00+00:00",
+      "excerpt": "Not natural, not quite unnatural, the strange new rocks of the Anthropocene stretch the boundaries of geology- by John MacDonald",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-strange-rocks-that-wouldnt-exist-without-us.json"
+    },
     {
       "id": "what-would-a-therapy-camp-for-billionaires-look-like",
       "title": "Therapy for billionaires",
