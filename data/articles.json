@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-19T05:03:31.607581+00:00",
+  "lastFetched": "2026-06-19T10:48:22.025864+00:00",
   "articles": [
+    {
+      "id": "not-everything-is-trauma-language-needs-to-mean-something",
+      "title": "Trauma creep",
+      "author": "Lily Dunn",
+      "category": "",
+      "publishedAt": "2026-06-19T10:00:00+00:00",
+      "excerpt": "From a broken life to a broken nail, ‘trauma’ has been bleached by overuse. But it names something real – and must be reclaimed- by Lily Dunn",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-not-everything-is-trauma-language-needs-to-mean-something.json"
+    },
     {
       "id": "literature-fans-should-welcome-ai-as-a-fellow-wordsmith",
       "title": "Words, words, words",
