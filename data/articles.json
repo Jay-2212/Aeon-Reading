@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-22T05:07:44.548624+00:00",
+  "lastFetched": "2026-06-22T12:17:09.452743+00:00",
   "articles": [
+    {
+      "id": "zhuangzi-and-the-case-against-meritocracy",
+      "title": "No one is self-made",
+      "author": "Christine Abigail L Tan",
+      "category": "",
+      "publishedAt": "2026-06-22T10:00:00+00:00",
+      "excerpt": "The idea that success is deserved has great traction in the world. But Zhuangzi argues that it is a deeply flawed notion- by Christine Abigail L Tan",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-zhuangzi-and-the-case-against-meritocracy.json"
+    },
     {
       "id": "not-everything-is-trauma-language-needs-to-mean-something",
       "title": "Trauma creep",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-why-being-autistic-can-be-a-lot-of-fun.json"
-    },
-    {
-      "id": "why-did-measuring-earths-true-shape-matter-for-science",
-      "title": "What shape is the Earth?",
-      "author": "Miguel Ohnesorge",
-      "category": "",
-      "publishedAt": "2026-06-08T10:00:00+00:00",
-      "excerpt": "The extraordinary challenge of determining the true shape of Earth reveals the deep value of measurement to scientific progress- by Miguel Ohnesorge",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-did-measuring-earths-true-shape-matter-for-science.json"
-    },
-    {
-      "id": "why-mozarts-operas-are-tests-of-moral-character",
-      "title": "Artist of sympathy and cruelty",
-      "author": "Dorian Bandy",
-      "category": "",
-      "publishedAt": "2026-05-29T10:00:00+00:00",
-      "excerpt": "Mozart’s genius lay in writing music of such power that he could draw his audience into morally wrenching predicaments- by Dorian Bandy",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-mozarts-operas-are-tests-of-moral-character.json"
     }
   ]
 }
