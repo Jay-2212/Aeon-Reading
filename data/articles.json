@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-25T09:34:17.891444+00:00",
+  "lastFetched": "2026-06-25T14:44:51.637693+00:00",
   "articles": [
+    {
+      "id": "who-are-the-fire-taming-healers-of-modern-france",
+      "title": "Who are the fire-tamers?",
+      "author": "Susanna Crossman",
+      "category": "",
+      "publishedAt": "2026-06-25T10:00:00+00:00",
+      "excerpt": "From remote farmhouses to oncology clinics, a secret world of French healers works in parallel with conventional medicine- by Susanna Crossman",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-who-are-the-fire-taming-healers-of-modern-france.json"
+    },
     {
       "id": "zhuangzi-and-the-case-against-meritocracy",
       "title": "No one is self-made",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-is-nick-lands-philosophy-of-accelerationism-really.json"
-    },
-    {
-      "id": "why-being-autistic-can-be-a-lot-of-fun",
-      "title": "The joy of autism",
-      "author": "Sarah Hendrickx",
-      "category": "",
-      "publishedAt": "2026-06-09T10:00:00+00:00",
-      "excerpt": "Yes, we’re in a world of our own: for the autistic mind, it’s a place of intense curiosity, deep focus and sensory delight- by Sarah Hendrickx",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-being-autistic-can-be-a-lot-of-fun.json"
     }
   ]
 }
