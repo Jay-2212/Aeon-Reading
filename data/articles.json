@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-26T09:39:55.468348+00:00",
+  "lastFetched": "2026-06-26T14:37:28.122414+00:00",
   "articles": [
+    {
+      "id": "organised-violence-is-a-trade-whether-legal-or-illegal",
+      "title": "The violence specialists",
+      "author": "Raúl Zepeda Gil",
+      "category": "",
+      "publishedAt": "2026-06-26T10:00:00+00:00",
+      "excerpt": "Every society depends on violence workers, but what makes young men take a job that risks their lives and harms others?- by Raúl Zepeda Gil",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-organised-violence-is-a-trade-whether-legal-or-illegal.json"
+    },
     {
       "id": "who-are-the-fire-taming-healers-of-modern-france",
       "title": "Who are the fire-tamers?",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-ancient-philosophy-really-thought-about-domestic-life.json"
-    },
-    {
-      "id": "what-is-nick-lands-philosophy-of-accelerationism-really",
-      "title": "The no-human future",
-      "author": "Vincent Lê",
-      "category": "",
-      "publishedAt": "2026-06-11T10:00:00+00:00",
-      "excerpt": "Terrorists and tech bros alike view accelerationism as a revolutionary weapon. Nick Land glimpsed something much darker- by Vincent Lê",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-is-nick-lands-philosophy-of-accelerationism-really.json"
     }
   ]
 }
