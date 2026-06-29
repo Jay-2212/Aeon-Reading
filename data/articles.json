@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-06-29T04:43:57.072166+00:00",
+  "lastFetched": "2026-06-29T11:12:51.106938+00:00",
   "articles": [
+    {
+      "id": "it-doesnt-have-to-be-us-versus-nature",
+      "title": "The measure of flourishing",
+      "author": "Yadvinder Malhi",
+      "category": "",
+      "publishedAt": "2026-06-29T10:00:00+00:00",
+      "excerpt": "Human prosperity depends on nature, but no global metric has captured this with precision. Enter the Nature Relationship Index- by Yadvinder Malhi",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-it-doesnt-have-to-be-us-versus-nature.json"
+    },
     {
       "id": "organised-violence-is-a-trade-whether-legal-or-illegal",
       "title": "The violence specialists",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-would-a-therapy-camp-for-billionaires-look-like.json"
-    },
-    {
-      "id": "what-ancient-philosophy-really-thought-about-domestic-life",
-      "title": "A philosophy of home",
-      "author": "Sandrine Bergès",
-      "category": "",
-      "publishedAt": "2026-06-12T10:00:00+00:00",
-      "excerpt": "The household is a community, as much as the state, and ancient philosophy had much more to say about it than we think- by Sandrine Bergès",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-ancient-philosophy-really-thought-about-domestic-life.json"
     }
   ]
 }
