@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-02T09:24:24.542040+00:00",
+  "lastFetched": "2026-07-02T14:18:43.730811+00:00",
   "articles": [
+    {
+      "id": "re-reading-sartres-lecture-existentialism-is-a-humanism",
+      "title": "The anguish of choice",
+      "author": "Skye C Cleary",
+      "category": "",
+      "publishedAt": "2026-07-02T10:00:00+00:00",
+      "excerpt": "In the shattered aftermath of war, Sartre delivered a formidable lecture on freedom and meaning. Its urgency remains- by Skye C Cleary",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-re-reading-sartres-lecture-existentialism-is-a-humanism.json"
+    },
     {
       "id": "what-we-cant-measure-about-ai-yet",
       "title": "Illegible benefits",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-literature-fans-should-welcome-ai-as-a-fellow-wordsmith.json"
-    },
-    {
-      "id": "the-strange-rocks-that-wouldnt-exist-without-us",
-      "title": "What is this rock?",
-      "author": "John MacDonald",
-      "category": "",
-      "publishedAt": "2026-06-16T10:00:00+00:00",
-      "excerpt": "Not natural, not quite unnatural, the strange new rocks of the Anthropocene stretch the boundaries of geology- by John MacDonald",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-strange-rocks-that-wouldnt-exist-without-us.json"
     }
   ]
 }
