@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-03T09:29:02.036308+00:00",
+  "lastFetched": "2026-07-03T14:23:10.241952+00:00",
   "articles": [
+    {
+      "id": "what-ukrainian-war-widows-know-about-love-and-loss",
+      "title": "Abyss",
+      "author": "Julie Reshe",
+      "category": "",
+      "publishedAt": "2026-07-03T10:00:00+00:00",
+      "excerpt": "The testimonies of Ukraine’s war widows reveal the mortal risk of love and the possibility of dying while alive: a black pain- by Julie Reshe",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-what-ukrainian-war-widows-know-about-love-and-loss.json"
+    },
     {
       "id": "re-reading-sartres-lecture-existentialism-is-a-humanism",
       "title": "The anguish of choice",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-not-everything-is-trauma-language-needs-to-mean-something.json"
-    },
-    {
-      "id": "literature-fans-should-welcome-ai-as-a-fellow-wordsmith",
-      "title": "Words, words, words",
-      "author": "Martin Puchner",
-      "category": "",
-      "publishedAt": "2026-06-18T10:00:00+00:00",
-      "excerpt": "Strong resistance to AI among writers is understandable. But it obscures what we share with the machines: language itself- by Martin Puchner",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-literature-fans-should-welcome-ai-as-a-fellow-wordsmith.json"
     }
   ]
 }
