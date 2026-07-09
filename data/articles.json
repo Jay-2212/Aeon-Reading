@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-09T09:55:53.340134+00:00",
+  "lastFetched": "2026-07-09T15:24:16.165166+00:00",
   "articles": [
+    {
+      "id": "can-mindfulness-help-you-overcome-your-cognitive-biases",
+      "title": "How to offset your brain",
+      "author": "Stephanie Dorais",
+      "category": "",
+      "publishedAt": "2026-07-09T10:00:00+00:00",
+      "excerpt": "From confirmation bias to loss aversion, everyone suffers from cognitive biases. Skilfully targeted mindfulness can help- by Stephanie Dorais",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-can-mindfulness-help-you-overcome-your-cognitive-biases.json"
+    },
     {
       "id": "how-little-we-really-know-of-the-mighty-ming-dynasty",
       "title": "‘The emperor is far away’",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-organised-violence-is-a-trade-whether-legal-or-illegal.json"
-    },
-    {
-      "id": "who-are-the-fire-taming-healers-of-modern-france",
-      "title": "Who are the fire-tamers?",
-      "author": "Susanna Crossman",
-      "category": "",
-      "publishedAt": "2026-06-25T10:00:00+00:00",
-      "excerpt": "From remote farmhouses to oncology clinics, a secret world of French healers works in parallel with conventional medicine- by Susanna Crossman",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-who-are-the-fire-taming-healers-of-modern-france.json"
     }
   ]
 }
