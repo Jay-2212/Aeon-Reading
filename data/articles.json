@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-10T09:46:40.569967+00:00",
+  "lastFetched": "2026-07-10T14:41:51.417288+00:00",
   "articles": [
+    {
+      "id": "how-to-decode-the-archive-inside-ancient-tree-rings",
+      "title": "Lore of the rings",
+      "author": "Valerie Trouet",
+      "category": "",
+      "publishedAt": "2026-07-10T10:00:00+00:00",
+      "excerpt": "Trees contain an archive – tales of planetary shifts, cosmic events, historical pivots – that we’re only just unlocking- by Valerie Trouet",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-how-to-decode-the-archive-inside-ancient-tree-rings.json"
+    },
     {
       "id": "can-mindfulness-help-you-overcome-your-cognitive-biases",
       "title": "How to offset your brain",
