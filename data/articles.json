@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-13T09:39:05.707031+00:00",
+  "lastFetched": "2026-07-13T14:49:34.358699+00:00",
   "articles": [
+    {
+      "id": "when-my-ties-to-my-mother-faded-so-did-my-memories",
+      "title": "Unmothered",
+      "author": "David Robson",
+      "category": "",
+      "publishedAt": "2026-07-13T10:00:00+00:00",
+      "excerpt": "We are each a living story, written with those who raised us. But when my most loving co-author ghosted me, my story fractured- by David Robson",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-when-my-ties-to-my-mother-faded-so-did-my-memories.json"
+    },
     {
       "id": "how-to-decode-the-archive-inside-ancient-tree-rings",
       "title": "Lore of the rings",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-we-cant-measure-about-ai-yet.json"
-    },
-    {
-      "id": "it-doesnt-have-to-be-us-versus-nature",
-      "title": "The measure of flourishing",
-      "author": "Yadvinder Malhi",
-      "category": "",
-      "publishedAt": "2026-06-29T10:00:00+00:00",
-      "excerpt": "Human prosperity depends on nature, but no global metric has captured this with precision. Enter the Nature Relationship Index- by Yadvinder Malhi",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-it-doesnt-have-to-be-us-versus-nature.json"
-    },
-    {
-      "id": "organised-violence-is-a-trade-whether-legal-or-illegal",
-      "title": "The violence specialists",
-      "author": "Raúl Zepeda Gil",
-      "category": "",
-      "publishedAt": "2026-06-26T10:00:00+00:00",
-      "excerpt": "Every society depends on violence workers, but what makes young men take a job that risks their lives and harms others?- by Raúl Zepeda Gil",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-organised-violence-is-a-trade-whether-legal-or-illegal.json"
     }
   ]
 }
