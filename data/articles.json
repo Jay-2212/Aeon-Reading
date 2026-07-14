@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-14T08:19:15.383890+00:00",
+  "lastFetched": "2026-07-14T13:59:12.042382+00:00",
   "articles": [
+    {
+      "id": "silicon-valley-has-a-science-fiction-problem",
+      "title": "The looting of science fiction",
+      "author": "Ali Rıza Taşkale",
+      "category": "",
+      "publishedAt": "2026-07-14T10:00:00+00:00",
+      "excerpt": "Tech titans claim the genre inspired them. But all they’ve done is graft their politics onto stories of a better future- by Ali Rıza Taşkale",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-silicon-valley-has-a-science-fiction-problem.json"
+    },
     {
       "id": "when-my-ties-to-my-mother-faded-so-did-my-memories",
       "title": "Unmothered",
