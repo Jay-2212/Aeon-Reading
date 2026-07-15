@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-15T08:24:46.394540+00:00",
+  "lastFetched": "2026-07-15T13:55:55.947164+00:00",
   "articles": [
     {
       "id": "silicon-valley-has-a-science-fiction-problem",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-re-reading-sartres-lecture-existentialism-is-a-humanism.json"
-    },
-    {
-      "id": "what-we-cant-measure-about-ai-yet",
-      "title": "Illegible benefits",
-      "author": "Carlo Cordasco",
-      "category": "",
-      "publishedAt": "2026-06-30T10:00:00+00:00",
-      "excerpt": "The costs of transformative innovations are immediately clear: it’s the longterm gains that are hardest to understand- by Carlo Cordasco",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-we-cant-measure-about-ai-yet.json"
     }
   ]
 }
