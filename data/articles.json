@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-16T08:23:50.151901+00:00",
+  "lastFetched": "2026-07-16T14:08:13.399320+00:00",
   "articles": [
+    {
+      "id": "viennas-cafes-inspired-poets-belgrades-bred-dissent",
+      "title": "Loitering towards war",
+      "author": "Anton Cebalo",
+      "category": "",
+      "publishedAt": "2026-07-16T10:00:00+00:00",
+      "excerpt": "While Vienna’s coffeehouses bred modernism, in Belgrade’s kafanas grew conspiracy and rage. Their clash consumed Europe- by Anton Cebalo",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-viennas-cafes-inspired-poets-belgrades-bred-dissent.json"
+    },
     {
       "id": "silicon-valley-has-a-science-fiction-problem",
       "title": "The looting of science fiction",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-ukrainian-war-widows-know-about-love-and-loss.json"
-    },
-    {
-      "id": "re-reading-sartres-lecture-existentialism-is-a-humanism",
-      "title": "The anguish of choice",
-      "author": "Skye C Cleary",
-      "category": "",
-      "publishedAt": "2026-07-02T10:00:00+00:00",
-      "excerpt": "In the shattered aftermath of war, Sartre delivered a formidable lecture on freedom and meaning. Its urgency remains- by Skye C Cleary",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-re-reading-sartres-lecture-existentialism-is-a-humanism.json"
     }
   ]
 }
