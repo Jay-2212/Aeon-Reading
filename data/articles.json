@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-17T08:19:54.718103+00:00",
+  "lastFetched": "2026-07-17T13:51:42.865236+00:00",
   "articles": [
+    {
+      "id": "why-has-venus-obsessed-so-many-astronomers",
+      "title": "Transit of wonder",
+      "author": "Ananya Palivela",
+      "category": "",
+      "publishedAt": "2026-07-17T10:00:00+00:00",
+      "excerpt": "Every 122 years, Venus crosses the Sun as a black and fleeting teardrop, kindling the awe of all those who dare to know- by Ananya Palivela",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-why-has-venus-obsessed-so-many-astronomers.json"
+    },
     {
       "id": "viennas-cafes-inspired-poets-belgrades-bred-dissent",
       "title": "Loitering towards war",
