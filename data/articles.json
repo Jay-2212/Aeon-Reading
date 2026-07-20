@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-20T09:26:37.222925+00:00",
+  "lastFetched": "2026-07-20T14:21:18.412642+00:00",
   "articles": [
+    {
+      "id": "uncovering-a-global-ancient-history-beyond-greece-and-rome",
+      "title": "Beyond Greece and Rome",
+      "author": "Carlos Noreña",
+      "category": "",
+      "publishedAt": "2026-07-20T10:00:00+00:00",
+      "excerpt": "A dramatic shift in perspective is producing a much bigger, broader and more exciting view of ‘the ancient world’- by Carlos Noreña",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-uncovering-a-global-ancient-history-beyond-greece-and-rome.json"
+    },
     {
       "id": "why-has-venus-obsessed-so-many-astronomers",
       "title": "Transit of wonder",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-how-little-we-really-know-of-the-mighty-ming-dynasty.json"
-    },
-    {
-      "id": "the-radical-reasons-why-you-dream-of-making-things-by-hand",
-      "title": "Skill nostalgia",
-      "author": "Joshua Habgood-Coote",
-      "category": "",
-      "publishedAt": "2026-07-06T10:00:00+00:00",
-      "excerpt": "Is all the beekeeping, baking and leatherwork just escapist fantasy or the start of a radically human approach to work?- by Joshua Habgood-Coote",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-the-radical-reasons-why-you-dream-of-making-things-by-hand.json"
-    },
-    {
-      "id": "what-ukrainian-war-widows-know-about-love-and-loss",
-      "title": "Abyss",
-      "author": "Julie Reshe",
-      "category": "",
-      "publishedAt": "2026-07-03T10:00:00+00:00",
-      "excerpt": "The testimonies of Ukraine’s war widows reveal the mortal risk of love and the possibility of dying while alive: a black pain- by Julie Reshe",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-what-ukrainian-war-widows-know-about-love-and-loss.json"
     }
   ]
 }
