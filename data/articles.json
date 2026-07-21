@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-21T08:38:01.752180+00:00",
+  "lastFetched": "2026-07-21T14:07:50.869989+00:00",
   "articles": [
+    {
+      "id": "the-rural-french-priest-who-preached-atheism-to-the-people",
+      "title": "The people’s atheist",
+      "author": "Nidal Taibi",
+      "category": "",
+      "publishedAt": "2026-07-21T10:00:00+00:00",
+      "excerpt": "Jean Meslier, a rural French priest, argued that religion is designed to produce subjects who will automatically obey- by Nidal Taibi",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-rural-french-priest-who-preached-atheism-to-the-people.json"
+    },
     {
       "id": "uncovering-a-global-ancient-history-beyond-greece-and-rome",
       "title": "Beyond Greece and Rome",
