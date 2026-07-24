@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-24T08:35:02.747042+00:00",
+  "lastFetched": "2026-07-24T13:58:29.067499+00:00",
   "articles": [
+    {
+      "id": "a-researchers-50-year-hunt-for-the-source-of-chronic-pain",
+      "title": "Signal then storm",
+      "author": "Stephani Sutherland",
+      "category": "",
+      "publishedAt": "2026-07-24T10:00:00+00:00",
+      "excerpt": "Allan Basbaum has spent 50 years searching the nervous system for the places where pain begins – and where it can be stopped- by Stephani Sutherland",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-a-researchers-50-year-hunt-for-the-source-of-chronic-pain.json"
+    },
     {
       "id": "anthropophagy-art-flips-the-cannibal-worries-of-colonialism",
       "title": "The savage bites back",
