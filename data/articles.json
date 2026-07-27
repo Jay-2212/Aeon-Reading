@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-27T10:02:09.534780+00:00",
+  "lastFetched": "2026-07-27T14:49:52.298266+00:00",
   "articles": [
+    {
+      "id": "epistemic-convergence-in-the-study-of-world-philosophies",
+      "title": "The taming of Black thought",
+      "author": "Takeshi Morisato",
+      "category": "",
+      "publishedAt": "2026-07-27T10:00:00+00:00",
+      "excerpt": "Black philosophers now feature on Western curricula, but the European tradition diminishes their radicalism into reassurance- by Takeshi Morisato",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-epistemic-convergence-in-the-study-of-world-philosophies.json"
+    },
     {
       "id": "a-researchers-50-year-hunt-for-the-source-of-chronic-pain",
       "title": "Signal then storm",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-silicon-valley-has-a-science-fiction-problem.json"
-    },
-    {
-      "id": "when-my-ties-to-my-mother-faded-so-did-my-memories",
-      "title": "Unmothered",
-      "author": "David Robson",
-      "category": "",
-      "publishedAt": "2026-07-13T10:00:00+00:00",
-      "excerpt": "We are each a living story, written with those who raised us. But when my most loving co-author ghosted me, my story fractured- by David Robson",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-when-my-ties-to-my-mother-faded-so-did-my-memories.json"
-    },
-    {
-      "id": "how-to-decode-the-archive-inside-ancient-tree-rings",
-      "title": "Lore of the rings",
-      "author": "Valerie Trouet",
-      "category": "",
-      "publishedAt": "2026-07-10T10:00:00+00:00",
-      "excerpt": "Trees contain an archive – tales of planetary shifts, cosmic events, historical pivots – that we’re only just unlocking- by Valerie Trouet",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-how-to-decode-the-archive-inside-ancient-tree-rings.json"
     }
   ]
 }
