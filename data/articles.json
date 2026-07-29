@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-29T08:49:33.344096+00:00",
+  "lastFetched": "2026-07-29T14:23:25.099051+00:00",
   "articles": [
     {
       "id": "what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-viennas-cafes-inspired-poets-belgrades-bred-dissent.json"
-    },
-    {
-      "id": "silicon-valley-has-a-science-fiction-problem",
-      "title": "The looting of science fiction",
-      "author": "Ali Rıza Taşkale",
-      "category": "",
-      "publishedAt": "2026-07-14T10:00:00+00:00",
-      "excerpt": "Tech titans claim the genre inspired them. But all they’ve done is graft their politics onto stories of a better future- by Ali Rıza Taşkale",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-silicon-valley-has-a-science-fiction-problem.json"
     }
   ]
 }
