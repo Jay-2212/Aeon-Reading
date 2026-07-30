@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-07-30T08:38:12.257815+00:00",
+  "lastFetched": "2026-07-30T14:19:14.186538+00:00",
   "articles": [
+    {
+      "id": "humans-did-not-invent-art-it-was-the-other-way-around",
+      "title": "How art invented humanity",
+      "author": "J F Martel",
+      "category": "",
+      "publishedAt": "2026-07-30T10:00:00+00:00",
+      "excerpt": "When early humans first painted cave walls, they began to find out who they really were: our minds emerged from our images- by J F Martel",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-humans-did-not-invent-art-it-was-the-other-way-around.json"
+    },
     {
       "id": "what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code",
       "title": "The light narrows",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-why-has-venus-obsessed-so-many-astronomers.json"
-    },
-    {
-      "id": "viennas-cafes-inspired-poets-belgrades-bred-dissent",
-      "title": "Loitering towards war",
-      "author": "Anton Cebalo",
-      "category": "",
-      "publishedAt": "2026-07-16T10:00:00+00:00",
-      "excerpt": "While Vienna’s coffeehouses bred modernism, in Belgrade’s kafanas grew conspiracy and rage. Their clash consumed Europe- by Anton Cebalo",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-viennas-cafes-inspired-poets-belgrades-bred-dissent.json"
     }
   ]
 }
