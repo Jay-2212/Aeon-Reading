@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-03T09:57:30.093345+00:00",
+  "lastFetched": "2026-08-03T14:53:40.568008+00:00",
   "articles": [
+    {
+      "id": "thucydides-account-of-war-is-as-timely-as-it-is-misunderstood",
+      "title": "Thucydides the perspicacious",
+      "author": "David Polansky & Daniel Schillinger",
+      "category": "",
+      "publishedAt": "2026-08-03T10:00:00+00:00",
+      "excerpt": "Far from thinking that ‘might makes right’, the great historian’s analysis of war identifies a vice common to all states- by David Polansky & Daniel Schillinger",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-thucydides-account-of-war-is-as-timely-as-it-is-misunderstood.json"
+    },
     {
       "id": "are-we-witnessing-the-end-of-the-technocratic-international",
       "title": "Resist the technocrats",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-the-rural-french-priest-who-preached-atheism-to-the-people.json"
-    },
-    {
-      "id": "uncovering-a-global-ancient-history-beyond-greece-and-rome",
-      "title": "Beyond Greece and Rome",
-      "author": "Carlos Noreña",
-      "category": "",
-      "publishedAt": "2026-07-20T10:00:00+00:00",
-      "excerpt": "A dramatic shift in perspective is producing a much bigger, broader and more exciting view of ‘the ancient world’- by Carlos Noreña",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-uncovering-a-global-ancient-history-beyond-greece-and-rome.json"
-    },
-    {
-      "id": "why-has-venus-obsessed-so-many-astronomers",
-      "title": "Transit of wonder",
-      "author": "Ananya Palivela",
-      "category": "",
-      "publishedAt": "2026-07-17T10:00:00+00:00",
-      "excerpt": "Every 122 years, Venus crosses the Sun as a black and fleeting teardrop, kindling the awe of all those who dare to know- by Ananya Palivela",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-why-has-venus-obsessed-so-many-astronomers.json"
     }
   ]
 }
