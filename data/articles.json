@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-04T08:47:59.671091+00:00",
+  "lastFetched": "2026-08-04T14:29:57.347078+00:00",
   "articles": [
+    {
+      "id": "an-ai-for-africa-would-be-built-on-hunhu-ubuntu-ethics",
+      "title": "Towards an AI for Africa",
+      "author": "Fainos Mangena",
+      "category": "",
+      "publishedAt": "2026-08-04T10:00:00+00:00",
+      "excerpt": "Western-developed AI rides roughshod over Ubuntu values of connection and community that animate African ethical life- by Fainos Mangena",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-an-ai-for-africa-would-be-built-on-hunhu-ubuntu-ethics.json"
+    },
     {
       "id": "thucydides-account-of-war-is-as-timely-as-it-is-misunderstood",
       "title": "Thucydides the perspicacious",
