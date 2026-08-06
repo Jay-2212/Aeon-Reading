@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-06T08:46:28.505541+00:00",
+  "lastFetched": "2026-08-06T14:26:18.607627+00:00",
   "articles": [
+    {
+      "id": "at-the-heart-of-the-snow-leavis-two-cultures-clash",
+      "title": "Culture clash",
+      "author": "Sam Dresser",
+      "category": "",
+      "publishedAt": "2026-08-06T10:00:00+00:00",
+      "excerpt": "C P Snow’s ‘Two Cultures’ lecture provoked a savage response from fellow critic F R Leavis. What was at the heart of it all?- by Sam Dresser",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-at-the-heart-of-the-snow-leavis-two-cultures-clash.json"
+    },
     {
       "id": "an-ai-for-africa-would-be-built-on-hunhu-ubuntu-ethics",
       "title": "Towards an AI for Africa",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-a-researchers-50-year-hunt-for-the-source-of-chronic-pain.json"
-    },
-    {
-      "id": "anthropophagy-art-flips-the-cannibal-worries-of-colonialism",
-      "title": "The savage bites back",
-      "author": "Sofía Cándano",
-      "category": "",
-      "publishedAt": "2026-07-23T10:00:00+00:00",
-      "excerpt": "Rooted in Brazilian modernism, anthropophagy devours and transforms culture, subverting colonial fears of cannibalism- by Sofía Cándano",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-anthropophagy-art-flips-the-cannibal-worries-of-colonialism.json"
     }
   ]
 }
