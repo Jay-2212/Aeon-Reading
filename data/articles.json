@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-07T07:25:23.210024+00:00",
+  "lastFetched": "2026-08-07T13:17:02.768978+00:00",
   "articles": [
+    {
+      "id": "the-surprisingly-scientific-methods-of-bigfooters",
+      "title": "Sasquatch science",
+      "author": "Andrew Bartlett & Jamie Lewis",
+      "category": "",
+      "publishedAt": "2026-08-07T10:00:00+00:00",
+      "excerpt": "The hunt for Bigfoot sounds like the opposite of good science, but those pursuing the creature are often serious empiricists- by Andrew Bartlett & Jamie Lewis",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-surprisingly-scientific-methods-of-bigfooters.json"
+    },
     {
       "id": "at-the-heart-of-the-snow-leavis-two-cultures-clash",
       "title": "Culture clash",
