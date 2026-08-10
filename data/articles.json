@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-10T07:52:16.730443+00:00",
+  "lastFetched": "2026-08-10T13:22:15.455977+00:00",
   "articles": [
+    {
+      "id": "when-is-stereotyping-a-handy-tool-and-when-is-it-a-sin",
+      "title": "How we meet the future",
+      "author": "Tom Ralston",
+      "category": "",
+      "publishedAt": "2026-08-10T10:00:00+00:00",
+      "excerpt": "If we couldn’t make generalisations, we would be paralysed by the world’s complexity. Does that ever excuse stereotyping?- by Tom Ralston",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-when-is-stereotyping-a-handy-tool-and-when-is-it-a-sin.json"
+    },
     {
       "id": "the-surprisingly-scientific-methods-of-bigfooters",
       "title": "Sasquatch science",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code.json"
-    },
-    {
-      "id": "epistemic-convergence-in-the-study-of-world-philosophies",
-      "title": "The taming of Black thought",
-      "author": "Takeshi Morisato",
-      "category": "",
-      "publishedAt": "2026-07-27T10:00:00+00:00",
-      "excerpt": "Black philosophers now feature on Western curricula, but the European tradition diminishes their radicalism into reassurance- by Takeshi Morisato",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-epistemic-convergence-in-the-study-of-world-philosophies.json"
-    },
-    {
-      "id": "a-researchers-50-year-hunt-for-the-source-of-chronic-pain",
-      "title": "Signal then storm",
-      "author": "Stephani Sutherland",
-      "category": "",
-      "publishedAt": "2026-07-24T10:00:00+00:00",
-      "excerpt": "Allan Basbaum has spent 50 years searching the nervous system for the places where pain begins – and where it can be stopped- by Stephani Sutherland",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-a-researchers-50-year-hunt-for-the-source-of-chronic-pain.json"
     }
   ]
 }
