@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-13T07:42:42.292511+00:00",
+  "lastFetched": "2026-08-13T13:24:43.398386+00:00",
   "articles": [
+    {
+      "id": "my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall",
+      "title": "Mecca and the mall",
+      "author": "Azania Imtiaz Patel",
+      "category": "",
+      "publishedAt": "2026-08-13T10:00:00+00:00",
+      "excerpt": "In a bid for spiritual renewal, I made a pilgrimage to Islam’s holy city. Almost everything I expected to see was gone- by Azania Imtiaz Patel",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall.json"
+    },
     {
       "id": "how-shere-hite-listened-to-womens-sexual-desires-and-dislikes",
       "title": "A second sexual revolution",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 1,
       "articleFile": "data/article-are-we-witnessing-the-end-of-the-technocratic-international.json"
-    },
-    {
-      "id": "humans-did-not-invent-art-it-was-the-other-way-around",
-      "title": "How art invented humanity",
-      "author": "J F Martel",
-      "category": "",
-      "publishedAt": "2026-07-30T10:00:00+00:00",
-      "excerpt": "When early humans first painted cave walls, they began to find out who they really were: our minds emerged from our images- by J F Martel",
-      "imageUrl": "",
-      "imageAlt": "",
-      "readingTimeMinutes": 1,
-      "articleFile": "data/article-humans-did-not-invent-art-it-was-the-other-way-around.json"
     }
   ]
 }
