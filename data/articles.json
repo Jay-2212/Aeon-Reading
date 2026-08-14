@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-14T07:40:29.771325+00:00",
+  "lastFetched": "2026-08-14T13:19:26.994539+00:00",
   "articles": [
+    {
+      "id": "the-art-of-dwelling-in-santiagos-self-built-homes",
+      "title": "The neverending house",
+      "author": "Consuelo Araos",
+      "category": "",
+      "publishedAt": "2026-08-14T10:00:00+00:00",
+      "excerpt": "The self-built homes of Santiago are precarious and ever changing. They are, always and at once, being and becoming- by Consuelo Araos",
+      "imageUrl": "",
+      "imageAlt": "",
+      "readingTimeMinutes": 1,
+      "articleFile": "data/article-the-art-of-dwelling-in-santiagos-self-built-homes.json"
+    },
     {
       "id": "my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall",
       "title": "Mecca and the mall",
