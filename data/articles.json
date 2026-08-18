@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-17T12:55:09.966734+00:00",
+  "lastFetched": "2026-08-18T12:56:51.761961+00:00",
   "articles": [
+    {
+      "id": "polite-debate-has-privilege-the-marginalised-need-zealotry",
+      "title": "In praise of zealotry",
+      "author": "Geertje Bol",
+      "category": "",
+      "publishedAt": "2026-08-18T10:00:00+00:00",
+      "excerpt": "Early feminists like Mary Astell and Catharine Macaulay refused their male peers’ advice to remain polite in debate. Why?- by Geertje Bol",
+      "imageUrl": "https://images.aeonmedia.co/images/7658e7b8-9c34-41ec-b558-2302dd610d06/essay-bm-265686001.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 17,
+      "articleFile": "data/article-polite-debate-has-privilege-the-marginalised-need-zealotry.json"
+    },
     {
       "id": "worm-munch-matters-the-new-acoustic-ecology-of-the-soil",
       "title": "Worm munch matters",
