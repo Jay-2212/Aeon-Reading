@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-19T12:57:38.700732+00:00",
+  "lastFetched": "2026-08-20T13:00:02.895596+00:00",
   "articles": [
+    {
+      "id": "why-the-andoque-of-the-amazon-fear-the-seductive-dolphin",
+      "title": "Dolphins and other lovers",
+      "author": "Eliran Arazi",
+      "category": "",
+      "publishedAt": "2026-08-20T10:00:00+00:00",
+      "excerpt": "The Andoque of the Amazon know what we have forgotten: the forest’s most beautiful creatures are also its most dangerous- by Eliran Arazi",
+      "imageUrl": "https://images.aeonmedia.co/images/feb30884-154c-41ba-a04f-79e7037a973a/cj_aeon_boto.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 34,
+      "articleFile": "data/article-why-the-andoque-of-the-amazon-fear-the-seductive-dolphin.json"
+    },
     {
       "id": "polite-debate-has-privilege-the-marginalised-need-zealotry",
       "title": "In praise of zealotry",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-the-surprisingly-scientific-methods-of-bigfooters.json"
-    },
-    {
-      "id": "at-the-heart-of-the-snow-leavis-two-cultures-clash",
-      "title": "Culture clash",
-      "author": "Sam Dresser",
-      "category": "",
-      "publishedAt": "2026-08-06T10:00:00+00:00",
-      "excerpt": "C P Snow’s ‘Two Cultures’ lecture provoked a savage response from fellow critic F R Leavis. What was at the heart of it all?- by Sam Dresser",
-      "imageUrl": "https://images.aeonmedia.co/images/293d3554-1154-4dff-92cc-d8552917cb52/screenshot-2024-09-18-at-17_08_16.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 28,
-      "articleFile": "data/article-at-the-heart-of-the-snow-leavis-two-cultures-clash.json"
     }
   ]
 }
