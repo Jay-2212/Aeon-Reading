@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-08-21T12:58:47.855212+00:00",
+  "lastFetched": "2026-08-31T13:19:14.066945+00:00",
   "articles": [
+    {
+      "id": "did-singapore-go-wrong-in-its-quest-for-food-security",
+      "title": "The Singapore strategies",
+      "author": "Peter A Coclanis",
+      "category": "",
+      "publishedAt": "2026-08-31T10:00:00+00:00",
+      "excerpt": "The nation’s water is secure, but its food is another matter: lessons from the city-state in efficiency versus self-sufficiency- by Peter A Coclanis",
+      "imageUrl": "https://images.aeonmedia.co/images/6311f093-ca53-432a-86b4-5bce84e5e000/essay-panos_00193525.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 21,
+      "articleFile": "data/article-did-singapore-go-wrong-in-its-quest-for-food-security.json"
+    },
     {
       "id": "a-hungry-woman-is-easier-to-dismiss-than-a-well-fed-woman",
       "title": "The fog of hunger",
@@ -96,18 +108,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 19,
       "articleFile": "data/article-when-is-stereotyping-a-handy-tool-and-when-is-it-a-sin.json"
-    },
-    {
-      "id": "the-surprisingly-scientific-methods-of-bigfooters",
-      "title": "Sasquatch science",
-      "author": "Andrew Bartlett & Jamie Lewis",
-      "category": "",
-      "publishedAt": "2026-08-07T10:00:00+00:00",
-      "excerpt": "The hunt for Bigfoot sounds like the opposite of good science, but those pursuing the creature are often serious empiricists- by Andrew Bartlett & Jamie Lewis",
-      "imageUrl": "https://images.aeonmedia.co/images/b80e27a6-fdc1-4a2c-8987-5e08829d5eb4/essay-bigfoot-comp.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-the-surprisingly-scientific-methods-of-bigfooters.json"
     }
   ]
 }
