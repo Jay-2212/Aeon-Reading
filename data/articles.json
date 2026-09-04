@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-03T11:00:02.225884+00:00",
+  "lastFetched": "2026-09-04T11:00:17.905281+00:00",
   "articles": [
+    {
+      "id": "why-western-democracy-is-ailing-and-how-to-fix-it",
+      "title": "Upend the trickle-down",
+      "author": "Les Coleman",
+      "category": "",
+      "publishedAt": "2026-09-04T10:00:00+00:00",
+      "excerpt": "Neoliberal policies have hollowed out democracies and spawned unchecked oligarchs. Grasping their structure points to a fix- by Les Coleman",
+      "imageUrl": "https://images.aeonmedia.co/images/0104da2d-f55d-4db7-933e-ad6ea30d78a8/essay-gettyimages-1916677655.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 16,
+      "articleFile": "data/article-why-western-democracy-is-ailing-and-how-to-fix-it.json"
+    },
     {
       "id": "neuroqueer-expression-and-the-limits-of-social-tolerance",
       "title": "Neuroqueering on the lawn",
@@ -108,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 15,
       "articleFile": "data/article-my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall.json"
-    },
-    {
-      "id": "how-shere-hite-listened-to-womens-sexual-desires-and-dislikes",
-      "title": "A second sexual revolution",
-      "author": "Rosa Campbell",
-      "category": "",
-      "publishedAt": "2026-08-11T10:00:00+00:00",
-      "excerpt": "Until Shere Hite’s Report, even the most daring sexologists refused to listen to what women desired and hated in sex- by Rosa Campbell",
-      "imageUrl": "https://images.aeonmedia.co/images/4031d775-92f8-4310-843b-6c8c0acf8443/essay-final-aeon_sherehite_v01.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-how-shere-hite-listened-to-womens-sexual-desires-and-dislikes.json"
     }
   ]
 }
