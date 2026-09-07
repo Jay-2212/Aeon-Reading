@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-04T11:00:17.905281+00:00",
+  "lastFetched": "2026-09-07T12:09:11.657188+00:00",
   "articles": [
+    {
+      "id": "why-the-pan-american-highway-only-half-exists",
+      "title": "Continental divide",
+      "author": "Shawn Miller",
+      "category": "",
+      "publishedAt": "2026-09-07T10:00:00+00:00",
+      "excerpt": "A century ago, the Pan-American road promised a new era of fraternity between the two continents. Did it succeed?- by Shawn Miller",
+      "imageUrl": "https://images.aeonmedia.co/images/7ceec72b-c3a7-478b-891f-6d9e32f1bbad/sz-final-essay-gettyimages-1151909862.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 22,
+      "articleFile": "data/article-why-the-pan-american-highway-only-half-exists.json"
+    },
     {
       "id": "why-western-democracy-is-ailing-and-how-to-fix-it",
       "title": "Upend the trickle-down",
@@ -108,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 19,
       "articleFile": "data/article-the-art-of-dwelling-in-santiagos-self-built-homes.json"
-    },
-    {
-      "id": "my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall",
-      "title": "Mecca and the mall",
-      "author": "Azania Imtiaz Patel",
-      "category": "",
-      "publishedAt": "2026-08-13T10:00:00+00:00",
-      "excerpt": "In a bid for spiritual renewal, I made a pilgrimage to Islam’s holy city. Almost everything I expected to see was gone- by Azania Imtiaz Patel",
-      "imageUrl": "https://images.aeonmedia.co/images/dd48dcf5-2d7f-4268-b063-59787efba825/essay-this-gettyimages-1258945398.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 15,
-      "articleFile": "data/article-my-pilgrimage-to-mecca-in-the-age-of-the-golf-cart-and-mall.json"
     }
   ]
 }
