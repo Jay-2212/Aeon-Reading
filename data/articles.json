@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-07T12:09:11.657188+00:00",
+  "lastFetched": "2026-09-08T11:00:19.468668+00:00",
   "articles": [
+    {
+      "id": "what-palmistry-and-medicine-have-always-had-in-common",
+      "title": "Our eloquent hands",
+      "author": "Alison Bashford",
+      "category": "",
+      "publishedAt": "2026-09-08T10:00:00+00:00",
+      "excerpt": "Physicians reject palmistry as nonsense. But reading the creases of our palms for hidden meaning is what doctors have always done- by Alison Bashford",
+      "imageUrl": "https://images.aeonmedia.co/images/4efb216a-7579-4e44-b972-2f527d9d4854/test-fig_-1.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 16,
+      "articleFile": "data/article-what-palmistry-and-medicine-have-always-had-in-common.json"
+    },
     {
       "id": "why-the-pan-american-highway-only-half-exists",
       "title": "Continental divide",
