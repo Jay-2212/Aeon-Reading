@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-09-08T11:00:19.468668+00:00",
+  "lastFetched": "2026-09-09T11:05:16.109152+00:00",
   "articles": [
     {
       "id": "what-palmistry-and-medicine-have-always-had-in-common",
@@ -120,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 15,
       "articleFile": "data/article-worm-munch-matters-the-new-acoustic-ecology-of-the-soil.json"
-    },
-    {
-      "id": "the-art-of-dwelling-in-santiagos-self-built-homes",
-      "title": "The neverending house",
-      "author": "Consuelo Araos",
-      "category": "",
-      "publishedAt": "2026-08-14T10:00:00+00:00",
-      "excerpt": "The self-built homes of Santiago are precarious and ever changing. They are, always and at once, being and becoming- by Consuelo Araos",
-      "imageUrl": "https://images.aeonmedia.co/images/aa9106e2-93ab-404f-b220-bcdb87e02b4d/victorias-house-final-.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-the-art-of-dwelling-in-santiagos-self-built-homes.json"
     }
   ]
 }
