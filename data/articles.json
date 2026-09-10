@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-09T11:05:16.109152+00:00",
+  "lastFetched": "2026-09-10T11:01:07.733401+00:00",
   "articles": [
+    {
+      "id": "the-curio-cabinet-of-medieval-mental-health",
+      "title": "Medieval mental health",
+      "author": "Katherine Harvey",
+      "category": "",
+      "publishedAt": "2026-09-10T10:00:00+00:00",
+      "excerpt": "Saffron and ostrich liver were prescribed but so were exercise, gardens, animals, socialising, and music- by Katherine Harvey",
+      "imageUrl": "https://images.aeonmedia.co/images/f5b2d9a3-db7d-49c3-b79d-a14788da0cb0/essay-bathing.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-the-curio-cabinet-of-medieval-mental-health.json"
+    },
     {
       "id": "what-palmistry-and-medicine-have-always-had-in-common",
       "title": "Our eloquent hands",
@@ -108,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-polite-debate-has-privilege-the-marginalised-need-zealotry.json"
-    },
-    {
-      "id": "worm-munch-matters-the-new-acoustic-ecology-of-the-soil",
-      "title": "Worm munch matters",
-      "author": "Ella Browning",
-      "category": "",
-      "publishedAt": "2026-08-17T10:00:00+00:00",
-      "excerpt": "The lives that slither and scurry beneath the soil’s surface are vital for ecological health: now we can listen in to them- by Ella Browning",
-      "imageUrl": "https://images.aeonmedia.co/images/78d61ad2-131f-4408-97d9-c869e125bdcc/essay-v1-screenshot-2026-08-11-at-14_14_59.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 15,
-      "articleFile": "data/article-worm-munch-matters-the-new-acoustic-ecology-of-the-soil.json"
     }
   ]
 }
