@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-11T10:59:53.503595+00:00",
+  "lastFetched": "2026-09-14T12:25:12.862938+00:00",
   "articles": [
+    {
+      "id": "its-not-just-screen-time-kids-are-bombarded-by-hectic-media",
+      "title": "The bombarding of childhood",
+      "author": "Natalia Kucirkova",
+      "category": "",
+      "publishedAt": "2026-09-14T10:00:00+00:00",
+      "excerpt": "It’s not just screen time: the problem with children’s media is that it has become relentlessly hectic, loud and bright- by Natalia Kucirkova",
+      "imageUrl": "https://images.aeonmedia.co/images/0bdeea37-3692-4792-af19-9981bd686a4b/essay-gettyimages-514482248.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 13,
+      "articleFile": "data/article-its-not-just-screen-time-kids-are-bombarded-by-hectic-media.json"
+    },
     {
       "id": "four-islamic-polymaths-prove-breadth-beats-specialisation",
       "title": "Penchants of the polymaths",
@@ -108,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-a-hungry-woman-is-easier-to-dismiss-than-a-well-fed-woman.json"
-    },
-    {
-      "id": "why-the-andoque-of-the-amazon-fear-the-seductive-dolphin",
-      "title": "Dolphins and other lovers",
-      "author": "Eliran Arazi",
-      "category": "",
-      "publishedAt": "2026-08-20T10:00:00+00:00",
-      "excerpt": "The Andoque of the Amazon know what we have forgotten: the forest’s most beautiful creatures are also its most dangerous- by Eliran Arazi",
-      "imageUrl": "https://images.aeonmedia.co/images/feb30884-154c-41ba-a04f-79e7037a973a/cj_aeon_boto.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 34,
-      "articleFile": "data/article-why-the-andoque-of-the-amazon-fear-the-seductive-dolphin.json"
     }
   ]
 }
