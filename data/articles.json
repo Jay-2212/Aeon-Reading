@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-14T12:25:12.862938+00:00",
+  "lastFetched": "2026-09-15T11:30:02.745482+00:00",
   "articles": [
+    {
+      "id": "italianness-is-a-state-of-travelling-in-both-directions",
+      "title": "Chasing la dolce vita",
+      "author": "Ben Faccini",
+      "category": "",
+      "publishedAt": "2026-09-15T10:00:00+00:00",
+      "excerpt": "Homecomings, fantasies, food and ghosts – how the myth of eternal return keeps the Italian diaspora in a state of longing- by Ben Faccini",
+      "imageUrl": "https://images.aeonmedia.co/images/5a315ba7-7976-4a29-8c59-16d548b4c941/essay-main-20260908_093350-1.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-italianness-is-a-state-of-travelling-in-both-directions.json"
+    },
     {
       "id": "its-not-just-screen-time-kids-are-bombarded-by-hectic-media",
       "title": "The bombarding of childhood",
