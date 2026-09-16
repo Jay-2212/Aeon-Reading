@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-09-15T11:30:02.745482+00:00",
+  "lastFetched": "2026-09-16T11:16:11.766695+00:00",
   "articles": [
     {
       "id": "italianness-is-a-state-of-travelling-in-both-directions",
@@ -120,18 +120,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 21,
       "articleFile": "data/article-did-singapore-go-wrong-in-its-quest-for-food-security.json"
-    },
-    {
-      "id": "a-hungry-woman-is-easier-to-dismiss-than-a-well-fed-woman",
-      "title": "The fog of hunger",
-      "author": "Sarah Berg",
-      "category": "",
-      "publishedAt": "2026-08-21T10:00:00+00:00",
-      "excerpt": "From childhood, women are trained to restrict their appetite. And there’s a huge, hidden, cognitive price to pay for it- by Sarah Berg",
-      "imageUrl": "https://images.aeonmedia.co/images/8faddae4-306f-4e06-81c2-183366800391/essay-v2-nyc34743.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-a-hungry-woman-is-easier-to-dismiss-than-a-well-fed-woman.json"
     }
   ]
 }
