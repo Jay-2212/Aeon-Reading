@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-16T11:16:11.766695+00:00",
+  "lastFetched": "2026-09-17T11:24:30.912458+00:00",
   "articles": [
+    {
+      "id": "if-computers-count-all-the-petals-who-tastes-the-cherries",
+      "title": "Who will taste the cherries?",
+      "author": "Liam Spradlin",
+      "category": "",
+      "publishedAt": "2026-09-17T10:00:00+00:00",
+      "excerpt": "The computist has one dream: to debug the subjectivity out of all of human knowledge, creating a pure, frictionless world- by Liam Spradlin",
+      "imageUrl": "https://images.aeonmedia.co/images/df3de1b9-0cd3-48a0-a054-36d0baf17bbe/essay-v1-.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 16,
+      "articleFile": "data/article-if-computers-count-all-the-petals-who-tastes-the-cherries.json"
+    },
     {
       "id": "italianness-is-a-state-of-travelling-in-both-directions",
       "title": "Chasing la dolce vita",
@@ -96,30 +108,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-neuroqueer-expression-and-the-limits-of-social-tolerance.json"
-    },
-    {
-      "id": "play-is-doing-its-work-even-if-were-not-keeping-score",
-      "title": "More nothing now",
-      "author": "Justin Neuman",
-      "category": "",
-      "publishedAt": "2026-09-01T10:00:00+00:00",
-      "excerpt": "We are most human when we play freely, imaginatively, pointlessly. Gamification risks atrophying that most precious capacity- by Justin Neuman",
-      "imageUrl": "https://images.aeonmedia.co/images/e2cbb509-e695-4191-8ab0-d8a48f630ec2/essay-gettyimages-2257653140.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 15,
-      "articleFile": "data/article-play-is-doing-its-work-even-if-were-not-keeping-score.json"
-    },
-    {
-      "id": "did-singapore-go-wrong-in-its-quest-for-food-security",
-      "title": "The Singapore strategies",
-      "author": "Peter A Coclanis",
-      "category": "",
-      "publishedAt": "2026-08-31T10:00:00+00:00",
-      "excerpt": "The nation’s water is secure, but its food is another matter: lessons from the city-state in efficiency versus self-sufficiency- by Peter A Coclanis",
-      "imageUrl": "https://images.aeonmedia.co/images/6311f093-ca53-432a-86b4-5bce84e5e000/essay-panos_00193525.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 21,
-      "articleFile": "data/article-did-singapore-go-wrong-in-its-quest-for-food-security.json"
     }
   ]
 }
