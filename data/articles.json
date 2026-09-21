@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-18T10:57:54.892754+00:00",
+  "lastFetched": "2026-09-21T12:31:57.584091+00:00",
   "articles": [
+    {
+      "id": "a-good-sceptic-has-more-than-doubt-and-less-than-certainty",
+      "title": "He was probably right",
+      "author": "Massimo Pigliucci",
+      "category": "",
+      "publishedAt": "2026-09-21T10:00:00+00:00",
+      "excerpt": "Cicero’s life and thought are a testament to the idea of probabilia: we should be confident in our beliefs, but never certain- by Massimo Pigliucci",
+      "imageUrl": "https://images.aeonmedia.co/images/ab30ee1c-11a9-4d4d-a7a0-fd34b45891e5/esssay-gettyimages-527618704.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-a-good-sceptic-has-more-than-doubt-and-less-than-certainty.json"
+    },
     {
       "id": "black-holes-ring-like-bells-what-happens-next-is-stranger",
       "title": "Cosmic amnesia",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 16,
       "articleFile": "data/article-what-palmistry-and-medicine-have-always-had-in-common.json"
-    },
-    {
-      "id": "why-the-pan-american-highway-only-half-exists",
-      "title": "Continental divide",
-      "author": "Shawn Miller",
-      "category": "",
-      "publishedAt": "2026-09-07T10:00:00+00:00",
-      "excerpt": "A century ago, the Pan-American road promised a new era of fraternity between the two continents. Did it succeed?- by Shawn Miller",
-      "imageUrl": "https://images.aeonmedia.co/images/7ceec72b-c3a7-478b-891f-6d9e32f1bbad/sz-final-essay-gettyimages-1151909862.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 22,
-      "articleFile": "data/article-why-the-pan-american-highway-only-half-exists.json"
-    },
-    {
-      "id": "why-western-democracy-is-ailing-and-how-to-fix-it",
-      "title": "Upend the trickle-down",
-      "author": "Les Coleman",
-      "category": "",
-      "publishedAt": "2026-09-04T10:00:00+00:00",
-      "excerpt": "Neoliberal policies have hollowed out democracies and spawned unchecked oligarchs. Grasping their structure points to a fix- by Les Coleman",
-      "imageUrl": "https://images.aeonmedia.co/images/0104da2d-f55d-4db7-933e-ad6ea30d78a8/essay-gettyimages-1916677655.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 16,
-      "articleFile": "data/article-why-western-democracy-is-ailing-and-how-to-fix-it.json"
     }
   ]
 }
