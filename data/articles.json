@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-23T11:15:02.354559+00:00",
+  "lastFetched": "2026-09-24T11:29:47.105797+00:00",
   "articles": [
+    {
+      "id": "a-prairie-enthusiast-in-search-of-a-farming-land-ethic",
+      "title": "Where a land ethic blooms",
+      "author": "Craig Maier",
+      "category": "",
+      "publishedAt": "2026-09-24T10:00:00+00:00",
+      "excerpt": "Caring for this planet entails decisions that are intimate, about our farms, our homes, our human and our wild neighbours- by Craig Maier",
+      "imageUrl": "https://images.aeonmedia.co/images/1cd4dc38-6c0f-44aa-85b0-49959f51226b/essay-grassland-ag-2.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 25,
+      "articleFile": "data/article-a-prairie-enthusiast-in-search-of-a-farming-land-ethic.json"
+    },
     {
       "id": "a-scientists-search-for-answers-about-amanita-muscaria-gummies",
       "title": "Toadstools and toxins",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-four-islamic-polymaths-prove-breadth-beats-specialisation.json"
-    },
-    {
-      "id": "the-curio-cabinet-of-medieval-mental-health",
-      "title": "Medieval mental health",
-      "author": "Katherine Harvey",
-      "category": "",
-      "publishedAt": "2026-09-10T10:00:00+00:00",
-      "excerpt": "Saffron and ostrich liver were prescribed but so were exercise, gardens, animals, socialising, and music- by Katherine Harvey",
-      "imageUrl": "https://images.aeonmedia.co/images/f5b2d9a3-db7d-49c3-b79d-a14788da0cb0/essay-bathing.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 20,
-      "articleFile": "data/article-the-curio-cabinet-of-medieval-mental-health.json"
     }
   ]
 }
