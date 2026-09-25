@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-24T11:29:47.105797+00:00",
+  "lastFetched": "2026-09-25T11:35:46.290995+00:00",
   "articles": [
+    {
+      "id": "habermass-theory-of-truth-meant-he-changed-his-mind",
+      "title": "Reasoning together",
+      "author": "Emilie Prattico",
+      "category": "",
+      "publishedAt": "2026-09-25T10:00:00+00:00",
+      "excerpt": "Jürgen Habermas, the great defender of deliberative democracy, lived up to its demands: he never feared changing his mind- by Emilie Prattico",
+      "imageUrl": "https://images.aeonmedia.co/images/d19c6cf8-eddc-49ec-a4c1-4c20fb6cd93e/essay-v2-2a2b9x3.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 16,
+      "articleFile": "data/article-habermass-theory-of-truth-meant-he-changed-his-mind.json"
+    },
     {
       "id": "a-prairie-enthusiast-in-search-of-a-farming-land-ethic",
       "title": "Where a land ethic blooms",
