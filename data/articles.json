@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-09-25T11:35:46.290995+00:00",
+  "lastFetched": "2026-09-28T13:31:03.780863+00:00",
   "articles": [
+    {
+      "id": "when-a-man-becomes-a-father-and-a-poetic-revolution-follows",
+      "title": "Paternity is poetical",
+      "author": "Daniel Swift",
+      "category": "",
+      "publishedAt": "2026-09-28T10:00:00+00:00",
+      "excerpt": "The notion that fatherhood and creativity are at odds is plain wrong, as both poetry and neuroscience are showing us- by Daniel Swift",
+      "imageUrl": "https://images.aeonmedia.co/images/450d70f9-21a4-48dd-95c0-f372f4813999/essay-nn11536415.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-when-a-man-becomes-a-father-and-a-poetic-revolution-follows.json"
+    },
     {
       "id": "habermass-theory-of-truth-meant-he-changed-his-mind",
       "title": "Reasoning together",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 20,
       "articleFile": "data/article-italianness-is-a-state-of-travelling-in-both-directions.json"
-    },
-    {
-      "id": "its-not-just-screen-time-kids-are-bombarded-by-hectic-media",
-      "title": "The bombarding of childhood",
-      "author": "Natalia Kucirkova",
-      "category": "",
-      "publishedAt": "2026-09-14T10:00:00+00:00",
-      "excerpt": "It’s not just screen time: the problem with children’s media is that it has become relentlessly hectic, loud and bright- by Natalia Kucirkova",
-      "imageUrl": "https://images.aeonmedia.co/images/0bdeea37-3692-4792-af19-9981bd686a4b/essay-gettyimages-514482248.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 13,
-      "articleFile": "data/article-its-not-just-screen-time-kids-are-bombarded-by-hectic-media.json"
-    },
-    {
-      "id": "four-islamic-polymaths-prove-breadth-beats-specialisation",
-      "title": "Penchants of the polymaths",
-      "author": "Mariam Sabri",
-      "category": "",
-      "publishedAt": "2026-09-11T10:00:00+00:00",
-      "excerpt": "The fathers of Islamic science hold lessons for students: breadth over specialisation, and never let constraints get in the way- by Mariam Sabri",
-      "imageUrl": "https://images.aeonmedia.co/images/1024a5cb-d702-4ff5-b6b1-6c3e993da1eb/essay-chronology-of-ancient-nations-biruni.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-four-islamic-polymaths-prove-breadth-beats-specialisation.json"
     }
   ]
 }
