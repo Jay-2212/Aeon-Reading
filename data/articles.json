@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-01T12:53:50.932267+00:00",
+  "lastFetched": "2026-10-02T12:16:43.057261+00:00",
   "articles": [
+    {
+      "id": "early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew",
+      "title": "Life on a hair trigger",
+      "author": "Megan Kang",
+      "category": "",
+      "publishedAt": "2026-10-02T10:00:00+00:00",
+      "excerpt": "A world of violence sustains itself through guns, poverty and other social ills, but also through the minds it creates- by Megan Kang",
+      "imageUrl": "https://images.aeonmedia.co/images/41e2e3ad-d027-43d2-a055-5890c5f5789b/essay-2021-12-25t171644z_229486544_rc2mlr9fk1lt_rtrmadp_3_usa-guns-chicago.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 22,
+      "articleFile": "data/article-early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew.json"
+    },
     {
       "id": "why-real-intelligence-is-something-more-than-optimisation",
       "title": "Reason is more than a tool",
