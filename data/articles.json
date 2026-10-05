@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-02T12:16:43.057261+00:00",
+  "lastFetched": "2026-10-05T14:14:52.631453+00:00",
   "articles": [
+    {
+      "id": "what-i-have-learned-from-posting-episodes-of-my-life-on-facebook",
+      "title": "A life in episodes",
+      "author": "Thomas Söderqvist",
+      "category": "",
+      "publishedAt": "2026-10-05T10:00:00+00:00",
+      "excerpt": "For a decade, I’ve posted episodes of my memoir to Facebook. My readers correct my understanding of my past- by Thomas Söderqvist",
+      "imageUrl": "https://images.aeonmedia.co/images/add21bb0-e0e1-4a92-8b7a-d0d53f9da477/final-essay.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 29,
+      "articleFile": "data/article-what-i-have-learned-from-posting-episodes-of-my-life-on-facebook.json"
+    },
     {
       "id": "early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew",
       "title": "Life on a hair trigger",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 22,
       "articleFile": "data/article-a-scientists-search-for-answers-about-amanita-muscaria-gummies.json"
-    },
-    {
-      "id": "a-good-sceptic-has-more-than-doubt-and-less-than-certainty",
-      "title": "He was probably right",
-      "author": "Massimo Pigliucci",
-      "category": "",
-      "publishedAt": "2026-09-21T10:00:00+00:00",
-      "excerpt": "Cicero’s life and thought are a testament to the idea of probabilia: we should be confident in our beliefs, but never certain- by Massimo Pigliucci",
-      "imageUrl": "https://images.aeonmedia.co/images/ab30ee1c-11a9-4d4d-a7a0-fd34b45891e5/esssay-gettyimages-527618704.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-a-good-sceptic-has-more-than-doubt-and-less-than-certainty.json"
-    },
-    {
-      "id": "black-holes-ring-like-bells-what-happens-next-is-stranger",
-      "title": "Cosmic amnesia",
-      "author": "Richard Dyer",
-      "category": "",
-      "publishedAt": "2026-09-18T10:00:00+00:00",
-      "excerpt": "A black hole rings like a struck bell, then settles into silence, forgetting almost everything about its history. Why?- by Richard Dyer",
-      "imageUrl": "https://images.aeonmedia.co/images/899acddb-5f08-456f-b901-015a75d5199e/essay-artgw250114_simonnet_2400.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-black-holes-ring-like-bells-what-happens-next-is-stranger.json"
     }
   ]
 }
