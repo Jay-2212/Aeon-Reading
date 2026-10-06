@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-05T14:14:52.631453+00:00",
+  "lastFetched": "2026-10-06T18:11:49.198628+00:00",
   "articles": [
+    {
+      "id": "the-life-saving-scientific-knowledge-hiding-in-plain-sight",
+      "title": "How to assemble science",
+      "author": "Helen Pearson",
+      "category": "",
+      "publishedAt": "2026-10-06T10:00:00+00:00",
+      "excerpt": "Humanity produces a staggering amount of new knowledge every day. The question is how to make sense of it all- by Helen Pearson",
+      "imageUrl": "https://images.aeonmedia.co/images/12748f11-e0ce-47d8-8b35-d2d1018380bc/essay-2016-10-10t000000z_1858079971_d1aeugejeiaa_rtrmadp_3_health-cancer-immunotherapy.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-the-life-saving-scientific-knowledge-hiding-in-plain-sight.json"
+    },
     {
       "id": "what-i-have-learned-from-posting-episodes-of-my-life-on-facebook",
       "title": "A life in episodes",
