@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-08T13:11:24.931521+00:00",
+  "lastFetched": "2026-10-09T12:57:56.833009+00:00",
   "articles": [
+    {
+      "id": "why-we-should-heed-barbara-wards-vision-of-planetary-justice",
+      "title": "Barbara Ward’s vision",
+      "author": "Or Rosenboim",
+      "category": "",
+      "publishedAt": "2026-10-09T10:00:00+00:00",
+      "excerpt": "She was among the first to argue that prosperity, equality and the protection of nature are inseparable planetary goals- by Or Rosenboim",
+      "imageUrl": "https://images.aeonmedia.co/images/41d8761c-df4f-4ee0-a580-d6bd64594340/essay-un-ward.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-why-we-should-heed-barbara-wards-vision-of-planetary-justice.json"
+    },
     {
       "id": "the-making-of-the-ghetto-on-a-venetian-island-in-1516",
       "title": "The ghetto on the lagoon",
