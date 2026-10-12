@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-09T12:57:56.833009+00:00",
+  "lastFetched": "2026-10-12T15:03:24.577948+00:00",
   "articles": [
+    {
+      "id": "does-the-principle-of-sufficient-reason-make-panpsychism-true",
+      "title": "Is everything conscious?",
+      "author": "Sam Kimpton-Nye",
+      "category": "",
+      "publishedAt": "2026-10-12T10:00:00+00:00",
+      "excerpt": "If the question makes no sense to you, try spending some time with the principle of sufficient reason- by Sam Kimpton-Nye",
+      "imageUrl": "https://images.aeonmedia.co/images/bec1dfcc-28fe-4a77-8345-e232c4bcd475/essay-panos_00227070.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 24,
+      "articleFile": "data/article-does-the-principle-of-sufficient-reason-make-panpsychism-true.json"
+    },
     {
       "id": "why-we-should-heed-barbara-wards-vision-of-planetary-justice",
       "title": "Barbara Ward’s vision",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 24,
       "articleFile": "data/article-we-need-a-better-way-to-describe-what-is-often-called-cancer.json"
-    },
-    {
-      "id": "when-a-man-becomes-a-father-and-a-poetic-revolution-follows",
-      "title": "Paternity is poetical",
-      "author": "Daniel Swift",
-      "category": "",
-      "publishedAt": "2026-09-28T10:00:00+00:00",
-      "excerpt": "The notion that fatherhood and creativity are at odds is plain wrong, as both poetry and neuroscience are showing us- by Daniel Swift",
-      "imageUrl": "https://images.aeonmedia.co/images/450d70f9-21a4-48dd-95c0-f372f4813999/essay-nn11536415.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 20,
-      "articleFile": "data/article-when-a-man-becomes-a-father-and-a-poetic-revolution-follows.json"
-    },
-    {
-      "id": "habermass-theory-of-truth-meant-he-changed-his-mind",
-      "title": "Reasoning together",
-      "author": "Emilie Prattico",
-      "category": "",
-      "publishedAt": "2026-09-25T10:00:00+00:00",
-      "excerpt": "Jürgen Habermas, the great defender of deliberative democracy, lived up to its demands: he never feared changing his mind- by Emilie Prattico",
-      "imageUrl": "https://images.aeonmedia.co/images/d19c6cf8-eddc-49ec-a4c1-4c20fb6cd93e/essay-v2-2a2b9x3.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 16,
-      "articleFile": "data/article-habermass-theory-of-truth-meant-he-changed-his-mind.json"
     }
   ]
 }
