@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-12T15:03:24.577948+00:00",
+  "lastFetched": "2026-10-13T13:57:26.270430+00:00",
   "articles": [
+    {
+      "id": "the-more-we-rely-on-tech-the-more-we-deskill-our-bodies",
+      "title": "Deskilling the body",
+      "author": "Melanie Challenger",
+      "category": "",
+      "publishedAt": "2026-10-13T10:00:00+00:00",
+      "excerpt": "We are, moment by moment, doing less sensing, navigating, remembering, walking, choosing, and attending- by Melanie Challenger",
+      "imageUrl": "https://images.aeonmedia.co/images/b060a785-e136-4e8e-bd82-6085cc21e62a/essay-final-nn11563596.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-the-more-we-rely-on-tech-the-more-we-deskill-our-bodies.json"
+    },
     {
       "id": "does-the-principle-of-sufficient-reason-make-panpsychism-true",
       "title": "Is everything conscious?",
