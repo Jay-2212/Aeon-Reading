@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-10-13T13:57:26.270430+00:00",
+  "lastFetched": "2026-10-14T11:34:17.779738+00:00",
   "articles": [
     {
       "id": "the-more-we-rely-on-tech-the-more-we-deskill-our-bodies",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 20,
       "articleFile": "data/article-why-real-intelligence-is-something-more-than-optimisation.json"
-    },
-    {
-      "id": "we-need-a-better-way-to-describe-what-is-often-called-cancer",
-      "title": "Don’t use the ‘C-word’",
-      "author": "Matthew R Cooperberg",
-      "category": "",
-      "publishedAt": "2026-09-29T10:00:00+00:00",
-      "excerpt": "A cancer diagnosis carries with it fear and upheaval. For many patients the cellular changes do not warrant the label- by Matthew R Cooperberg",
-      "imageUrl": "https://images.aeonmedia.co/images/bb13393b-9cc9-458f-b788-d5a0dc4acb03/essay-final-c0508866-prostate_hyperplasia_lm.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 24,
-      "articleFile": "data/article-we-need-a-better-way-to-describe-what-is-often-called-cancer.json"
     }
   ]
 }
