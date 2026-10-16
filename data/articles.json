@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-15T11:12:55.868959+00:00",
+  "lastFetched": "2026-10-16T11:07:39.266536+00:00",
   "articles": [
+    {
+      "id": "the-politics-of-masculinity-at-the-end-of-the-roman-republic",
+      "title": "How to be a (Roman) man",
+      "author": "Catharine Edwards",
+      "category": "",
+      "publishedAt": "2026-10-16T10:00:00+00:00",
+      "excerpt": "Cicero’s ideal of manly virtue stressed the performance of self-control and bravery, not boastful egotism and domination- by Catharine Edwards",
+      "imageUrl": "https://images.aeonmedia.co/images/2ac1e107-fd3a-4df1-9ecf-c703c8eea898/v7-dp328509.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-the-politics-of-masculinity-at-the-end-of-the-roman-republic.json"
+    },
     {
       "id": "the-century-long-search-for-the-limits-to-knowledge",
       "title": "The ladder of knowledge",
