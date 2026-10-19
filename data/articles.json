@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-16T11:07:39.266536+00:00",
+  "lastFetched": "2026-10-19T12:46:30.000156+00:00",
   "articles": [
+    {
+      "id": "the-renaissance-gun-from-diabolical-device-to-popular-militias",
+      "title": "Horrible, unmanly, indispensable",
+      "author": "Catherine Fletcher",
+      "category": "",
+      "publishedAt": "2026-10-19T10:00:00+00:00",
+      "excerpt": "Renaissance Italians saw the gun as the Devil’s work. But soon they embraced this unchivalrous – and necessary – weapon- by Catherine Fletcher",
+      "imageUrl": "https://images.aeonmedia.co/images/d5a13b73-fa43-4d25-a1ff-05f75220297e/essay-the_battle_of_pavia_1525_by_rupert_heller_-_nationalmuseum_stockholm.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 19,
+      "articleFile": "data/article-the-renaissance-gun-from-diabolical-device-to-popular-militias.json"
+    },
     {
       "id": "the-politics-of-masculinity-at-the-end-of-the-roman-republic",
       "title": "How to be a (Roman) man",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-the-life-saving-scientific-knowledge-hiding-in-plain-sight.json"
-    },
-    {
-      "id": "what-i-have-learned-from-posting-episodes-of-my-life-on-facebook",
-      "title": "A life in episodes",
-      "author": "Thomas Söderqvist",
-      "category": "",
-      "publishedAt": "2026-10-05T10:00:00+00:00",
-      "excerpt": "For a decade, I’ve posted episodes of my memoir to Facebook. My readers correct my understanding of my past- by Thomas Söderqvist",
-      "imageUrl": "https://images.aeonmedia.co/images/add21bb0-e0e1-4a92-8b7a-d0d53f9da477/final-essay.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 29,
-      "articleFile": "data/article-what-i-have-learned-from-posting-episodes-of-my-life-on-facebook.json"
-    },
-    {
-      "id": "early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew",
-      "title": "Life on a hair trigger",
-      "author": "Megan Kang",
-      "category": "",
-      "publishedAt": "2026-10-02T10:00:00+00:00",
-      "excerpt": "A world of violence sustains itself through guns, poverty and other social ills, but also through the minds it creates- by Megan Kang",
-      "imageUrl": "https://images.aeonmedia.co/images/41e2e3ad-d027-43d2-a055-5890c5f5789b/essay-2021-12-25t171644z_229486544_rc2mlr9fk1lt_rtrmadp_3_usa-guns-chicago.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 22,
-      "articleFile": "data/article-early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew.json"
     }
   ]
 }
