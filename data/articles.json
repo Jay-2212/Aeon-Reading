@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-19T12:46:30.000156+00:00",
+  "lastFetched": "2026-10-20T11:16:46.565911+00:00",
   "articles": [
+    {
+      "id": "sometimes-you-just-know-somethings-off-but-how",
+      "title": "How intuitions work",
+      "author": "Marc A Moffett",
+      "category": "",
+      "publishedAt": "2026-10-20T10:00:00+00:00",
+      "excerpt": "Just as seeing a tree gives you reason to believe it’s there, sensing that a stranger is creepy gives you reason to walk away- by Marc A Moffett",
+      "imageUrl": "https://images.aeonmedia.co/images/ebbfc9dd-2883-4780-837a-43887f0fbdb5/pessay-ar211874.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 23,
+      "articleFile": "data/article-sometimes-you-just-know-somethings-off-but-how.json"
+    },
     {
       "id": "the-renaissance-gun-from-diabolical-device-to-popular-militias",
       "title": "Horrible, unmanly, indispensable",
