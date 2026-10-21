@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-10-20T11:16:46.565911+00:00",
+  "lastFetched": "2026-10-21T11:32:17.326366+00:00",
   "articles": [
     {
       "id": "sometimes-you-just-know-somethings-off-but-how",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 22,
       "articleFile": "data/article-the-making-of-the-ghetto-on-a-venetian-island-in-1516.json"
-    },
-    {
-      "id": "the-life-saving-scientific-knowledge-hiding-in-plain-sight",
-      "title": "How to assemble science",
-      "author": "Helen Pearson",
-      "category": "",
-      "publishedAt": "2026-10-06T10:00:00+00:00",
-      "excerpt": "Humanity produces a staggering amount of new knowledge every day. The question is how to make sense of it all- by Helen Pearson",
-      "imageUrl": "https://images.aeonmedia.co/images/12748f11-e0ce-47d8-8b35-d2d1018380bc/essay-2016-10-10t000000z_1858079971_d1aeugejeiaa_rtrmadp_3_health-cancer-immunotherapy.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-the-life-saving-scientific-knowledge-hiding-in-plain-sight.json"
     }
   ]
 }
