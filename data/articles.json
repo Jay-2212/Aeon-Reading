@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-22T11:32:36.698689+00:00",
+  "lastFetched": "2026-10-23T11:22:03.507393+00:00",
   "articles": [
+    {
+      "id": "why-a-world-without-friction-is-a-world-without-progress",
+      "title": "Traction!",
+      "author": "Jennifer R Vail",
+      "category": "",
+      "publishedAt": "2026-10-23T10:00:00+00:00",
+      "excerpt": "Tribologists study friction: what happens when things rub together. It’s indispensable, from the wheel to the paths of stars- by Jennifer R Vail",
+      "imageUrl": "https://images.aeonmedia.co/images/44e36cdb-f3d7-45b0-8759-ba91f5eb550c/essay-friction.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 14,
+      "articleFile": "data/article-why-a-world-without-friction-is-a-world-without-progress.json"
+    },
     {
       "id": "living-in-community-is-where-self-illusions-go-to-die",
       "title": "Other people",
