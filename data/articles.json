@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-23T11:22:03.507393+00:00",
+  "lastFetched": "2026-10-26T12:39:35.613913+00:00",
   "articles": [
+    {
+      "id": "what-cooperatives-for-an-anticapitalist-peace-look-like",
+      "title": "How to build real peace",
+      "author": "Azize Aslan",
+      "category": "",
+      "publishedAt": "2026-10-26T10:00:00+00:00",
+      "excerpt": "From Colombia to Syria, I’ve seen that capitalist logic can’t help to rebuild postwar countries but cooperatives can- by Azize Aslan",
+      "imageUrl": "https://images.aeonmedia.co/images/8fd10da1-aaf3-42db-bfbe-7a7fe5af1814/v1-essay-gettyimages-1076552638.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 22,
+      "articleFile": "data/article-what-cooperatives-for-an-anticapitalist-peace-look-like.json"
+    },
     {
       "id": "why-a-world-without-friction-is-a-world-without-progress",
       "title": "Traction!",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-the-more-we-rely-on-tech-the-more-we-deskill-our-bodies.json"
-    },
-    {
-      "id": "does-the-principle-of-sufficient-reason-make-panpsychism-true",
-      "title": "Is everything conscious?",
-      "author": "Sam Kimpton-Nye",
-      "category": "",
-      "publishedAt": "2026-10-12T10:00:00+00:00",
-      "excerpt": "If the question makes no sense to you, try spending some time with the principle of sufficient reason- by Sam Kimpton-Nye",
-      "imageUrl": "https://images.aeonmedia.co/images/bec1dfcc-28fe-4a77-8345-e232c4bcd475/essay-panos_00227070.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 24,
-      "articleFile": "data/article-does-the-principle-of-sufficient-reason-make-panpsychism-true.json"
-    },
-    {
-      "id": "why-we-should-heed-barbara-wards-vision-of-planetary-justice",
-      "title": "Barbara Ward’s vision",
-      "author": "Or Rosenboim",
-      "category": "",
-      "publishedAt": "2026-10-09T10:00:00+00:00",
-      "excerpt": "She was among the first to argue that prosperity, equality and the protection of nature are inseparable planetary goals- by Or Rosenboim",
-      "imageUrl": "https://images.aeonmedia.co/images/41d8761c-df4f-4ee0-a580-d6bd64594340/essay-un-ward.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-why-we-should-heed-barbara-wards-vision-of-planetary-justice.json"
     }
   ]
 }
