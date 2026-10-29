@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-10-28T12:32:09.306583+00:00",
+  "lastFetched": "2026-10-29T12:42:54.891671+00:00",
   "articles": [
+    {
+      "id": "how-to-use-physics-to-make-sense-of-the-messiness-of-life",
+      "title": "The physics of getting fired",
+      "author": "Zahaan Bharmal",
+      "category": "",
+      "publishedAt": "2026-10-29T10:00:00+00:00",
+      "excerpt": "Physics offered me a sense of order and purpose. But when life got messy I realised it had a much deeper insight to give- by Zahaan Bharmal",
+      "imageUrl": "https://images.aeonmedia.co/images/afb6d18f-037c-451b-a48b-e7420fcaa8b4/essay-v1-test-v1-jiran-family-4srj_3nontc-unsplash.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-how-to-use-physics-to-make-sense-of-the-messiness-of-life.json"
+    },
     {
       "id": "we-need-a-language-to-name-the-grief-that-comes-without-death",
       "title": "Love with nowhere to go",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-the-politics-of-masculinity-at-the-end-of-the-roman-republic.json"
-    },
-    {
-      "id": "the-century-long-search-for-the-limits-to-knowledge",
-      "title": "The ladder of knowledge",
-      "author": "Alexander V Gheorghiu",
-      "category": "",
-      "publishedAt": "2026-10-15T10:00:00+00:00",
-      "excerpt": "What we claim as ‘true’ is not a ceiling we are forever failing to reach but something that changes as we climb toward it- by Alexander V Gheorghiu",
-      "imageUrl": "https://images.aeonmedia.co/images/2185ca1b-0c32-4af5-bcf9-3c2def289504/herbert-list-essay-par184662.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 16,
-      "articleFile": "data/article-the-century-long-search-for-the-limits-to-knowledge.json"
     }
   ]
 }
