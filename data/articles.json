@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-02T15:23:06.002742+00:00",
+  "lastFetched": "2026-11-03T13:56:48.713598+00:00",
   "articles": [
+    {
+      "id": "the-psychology-of-separating-church-and-state",
+      "title": "Believing and thinking",
+      "author": "Neil Van Leeuwen & Jacob Eisler",
+      "category": "",
+      "publishedAt": "2026-11-03T11:00:00+00:00",
+      "excerpt": "The separation of church and state has an unspoken psychological basis: we choose what we believe, but not what we think- by Neil Van Leeuwen & Jacob Eisler",
+      "imageUrl": "https://images.aeonmedia.co/images/40611a3c-3e4d-417a-b2a9-5d3ec4f128a0/essay-gettyimages-1431136250.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-the-psychology-of-separating-church-and-state.json"
+    },
     {
       "id": "the-self-making-world-of-jean-baptiste-lamarck",
       "title": "The self-making world",
