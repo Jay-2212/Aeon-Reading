@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-11-03T13:56:48.713598+00:00",
+  "lastFetched": "2026-11-04T14:10:36.363352+00:00",
   "articles": [
     {
       "id": "the-psychology-of-separating-church-and-state",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 22,
       "articleFile": "data/article-living-in-community-is-where-self-illusions-go-to-die.json"
-    },
-    {
-      "id": "sometimes-you-just-know-somethings-off-but-how",
-      "title": "How intuitions work",
-      "author": "Marc A Moffett",
-      "category": "",
-      "publishedAt": "2026-10-20T10:00:00+00:00",
-      "excerpt": "Just as seeing a tree gives you reason to believe it’s there, sensing that a stranger is creepy gives you reason to walk away- by Marc A Moffett",
-      "imageUrl": "https://images.aeonmedia.co/images/ebbfc9dd-2883-4780-837a-43887f0fbdb5/pessay-ar211874.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 23,
-      "articleFile": "data/article-sometimes-you-just-know-somethings-off-but-how.json"
     }
   ]
 }
