@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-05T19:46:29.617694+00:00",
+  "lastFetched": "2026-11-06T19:10:02.168773+00:00",
   "articles": [
+    {
+      "id": "why-astrophysics-needs-to-abandon-the-big-questions",
+      "title": "Celestial nuisance",
+      "author": "Dylan Jow",
+      "category": "",
+      "publishedAt": "2026-11-06T11:00:00+00:00",
+      "excerpt": "The cosmos has become a lab for the Big Questions in physics. Along the way, we’ve lost sight of its glorious messiness- by Dylan Jow",
+      "imageUrl": "https://images.aeonmedia.co/images/7129c5df-be79-48ee-bcbd-f31854ec3aa3/essay-weic2425c.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 18,
+      "articleFile": "data/article-why-astrophysics-needs-to-abandon-the-big-questions.json"
+    },
     {
       "id": "welcome-to-the-mixed-up-joyful-world-of-audhd",
       "title": "Methodical/mercurial",
