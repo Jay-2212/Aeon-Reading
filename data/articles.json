@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-09T15:50:31.536002+00:00",
+  "lastFetched": "2026-11-10T14:40:18.532504+00:00",
   "articles": [
+    {
+      "id": "how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life",
+      "title": "The wholehearted life",
+      "author": "Ben Daitz",
+      "category": "",
+      "publishedAt": "2026-11-10T11:00:00+00:00",
+      "excerpt": "Roshi Joan Halifax is an original, generous, gritty and profound Buddhist teacher. How does she look back on her life?- by Ben Daitz",
+      "imageUrl": "https://images.aeonmedia.co/images/1f0bf1c6-e0ad-490d-b4c1-685617a95d62/essay-from-kodo-dsc02003.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 28,
+      "articleFile": "data/article-how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life.json"
+    },
     {
       "id": "historical-ideas-of-equality-help-us-imagine-an-equal-world",
       "title": "Equality talk",
