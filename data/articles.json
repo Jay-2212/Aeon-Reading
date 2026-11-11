@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-11-10T14:40:18.532504+00:00",
+  "lastFetched": "2026-11-11T13:55:45.889240+00:00",
   "articles": [
     {
       "id": "how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-how-to-use-physics-to-make-sense-of-the-messiness-of-life.json"
-    },
-    {
-      "id": "we-need-a-language-to-name-the-grief-that-comes-without-death",
-      "title": "Love with nowhere to go",
-      "author": "Derek van Zoonen",
-      "category": "",
-      "publishedAt": "2026-10-27T10:00:00+00:00",
-      "excerpt": "Grief is not only for the dead. When we are unable to honour other profound losses, we become strangers to ourselves- by Derek van Zoonen",
-      "imageUrl": "https://images.aeonmedia.co/images/e4ffcd43-fc58-49e0-9596-99b6020acfca/essay-v2-nyc117497.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 20,
-      "articleFile": "data/article-we-need-a-language-to-name-the-grief-that-comes-without-death.json"
     }
   ]
 }
