@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-11T13:55:45.889240+00:00",
+  "lastFetched": "2026-11-12T14:56:49.492320+00:00",
   "articles": [
+    {
+      "id": "a-new-answer-to-why-there-is-something-rather-than-nothing",
+      "title": "Why anything exists",
+      "author": "Andrew T Brenner",
+      "category": "",
+      "publishedAt": "2026-11-12T11:00:00+00:00",
+      "excerpt": "Here’s a new answer to the old question ‘why is there something rather than nothing?’ (It’s neither simple nor easy)- by Andrew T Brenner",
+      "imageUrl": "https://images.aeonmedia.co/images/72b5e07e-102f-40ec-b0e7-0f8234e7ae07/essay-v1-dp279306.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 19,
+      "articleFile": "data/article-a-new-answer-to-why-there-is-something-rather-than-nothing.json"
+    },
     {
       "id": "how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life",
       "title": "The wholehearted life",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age.json"
-    },
-    {
-      "id": "how-to-use-physics-to-make-sense-of-the-messiness-of-life",
-      "title": "The physics of getting fired",
-      "author": "Zahaan Bharmal",
-      "category": "",
-      "publishedAt": "2026-10-29T10:00:00+00:00",
-      "excerpt": "Physics offered me a sense of order and purpose. But when life got messy I realised it had a much deeper insight to give- by Zahaan Bharmal",
-      "imageUrl": "https://images.aeonmedia.co/images/afb6d18f-037c-451b-a48b-e7420fcaa8b4/essay-v1-test-v1-jiran-family-4srj_3nontc-unsplash.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-how-to-use-physics-to-make-sense-of-the-messiness-of-life.json"
     }
   ]
 }
