@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-12T14:56:49.492320+00:00",
+  "lastFetched": "2026-11-13T19:28:00.124149+00:00",
   "articles": [
+    {
+      "id": "those-forced-to-cross-borders-are-imagining-a-radical-new-world",
+      "title": "Fugitive imagination",
+      "author": "Shahram Khosravi",
+      "category": "",
+      "publishedAt": "2026-11-13T11:00:00+00:00",
+      "excerpt": "Wherever people are confined, displaced, silenced or made disposable, fugitive forms of knowledge and imagination emerge- by Shahram Khosravi",
+      "imageUrl": "https://images.aeonmedia.co/images/250df91b-cb37-49ba-b1b1-4c14f75bb40e/essay-panos_00206717.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 17,
+      "articleFile": "data/article-those-forced-to-cross-borders-are-imagining-a-radical-new-world.json"
+    },
     {
       "id": "a-new-answer-to-why-there-is-something-rather-than-nothing",
       "title": "Why anything exists",
