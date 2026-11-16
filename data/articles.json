@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-13T19:28:00.124149+00:00",
+  "lastFetched": "2026-11-16T15:26:22.580670+00:00",
   "articles": [
+    {
+      "id": "the-origins-of-the-state-are-not-agrarian-but-pastoralist",
+      "title": "The horse made the state",
+      "author": "Lhamsuren Munkh-Erdene",
+      "category": "",
+      "publishedAt": "2026-11-16T11:00:00+00:00",
+      "excerpt": "Civilisation wasn’t made possible by grain, but by transportation – and the conquest it enabled, from the steppe to the sea- by Lhamsuren Munkh-Erdene",
+      "imageUrl": "https://images.aeonmedia.co/images/60bea515-b55f-48e9-9e81-4fe8bf8afde7/essay-uncavaliersurunepetiteeminencesurlagrandeplacedumarche_cadrageplusserre_a70091x.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 42,
+      "articleFile": "data/article-the-origins-of-the-state-are-not-agrarian-but-pastoralist.json"
+    },
     {
       "id": "those-forced-to-cross-borders-are-imagining-a-radical-new-world",
       "title": "Fugitive imagination",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 20,
       "articleFile": "data/article-the-psychology-of-separating-church-and-state.json"
-    },
-    {
-      "id": "the-self-making-world-of-jean-baptiste-lamarck",
-      "title": "The self-making world",
-      "author": "Jessica Riskin",
-      "category": "",
-      "publishedAt": "2026-11-02T11:00:00+00:00",
-      "excerpt": "Long mocked and misunderstood, Lamarck’s radical idea that organisms shape themselves and their world is making a comeback- by Jessica Riskin",
-      "imageUrl": "https://images.aeonmedia.co/images/e7ea39c8-e023-47fb-820f-7a6d68ed3928/essay-humpbacks.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 24,
-      "articleFile": "data/article-the-self-making-world-of-jean-baptiste-lamarck.json"
-    },
-    {
-      "id": "why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age",
-      "title": "In praise of the dilettante",
-      "author": "Jay Miller",
-      "category": "",
-      "publishedAt": "2026-10-30T10:00:00+00:00",
-      "excerpt": "A wayfaring cosmopolitan who never gets stuck, the dilettante is the right anti-hero for our hyper-specialised age- by Jay Miller",
-      "imageUrl": "https://images.aeonmedia.co/images/b943b6cc-6d15-4809-b176-165891129bc0/essay-par17520.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age.json"
     }
   ]
 }
