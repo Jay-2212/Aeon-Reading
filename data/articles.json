@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-16T15:26:22.580670+00:00",
+  "lastFetched": "2026-11-17T15:47:36.804083+00:00",
   "articles": [
+    {
+      "id": "its-not-political-the-young-fashionistas-of-tehran",
+      "title": "Catwalks and crackdowns",
+      "author": "Parisa Khoshnami",
+      "category": "",
+      "publishedAt": "2026-11-17T11:00:00+00:00",
+      "excerpt": "Women in Tehran are changing society by dressing as they choose, in numbers too large to stop. This is the ‘art of presence’- by Parisa Khoshnami",
+      "imageUrl": "https://images.aeonmedia.co/images/aadc8bad-88e2-4670-bc0a-b6a8c5190408/essay-gettyimages-2294390691.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 15,
+      "articleFile": "data/article-its-not-political-the-young-fashionistas-of-tehran.json"
+    },
     {
       "id": "the-origins-of-the-state-are-not-agrarian-but-pastoralist",
       "title": "The horse made the state",
