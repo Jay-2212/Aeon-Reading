@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-11-17T15:47:36.804083+00:00",
+  "lastFetched": "2026-11-18T15:27:26.552890+00:00",
   "articles": [
     {
       "id": "its-not-political-the-young-fashionistas-of-tehran",
@@ -96,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-welcome-to-the-mixed-up-joyful-world-of-audhd.json"
-    },
-    {
-      "id": "the-psychology-of-separating-church-and-state",
-      "title": "Believing and thinking",
-      "author": "Neil Van Leeuwen & Jacob Eisler",
-      "category": "",
-      "publishedAt": "2026-11-03T11:00:00+00:00",
-      "excerpt": "The separation of church and state has an unspoken psychological basis: we choose what we believe, but not what we think- by Neil Van Leeuwen & Jacob Eisler",
-      "imageUrl": "https://images.aeonmedia.co/images/40611a3c-3e4d-417a-b2a9-5d3ec4f128a0/essay-gettyimages-1431136250.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 20,
-      "articleFile": "data/article-the-psychology-of-separating-church-and-state.json"
     }
   ]
 }
