@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-18T15:27:26.552890+00:00",
+  "lastFetched": "2026-11-19T15:33:17.169514+00:00",
   "articles": [
+    {
+      "id": "what-would-parenting-by-ai-look-like",
+      "title": "At least it remembers",
+      "author": "Tom Wooldridge",
+      "category": "",
+      "publishedAt": "2026-11-19T11:00:00+00:00",
+      "excerpt": "Parents fear what AI will do to children. But for some, it’s the only steady presence they have – and that’s the real worry- by Tom Wooldridge",
+      "imageUrl": "https://images.aeonmedia.co/images/67889061-dbb5-4c47-87eb-21851f330133/essay-gettyimages-1950705233.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 21,
+      "articleFile": "data/article-what-would-parenting-by-ai-look-like.json"
+    },
     {
       "id": "its-not-political-the-young-fashionistas-of-tehran",
       "title": "Catwalks and crackdowns",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 18,
       "articleFile": "data/article-why-astrophysics-needs-to-abandon-the-big-questions.json"
-    },
-    {
-      "id": "welcome-to-the-mixed-up-joyful-world-of-audhd",
-      "title": "Methodical/mercurial",
-      "author": "Sarah Hendrickx",
-      "category": "",
-      "publishedAt": "2026-11-05T11:00:00+00:00",
-      "excerpt": "I need order and routine – just as much as I crave excitement and variety. What’s life like with both autism and ADHD?- by Sarah Hendrickx",
-      "imageUrl": "https://images.aeonmedia.co/images/38d6ec42-ad97-412b-800e-8e5c327d2c8f/essay-claudio-schwarz-exb9oi0i1ha-unsplash.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 17,
-      "articleFile": "data/article-welcome-to-the-mixed-up-joyful-world-of-audhd.json"
     }
   ]
 }
