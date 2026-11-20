@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-19T15:33:17.169514+00:00",
+  "lastFetched": "2026-11-20T15:12:48.622186+00:00",
   "articles": [
+    {
+      "id": "do-you-have-a-selkie-or-a-seal-in-the-family",
+      "title": "My grandmother was a seal",
+      "author": "Jordan Lee Borgman",
+      "category": "",
+      "publishedAt": "2026-11-20T11:00:00+00:00",
+      "excerpt": "Many Irish families believed they descended from selkies. Their stories reveal the violence and grief in our kinship with nature- by Jordan Lee Borgman",
+      "imageUrl": "https://images.aeonmedia.co/images/0cd99f4c-ddf6-43aa-b167-ea096fe4a0e7/essay-selkie-final-illustration.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 20,
+      "articleFile": "data/article-do-you-have-a-selkie-or-a-seal-in-the-family.json"
+    },
     {
       "id": "what-would-parenting-by-ai-look-like",
       "title": "At least it remembers",
