@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-20T15:12:48.622186+00:00",
+  "lastFetched": "2026-11-23T23:41:26.287050+00:00",
   "articles": [
+    {
+      "id": "what-can-we-learn-from-the-past-experience-of-el-nino",
+      "title": "A colossal oscillation",
+      "author": "Dagomar Degroot",
+      "category": "",
+      "publishedAt": "2026-11-23T11:00:00+00:00",
+      "excerpt": "El Niño has upended global weather, shaping the fate of societies, for millennia. Is this past a clue to a turbulent future?- by Dagomar Degroot",
+      "imageUrl": "https://images.aeonmedia.co/images/db143ee5-8693-43d5-a478-870c77a733a7/trevor-farrer-bom-.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 21,
+      "articleFile": "data/article-what-can-we-learn-from-the-past-experience-of-el-nino.json"
+    },
     {
       "id": "do-you-have-a-selkie-or-a-seal-in-the-family",
       "title": "My grandmother was a seal",
@@ -84,30 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 28,
       "articleFile": "data/article-how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life.json"
-    },
-    {
-      "id": "historical-ideas-of-equality-help-us-imagine-an-equal-world",
-      "title": "Equality talk",
-      "author": "Teresa M Bejan",
-      "category": "",
-      "publishedAt": "2026-11-09T11:00:00+00:00",
-      "excerpt": "In the summer of 1646, the idea of equality gained new and profound depths. We are still catching up with the consequences- by Teresa M Bejan",
-      "imageUrl": "https://images.aeonmedia.co/images/f220e1d9-d115-41d2-8d6b-19080731b06a/essay-par161210.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 24,
-      "articleFile": "data/article-historical-ideas-of-equality-help-us-imagine-an-equal-world.json"
-    },
-    {
-      "id": "why-astrophysics-needs-to-abandon-the-big-questions",
-      "title": "Celestial nuisance",
-      "author": "Dylan Jow",
-      "category": "",
-      "publishedAt": "2026-11-06T11:00:00+00:00",
-      "excerpt": "The cosmos has become a lab for the Big Questions in physics. Along the way, we’ve lost sight of its glorious messiness- by Dylan Jow",
-      "imageUrl": "https://images.aeonmedia.co/images/7129c5df-be79-48ee-bcbd-f31854ec3aa3/essay-weic2425c.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 18,
-      "articleFile": "data/article-why-astrophysics-needs-to-abandon-the-big-questions.json"
     }
   ]
 }
