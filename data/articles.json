@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-23T23:41:26.287050+00:00",
+  "lastFetched": "2026-11-24T22:12:45.828253+00:00",
   "articles": [
+    {
+      "id": "are-mental-illnesses-universal-or-are-they-culturally-specific",
+      "title": "Is mental illness universal?",
+      "author": "Alexander Pereira",
+      "category": "",
+      "publishedAt": "2026-11-24T11:00:00+00:00",
+      "excerpt": "Do all cultures experience the same mental disorders? Or are our experiences of mental distress culturally specific?- by Alexander Pereira",
+      "imageUrl": "https://images.aeonmedia.co/images/52cd7554-7970-47c1-b2e1-b1f2609d4c56/essay-2011-04-26t120000z_177609120_gm1e74q1iax01_rtrmadp_3_china.jpg?width=1200&quality=75&format=jpeg",
+      "imageAlt": "",
+      "readingTimeMinutes": 21,
+      "articleFile": "data/article-are-mental-illnesses-universal-or-are-they-culturally-specific.json"
+    },
     {
       "id": "what-can-we-learn-from-the-past-experience-of-el-nino",
       "title": "A colossal oscillation",
