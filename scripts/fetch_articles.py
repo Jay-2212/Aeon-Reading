@@ -332,6 +332,52 @@ def _is_video_entry(article: dict) -> bool:
     )
 
 
+# ---------------------------------------------------------------------------
+# Image URL Optimisation
+# ---------------------------------------------------------------------------
+
+#: Aeon image CDN host — the only host whose URLs we rewrite.
+AEON_IMAGE_HOST = "images.aeonmedia.co"
+
+#: Width (px) requested for hero/card images — sharp enough for phones,
+#: small enough to keep pages fast. The CDN serves resized variants.
+IMAGE_WIDTH = 1200
+
+
+def _optimize_image_url(url: str, width: int = IMAGE_WIDTH) -> str:
+    """Pin an Aeon CDN image URL to an optimised size/quality.
+
+    Rewrites ``width``/``quality``/``format`` query params on
+    ``images.aeonmedia.co`` URLs so article and hero images are served as
+    phone-appropriate JPEG/WebP variants instead of 3840px originals.
+    Non-Aeon URLs are returned unchanged.
+
+    Args:
+        url:   Original image URL.
+        width: Desired width in pixels.
+
+    Returns:
+        The optimised URL string.
+    """
+    if not url:
+        return url
+    try:
+        parts = urllib.parse.urlsplit(url)
+        if parts.hostname != AEON_IMAGE_HOST:
+            return url
+        query = urllib.parse.parse_qsl(parts.query, keep_blank_values=True)
+        query = [(k, v) for k, v in query if k not in ("width", "quality", "format")]
+        query.append(("width", str(width)))
+        query.append(("quality", "75"))
+        query.append(("format", "auto"))
+        return urllib.parse.urlunsplit(
+            (parts.scheme, parts.netloc, parts.path,
+             urllib.parse.urlencode(query), parts.fragment)
+        )
+    except (ValueError, TypeError):
+        return url
+
+
 def _clean_excerpt_text(text: str) -> str:
     """Normalize excerpt text and remove trailing feed CTA fragments."""
     cleaned = " ".join((text or "").split())
@@ -473,7 +519,7 @@ def extract_article_content(page_html: str, article_meta: dict) -> dict:
     return {
         "bodyHtml":           sanitised_html,
         "authorBio":          author_bio,
-        "imageUrl":           image_url,
+        "imageUrl":           _optimize_image_url(image_url),
         "imageAlt":           image_alt,
         "readingTimeMinutes": reading_time,
     }
@@ -611,6 +657,15 @@ def _sanitise_html(raw_html: str) -> str:
         lambda m: _make_secure_link(m.group(0)),
         cleaned,
     )
+
+    # Rewrite <img src> URLs to optimised CDN sizes. Serialised HTML escapes
+    # '&' as '&amp;', so decode before rewriting and re-escape afterwards.
+    def _rewrite_img_src(m: re.Match) -> str:
+        decoded = m.group(2).replace("&amp;", "&")
+        optimised = _optimize_image_url(decoded).replace("&", "&amp;")
+        return m.group(1) + optimised + m.group(3)
+
+    cleaned = re.sub(r'(<img[^>]*\ssrc=")([^"]*)(")', _rewrite_img_src, cleaned)
 
     # Collapse runs of 3+ newlines into two
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
@@ -807,7 +862,7 @@ def build_article_summary(rss_art: dict, content: dict) -> dict:
         "category":           rss_art["category"],
         "publishedAt":        rss_art["publishedAt"],
         "excerpt":            rss_art["excerpt"],
-        "imageUrl":           content["imageUrl"] or rss_art["imageUrl"],
+        "imageUrl":           _optimize_image_url(content["imageUrl"] or rss_art["imageUrl"]),
         "imageAlt":           content["imageAlt"] or rss_art["imageAlt"],
         "readingTimeMinutes": content["readingTimeMinutes"],
         "articleFile":        f"data/article-{article_id}.json",
@@ -832,7 +887,7 @@ def build_full_article(rss_art: dict, content: dict) -> dict:
         "authorBio":          content["authorBio"],
         "category":           rss_art["category"],
         "publishedAt":        rss_art["publishedAt"],
-        "imageUrl":           content["imageUrl"] or rss_art["imageUrl"],
+        "imageUrl":           _optimize_image_url(content["imageUrl"] or rss_art["imageUrl"]),
         "imageAlt":           content["imageAlt"] or rss_art["imageAlt"],
         "readingTimeMinutes": content["readingTimeMinutes"],
         "bodyHtml":           content["bodyHtml"],
@@ -885,7 +940,7 @@ def _get_rss_fallback_content(rss_art: dict) -> dict:
     return {
         "bodyHtml":           body_html,
         "authorBio":          "",
-        "imageUrl":           image_url,
+        "imageUrl":           _optimize_image_url(image_url),
         "imageAlt":           image_alt,
         "readingTimeMinutes": reading_time,
     }

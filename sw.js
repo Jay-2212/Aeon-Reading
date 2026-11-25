@@ -35,7 +35,7 @@
  * Current cache version — increment this whenever the SW logic or
  * PRECACHE_URLS change to ensure clients receive the updated assets.
  */
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 
 /** Cache for the application shell (HTML, CSS, JS, manifest, icons). */
 const SHELL_CACHE = `aeon-shell-${CACHE_VERSION}`;
@@ -43,11 +43,20 @@ const SHELL_CACHE = `aeon-shell-${CACHE_VERSION}`;
 /** Cache for article data files (articles.json and article-*.json). */
 const DATA_CACHE = `aeon-data-${CACHE_VERSION}`;
 
-/** Cache for images and Google Fonts. */
+/** Cache for Google Fonts. */
 const MEDIA_CACHE = `aeon-media-${CACHE_VERSION}`;
 
+/**
+ * Cache for article images (Aeon CDN). Entries are capped and pruned so the
+ * cache cannot grow unbounded on the user's device — see pruneImageCache().
+ */
+const IMAGE_CACHE = `aeon-images-${CACHE_VERSION}`;
+
+/** Maximum number of images kept in the image cache (LRU eviction). */
+const IMAGE_CACHE_MAX_ENTRIES = 40;
+
 /** All cache names — used during activation to delete old versions. */
-const ALL_CACHES = [SHELL_CACHE, DATA_CACHE, MEDIA_CACHE];
+const ALL_CACHES = [SHELL_CACHE, DATA_CACHE, MEDIA_CACHE, IMAGE_CACHE];
 
 /**
  * Resources to pre-cache during the `install` event (app shell).
@@ -139,11 +148,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // ---- Article cover images (Aeon CDN) — Cache-on-demand ----
-  if (url.hostname === 'images.aeon.co' ||
+  // ---- Article images (Aeon CDN) — Cache-on-demand with LRU pruning ----
+  if (url.hostname === 'images.aeonmedia.co' ||
+      url.hostname === 'images.aeon.co' ||
       url.hostname === 'd2e1bqvws99ptg.cloudfront.net' ||
       (url.hostname === 'aeon.co' && url.pathname.match(/\.(jpg|jpeg|png|webp|gif|svg)$/i))) {
-    event.respondWith(cacheFirst(request, MEDIA_CACHE));
+    event.respondWith(cacheImage(request));
+    // Prune the image cache in the background so it stays within its cap
+    event.waitUntil(pruneImageCache());
     return;
   }
 
@@ -213,6 +225,69 @@ async function cacheFirst(request, cacheName) {
       status:  503,
       headers: { 'Content-Type': 'text/plain' },
     });
+  }
+}
+
+/**
+ * Cache-first strategy for article images, with a timestamped entry so the
+ * cache can be pruned LRU-style (see pruneImageCache). On network failure and
+ * no cache hit, returns a 1x1 transparent GIF so <img> error handlers can
+ * swap in the placeholder instead of a broken-image icon.
+ *
+ * @param {Request} request - The image request.
+ * @returns {Promise<Response>}
+ */
+async function cacheImage(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) return cachedResponse;
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(IMAGE_CACHE);
+      // Clone with a timestamp header so pruning can order entries by age
+      const body = await networkResponse.blob();
+      const stamped = new Response(body, {
+        status: networkResponse.status,
+        statusText: networkResponse.statusText,
+        headers: {
+          ...Object.fromEntries(networkResponse.headers.entries()),
+          'x-sw-cached-at': String(Date.now()),
+        },
+      });
+      cache.put(request, stamped);
+    }
+    return networkResponse;
+  } catch (err) {
+    console.warn('[SW] Image fetch failed and not cached:', request.url);
+    return new Response('', { status: 504, statusText: 'Image unavailable' });
+  }
+}
+
+/**
+ * Prune the image cache down to IMAGE_CACHE_MAX_ENTRIES, evicting the oldest
+ * entries first (by the x-sw-cached-at header stamped in cacheImage).
+ * Runs in the background after each image fetch so user storage stays bounded.
+ *
+ * @returns {Promise<void>}
+ */
+async function pruneImageCache() {
+  try {
+    const cache = await caches.open(IMAGE_CACHE);
+    const requests = await cache.keys();
+    if (requests.length <= IMAGE_CACHE_MAX_ENTRIES) return;
+    const entries = await Promise.all(requests.map(async (req) => {
+      const res = await cache.match(req);
+      const ts = Number(res && res.headers.get('x-sw-cached-at')) || 0;
+      return { req, ts };
+    }));
+    entries.sort((a, b) => a.ts - b.ts);
+    const toDelete = entries.slice(0, entries.length - IMAGE_CACHE_MAX_ENTRIES);
+    await Promise.all(toDelete.map(e => cache.delete(e.req)));
+    if (toDelete.length) {
+      console.info(`[SW] Pruned ${toDelete.length} old image(s) from cache.`);
+    }
+  } catch (err) {
+    console.warn('[SW] Image cache pruning failed:', err.message);
   }
 }
 

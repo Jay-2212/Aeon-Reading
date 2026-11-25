@@ -580,7 +580,7 @@ class TestExtractArticleContent:
         result = fa.extract_article_content(NEXT_ARTICLE_HTML, meta)
         assert "Current Aeon markup keeps full essay paragraphs here." in result["bodyHtml"]
         assert "Listen to this essay" not in result["bodyHtml"]
-        assert result["imageUrl"] == "https://images.aeonmedia.co/images/current-hero.jpg"
+        assert result["imageUrl"] == "https://images.aeonmedia.co/images/current-hero.jpg?width=1200&quality=75&format=auto"
 
     def test_rss_image_preserved_when_page_has_none(self):
         """If the page has no hero image, the RSS imageUrl is returned."""
@@ -609,7 +609,7 @@ class TestExtractArticleContent:
         """When no hero is detected, the first content image is used as imageUrl."""
         meta = {"imageUrl": "", "imageAlt": ""}
         result = fa.extract_article_content(IMAGE_FALLBACK_HTML, meta)
-        assert result["imageUrl"] == "https://images.aeonmedia.co/images/fallback.jpg"
+        assert result["imageUrl"] == "https://images.aeonmedia.co/images/fallback.jpg?width=1200&quality=75&format=auto"
         assert result["imageAlt"] == "Fallback hero"
 
     def test_audio_promo_does_not_remove_container_with_real_content(self):
@@ -871,3 +871,43 @@ class TestRunPipeline:
             fa.run()
 
         assert not stale_file.exists(), "Stale article file should have been deleted"
+
+
+# ---------------------------------------------------------------------------
+# Tests: _optimize_image_url
+# ---------------------------------------------------------------------------
+
+class TestOptimizeImageUrl:
+    """_optimize_image_url pins Aeon CDN URLs to phone-friendly sizes."""
+
+    def test_rewrites_aeonmedia_url_params(self):
+        url = ("https://images.aeonmedia.co/images/abc/hero.jpg"
+               "?width=3840&quality=75&format=auto")
+        result = fa._optimize_image_url(url)
+        assert "width=1200" in result
+        assert "quality=75" in result
+        assert "format=auto" in result
+        assert "width=3840" not in result
+
+    def test_preserves_path_and_other_params(self):
+        url = "https://images.aeonmedia.co/user_image_upload/xyz/fig.png?foo=1&width=3840"
+        result = fa._optimize_image_url(url, width=640)
+        assert result.startswith("https://images.aeonmedia.co/user_image_upload/xyz/fig.png?")
+        assert "foo=1" in result
+        assert "width=640" in result
+
+    def test_non_aeon_url_unchanged(self):
+        url = "https://images.aeon.co/brain.jpg"
+        assert fa._optimize_image_url(url) == url
+
+    def test_empty_url(self):
+        assert fa._optimize_image_url("") == ""
+
+    def test_sanitise_html_rewrites_img_srcs(self):
+        html = ('<p><img src="https://images.aeonmedia.co/images/a.jpg'
+                '?width=3840&amp;quality=75&amp;format=auto" alt="x" /></p>')
+        result = fa._sanitise_html(html)
+        assert "width=1200" in result
+        assert "width=3840" not in result
+        # ampersands must stay HTML-escaped in the serialised output
+        assert "&amp;" in result

@@ -122,6 +122,14 @@ function createArticleCard(article) {
     img.alt = article.imageAlt || '';
     img.loading = 'lazy';
     img.decoding = 'async';
+    // Responsive candidates: phone-width (640w) and card-width (1200w)
+    const srcset = window.AeonImages ? window.AeonImages.buildImageSrcset(article.imageUrl) : '';
+    if (srcset) {
+      img.srcset = srcset;
+      img.sizes = '(max-width: 640px) 100vw, 430px';
+    }
+    // If the CDN image fails, swap in the local placeholder
+    if (window.AeonImages) window.AeonImages.guardImage(img);
     // Set src after creation to allow CSS to show placeholder first
     img.src = article.imageUrl;
     imgWrap.appendChild(img);

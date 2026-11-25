@@ -159,10 +159,20 @@ function renderArticle(article) {
   if (article.imageUrl) {
     const img = document.createElement('img');
     img.className = 'reader-hero-image';
-    img.src       = article.imageUrl;
     img.alt       = article.imageAlt || '';
-    img.loading   = 'lazy';
+    img.loading   = 'eager';
     img.decoding  = 'async';
+    img.fetchPriority = 'high';
+    // Responsive candidates: phone-width (640w) and desktop-width (1200w)
+    const srcset = window.AeonImages ? window.AeonImages.buildImageSrcset(article.imageUrl) : '';
+    if (srcset) {
+      img.srcset = srcset;
+      img.sizes = '100vw';
+    }
+    // If the hero fails to load, fall back to the local placeholder so the
+    // reader never sees a broken image at the top of the article.
+    if (window.AeonImages) window.AeonImages.guardImage(img);
+    img.src = article.imageUrl;
     readerArticle.appendChild(img);
   }
 
@@ -217,6 +227,15 @@ function renderArticle(article) {
   document.documentElement.style.setProperty('--line-spacing', lineSpacing);
 
   bodyDiv.innerHTML = article.bodyHtml;
+  // Guard every inline image: if one fails to load, swap in the placeholder.
+  // 'error' does not bubble, so listen in the capture phase.
+  if (window.AeonImages) {
+    bodyDiv.addEventListener('error', (ev) => {
+      const t = ev.target;
+      if (t && t.tagName === 'IMG') window.AeonImages.guardImage(t);
+    }, true);
+    bodyDiv.querySelectorAll('img').forEach(img => window.AeonImages.guardImage(img));
+  }
   readerArticle.appendChild(bodyDiv);
 
   // ---- Author Bio ----
