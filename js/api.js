@@ -336,6 +336,83 @@ async function triggerRefresh() {
 }
 
 // ---------------------------------------------------------------------------
+// Image Helpers
+// ---------------------------------------------------------------------------
+
+/** Aeon image CDN host — the only host we rewrite/optimize URLs for. */
+const AEON_IMAGE_HOST = 'images.aeonmedia.co';
+
+/** Placeholder shown when an image fails to load. */
+const IMAGE_FALLBACK_URL = 'assets/placeholder.svg';
+
+/**
+ * Return an Aeon CDN image URL pinned to a specific display width.
+ * Non-Aeon URLs are returned unchanged.
+ *
+ * @param {string} url   - Original image URL.
+ * @param {number} width - Desired width in pixels (CDN-supported).
+ * @returns {string}
+ */
+function optimizeImageUrl(url, width) {
+  if (!url) return url;
+  try {
+    const u = new URL(url, self.location.origin);
+    if (u.hostname !== AEON_IMAGE_HOST) return url;
+    u.searchParams.set('width', String(width));
+    u.searchParams.set('quality', '75');
+    u.searchParams.set('format', 'auto');
+    return u.toString();
+  } catch (_) {
+    return url;
+  }
+}
+
+/**
+ * Build a srcset string (640w and 1200w) for an Aeon CDN image URL.
+ * Returns an empty string for non-Aeon URLs.
+ *
+ * @param {string} url - Original image URL.
+ * @returns {string}
+ */
+function buildImageSrcset(url) {
+  if (!url) return '';
+  try {
+    if (new URL(url, self.location.origin).hostname !== AEON_IMAGE_HOST) return '';
+  } catch (_) {
+    return '';
+  }
+  return `${optimizeImageUrl(url, 640)} 640w, ${optimizeImageUrl(url, 1200)} 1200w`;
+}
+
+/**
+ * Attach a one-shot error handler to an <img> so that if the image fails
+ * to load (CDN block, 404, offline), it falls back to the local placeholder
+ * instead of showing a broken-image icon.
+ *
+ * @param {HTMLImageElement} img - The image element to guard.
+ */
+function guardImage(img) {
+  const applyFallback = () => {
+    if (img.dataset.fallbackApplied) return;
+    img.dataset.fallbackApplied = '1';
+    img.src = IMAGE_FALLBACK_URL;
+    img.classList.add('img--fallback');
+  };
+  // If the image already failed before this handler was attached
+  // (complete + naturalWidth 0), apply the fallback immediately.
+  if (img.complete && img.naturalWidth === 0 && img.src) applyFallback();
+  img.addEventListener('error', applyFallback, { once: true });
+}
+
+/** Expose image helpers so feed.js and reader.js can use them. */
+window.AeonImages = {
+  optimizeImageUrl,
+  buildImageSrcset,
+  guardImage,
+  IMAGE_FALLBACK_URL,
+};
+
+// ---------------------------------------------------------------------------
 // Initialisation
 // ---------------------------------------------------------------------------
 

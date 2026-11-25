@@ -109,6 +109,13 @@
   border-radius: 0 0 4px 4px;
 }
 
+/* Placeholder fallback when the CDN image fails to load */
+.reader-hero-image.img--fallback {
+  object-fit: contain;
+  background-color: var(--border);
+  min-height: 30vw;
+}
+
 /* Category label — small-caps, accent colour */
 .reader-category {
   font-family: system-ui, sans-serif;
