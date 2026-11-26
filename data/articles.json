@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-25T21:28:47.896019+00:00",
+  "lastFetched": "2026-11-26T21:16:17.918755+00:00",
   "articles": [
+    {
+      "id": "falsely-claiming-indigenous-identity-is-a-grave-form-of-theft",
+      "title": "The pretendian wars",
+      "author": "Dina Gilio-Whitaker",
+      "category": "",
+      "publishedAt": "2026-11-26T11:00:00+00:00",
+      "excerpt": "To falsely claim Indigenous identity is not a frivolous mistake. It’s a grave theft, and the stakes are getting higher- by Dina Gilio-Whitaker",
+      "imageUrl": "https://images.aeonmedia.co/images/e68a91ac-5959-4ae2-9d6b-7320076b26c7/grey-owl-feather-essay.jpg?width=1200&quality=75&format=auto",
+      "imageAlt": "",
+      "readingTimeMinutes": 22,
+      "articleFile": "data/article-falsely-claiming-indigenous-identity-is-a-grave-form-of-theft.json"
+    },
     {
       "id": "are-mental-illnesses-universal-or-are-they-culturally-specific",
       "title": "Is mental illness universal?",
@@ -84,18 +96,6 @@
       "imageAlt": "",
       "readingTimeMinutes": 17,
       "articleFile": "data/article-those-forced-to-cross-borders-are-imagining-a-radical-new-world.json"
-    },
-    {
-      "id": "a-new-answer-to-why-there-is-something-rather-than-nothing",
-      "title": "Why anything exists",
-      "author": "Andrew T Brenner",
-      "category": "",
-      "publishedAt": "2026-11-12T11:00:00+00:00",
-      "excerpt": "Here’s a new answer to the old question ‘why is there something rather than nothing?’ (It’s neither simple nor easy)- by Andrew T Brenner",
-      "imageUrl": "https://images.aeonmedia.co/images/72b5e07e-102f-40ec-b0e7-0f8234e7ae07/essay-v1-dp279306.jpg?width=1200&quality=75&format=jpeg",
-      "imageAlt": "",
-      "readingTimeMinutes": 19,
-      "articleFile": "data/article-a-new-answer-to-why-there-is-something-rather-than-nothing.json"
     }
   ]
 }
