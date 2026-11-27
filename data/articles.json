@@ -1,6 +1,18 @@
 {
-  "lastFetched": "2026-11-26T21:16:17.918755+00:00",
+  "lastFetched": "2026-11-27T20:58:06.222552+00:00",
   "articles": [
+    {
+      "id": "all-our-models-of-how-the-mind-functions-are-missing-something",
+      "title": "The energy of thought",
+      "author": "David Colaço & Philipp Haueis",
+      "category": "",
+      "publishedAt": "2026-11-27T11:00:00+00:00",
+      "excerpt": "We have an astonishing number of models of how the mind works. All of them neglect something essential- by David Colaço & Philipp Haueis",
+      "imageUrl": "https://images.aeonmedia.co/images/c26f206d-2e06-4e5b-8156-0d964a42cffc/essay-main-gettyimages-2247445825.jpg?width=1200&quality=75&format=auto",
+      "imageAlt": "",
+      "readingTimeMinutes": 16,
+      "articleFile": "data/article-all-our-models-of-how-the-mind-functions-are-missing-something.json"
+    },
     {
       "id": "falsely-claiming-indigenous-identity-is-a-grave-form-of-theft",
       "title": "The pretendian wars",
